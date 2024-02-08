@@ -1,0 +1,32 @@
+body {
+    background: #369;
+    color: #fff;
+}
+
+p{
+    background: #000;
+}
+
+a{
+    color: #ffa500;
+}
+
+.box{
+    background: #fff;
+}
+
+.warning{
+    color: #008000;
+}
+
+.error{
+    color: #ff0000;
+}
+
+.fancy{
+    border: 3px solid #800080;
+}
+
+#first-header{
+    font-size: 50px;
+}
