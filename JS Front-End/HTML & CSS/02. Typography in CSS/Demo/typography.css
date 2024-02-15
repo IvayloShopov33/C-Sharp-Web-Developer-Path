@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto&display=swap');
+
+html {
+    font: 14px/1.5 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+body {
+    font: inherit;
+}
+
+
+h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    padding: 0;
+    margin: 0.5em 0 0.5em 0;
+    line-height: 1.1;
+}
+
+h1 {font-size: 2.8em;} /* 14 * 2.8 = 39px */
+h2 {font-size: 2.2em;} /* 14 * 2.2 = 31px */
+h3 {font-size: 1.8em;} /* 14 * 1.8 = 25px */
+h4 {font-size: 1.6em;} /* 14 * 1.6 = 22px */
+h5 {font-size: 1.2em;} /* 14 * 1.2 = 17px */
+h6 {font-size: 1.0em;} /* 14 * 1.0 = 14px */
