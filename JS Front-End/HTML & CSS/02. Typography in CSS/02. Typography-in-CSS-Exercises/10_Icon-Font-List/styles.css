@@ -1,0 +1,53 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+
+html {
+    font: 18px/1.5 Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    font: inherit;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li.square-check::before {
+    content: '\f14a';
+    font-family: "Font Awesome 6 Free";
+    color: #2fcc71;
+    font-size: 20px;
+    margin-right: 5.40px;
+}
+
+li.star::before {
+    content: '\f005';
+    font-family: "Font Awesome 6 Free";
+    color: #ff7f50;
+    font-size: 20px;
+    margin-right: 5.40px;
+}
+
+li.envelope::before {
+    content: '\f0e0';
+    font-family: "Font Awesome 6 Free";
+    color: #3498da;
+    font-size: 20px;
+    margin-right: 5.40px;
+}
+
+li.twitter::before {
+    content: '\f099';
+    font-family: "Font Awesome 6 Free";
+    color: #3498da;
+    font-size: 20px;
+    margin-right: 5.40px;
+}
+
+li.linked-in::before {
+    content: '\f08c';
+    font-family: "Font Awesome 6 Free";
+    color: #3498da;
+    font-size: 20px;
+    margin-right: 5.40px;
+}
