@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            padding: 2em;
+        }
+
+        .container {
+            border: 2px solid #000;
+            padding: 2em;
+            position: relative;
+        }
+
+        .box {
+            border: 2px solid #060;
+            padding: 1em;
+            background-color: #eee;
+        }
+
+        .b2 {
+            position: absolute;
+            bottom:  0;
+            right: 0;
+        }
+
+        .b5 {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box b1">Line 1</div>
+        <div class="box b2">Line 2</div>
+        <div class="box b3">Line 3</div>
+        <div class="box b4">Line 4</div>
+        <div class="box b5">Line 5</div>
+    </div>
+</body>
+</html>

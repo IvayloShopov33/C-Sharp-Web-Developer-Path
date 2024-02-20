@@ -1,0 +1,15 @@
+body {
+    padding: 0 2em;
+    background-color: #add8e6;
+}
+
+.site {
+    max-width: 40em;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 2em;
+}
+
+.site-header, .site-content, .site-footer {
+    padding: 2em;
+}

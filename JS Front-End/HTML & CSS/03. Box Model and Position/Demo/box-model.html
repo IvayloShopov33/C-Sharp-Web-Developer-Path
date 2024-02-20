@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        body {
+            padding: 2em;
+        }
+
+        div {
+            padding: 2em;
+            border: 1px dashed #000;
+        }
+
+        .outside {
+            background-color: #f7b419;
+        }
+
+        .border {
+            background-color: #faebd7;
+        }
+
+        .padding {
+            background-color: #90ee90;
+        }
+
+        .content {
+            background-color: #add8e6;
+        }
+
+        .box {
+            border: 2px solid #000;           
+            margin: 2em auto;
+            padding: 0 0.5em 0 0.5em;
+            max-width: 50em;         
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outside">
+        <div class="border">
+            <div class="padding">
+                <div class="content">
+                    Some text here
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="box">
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque libero, quidem quis error minima
+            veritatis id explicabo excepturi, amet tenetur corporis dolore nesciunt adipisci odit cupiditate, deserunt
+            nihil ex a?
+        </p>
+    </div>
+</body>
+
+</html>
