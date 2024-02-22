@@ -1,0 +1,77 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.viewport {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.card {
+    max-width: 300px;
+    overflow: hidden;
+    border-radius: 0.4em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 1em 0.5em #808080;
+    border: 1px solid #ccc;
+}
+
+.card::before {
+    display: block;
+    content: '';
+    position: absolute;
+    inset: 0;
+    box-shadow: 0 0 1.5em 0.5em #000 inset;
+    opacity: 1;
+    transition: opacity 0.3s ease-in;
+}
+
+.card:hover::before {
+    opacity: 0;
+}
+
+.card svg {
+    display: block;
+    position: absolute;
+    width: 2em;
+    bottom: 1em;
+    right: 1em;
+    fill: #fff;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.3s ease-in;
+}
+
+.card svg:hover {
+    fill: #090;
+    transition: fill 0.5s ease-in;
+}
+
+.card:hover svg {
+    opacity: 1;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.viewport:first-child {
+    background-image: 
+    conic-gradient(
+      from 0deg at 0% 0% in oklch, 
+      oklch(75% 0.5 156) 0%, oklch(70% 0.5 261) 93% 93%);
+}
+
+.viewport:nth-child(2) {
+    background-image: 
+    radial-gradient(
+    farthest-corner circle at -72% 47% in oklch,
+    oklch(80% 0.30 8) 53% 53%, oklch(90% 0.30 82) 106% 106%);
+}

@@ -1,0 +1,15 @@
+html {
+    font: 1em/1.5 Georgia, serif;
+}
+
+body {
+    font: inherit;
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 80%;
+    background-color: #eeeeee;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding-top: 1.2em;
+}

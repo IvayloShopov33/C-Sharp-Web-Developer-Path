@@ -1,0 +1,50 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 2em;
+    background-color: #eee;
+}
+
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+nav ul ul ul {
+    top: 0;
+    left: 100%;
+    margin: -0.3em 0.2em;
+}
+
+nav > ul > li {
+    display: inline-block;
+}
+
+nav li {
+    display: block;
+    position: relative;
+    margin: 0.3em 0;
+}
+
+nav li:hover > ul {
+    display: block;
+}
+
+nav a {
+    display: block;
+    background-color: #369;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 0.3em;
+}
+
+nav li:hover > a, nav a:hover {
+    background-color: #69A;
+}

@@ -1,0 +1,26 @@
+body {
+    font: 16px/1.5 Helvetica, sans-serif;
+    background-color: #eeeeee;
+    color: #333333;
+    margin: 0 auto;
+    width: 90%;
+}
+
+article {
+    padding: 10px 20px;
+    float: left;
+    box-sizing: border-box;
+    width: 70%;
+}
+
+img {
+    display: block;
+    width: 70%;
+}
+
+aside {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    width: 30%;
+}

@@ -1,0 +1,22 @@
+section {
+    position: absolute;
+    top: 250px;
+    left: 180px;
+}
+
+h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+span {
+    font-size: 14px;
+    padding-left: 3px;
+    color: #808080;
+}
+
+div {
+    position: relative;
+    bottom: 50px;
+    left: 8px;
+}
