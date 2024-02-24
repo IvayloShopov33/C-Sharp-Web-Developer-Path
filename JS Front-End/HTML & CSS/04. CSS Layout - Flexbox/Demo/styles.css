@@ -1,0 +1,51 @@
+section, aside {
+    width: 50%;
+    border: 1px solid #090;
+}
+
+.site {
+    display: flex;
+    border: 2px solid #000;
+    margin: 2em auto;
+    padding: 1em;
+    max-width: 60em;
+}
+
+.first-container {
+    display: flex;
+    padding: 2em;
+    margin: 2em;
+    border: 2px solid #000;
+    gap: 2em 4em;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+}
+
+.first-container .item {
+    padding: 0.5em;
+    border: 1px solid #090;
+    flex-basis: 200px;
+}
+
+.second-container {
+    min-height: 100vh;
+    display: flex;
+    padding: 2em;
+    margin: 2em;
+    border: 2px solid #000;
+    flex-direction: column;
+}
+
+.second-container .item {
+    border: 1px solid #090;
+    padding: 0.5em;
+}
+
+.second-container .item:nth-child(3) {
+    flex-grow: 1;
+}
+
+.second-container .item:nth-child(4) {
+    margin-top: auto;
+}
