@@ -1,0 +1,74 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 15vw;
+    height: 19em;
+    gap: 0.3em;
+    margin: 2em;
+}
+
+.container > span {
+    border: 1px solid #000;
+    text-align: center;
+    padding: 0.3em 0;
+}
+
+.S {
+    order: 0;
+}
+
+.e {
+    order: 1;
+}
+
+.m {
+    order: 2;
+}
+
+.a {
+    order: 3;
+}
+
+.n {
+    order: 4;
+}
+
+.t {
+    order: 5;
+}
+
+.i {
+    order: 6;
+}
+
+.c {
+    order: 7;
+}
+
+.H {
+    order: 8;
+}
+
+.T {
+    order: 9;
+}
+
+.M {
+    order: 10;
+}
+
+.L {
+    order: 11;
+}

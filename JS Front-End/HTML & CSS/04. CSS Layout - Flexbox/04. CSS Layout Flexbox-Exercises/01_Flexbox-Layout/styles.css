@@ -1,0 +1,37 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #eee;
+    padding: 2em;
+    gap: 2em;
+}
+
+body > * {
+    padding: 1em;
+    background-color: #fff;
+    border-radius: 0.3em;
+    text-transform: uppercase;
+}
+
+body > header, body > footer {
+    flex-basis: 100%;
+    min-height: 100px;
+}
+
+body > main {
+    flex: 1 0 70%;
+}
+
+body > aside {
+    flex: 1 1 auto;
+}
+
+body > main, body > aside {
+    min-height: 300px;
+}
