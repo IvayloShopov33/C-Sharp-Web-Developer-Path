@@ -1,0 +1,84 @@
+.ui-fancy-quotes {
+    display: flex;
+    border: 2px solid #000;
+    gap: 2em;
+    flex-direction: column;
+}
+
+.ui-fancy-quotes main, .ui-fancy-quotes aside {
+    display: flex;
+    flex-direction: column;
+}
+
+.ui-fancy-quotes main {
+    gap: 2em;
+}
+
+.quote .author {
+    font-weight: bold;
+}
+
+.ui-fancy-quotes aside > .quote, .ui-fancy-quotes main > .quote {
+    flex-grow: 1;
+}
+
+.ui-fancy-quotes aside > .quote {
+    container: quote / inline-size;
+}
+
+.ui-fancy-quotes .quote {
+    display: flex;
+    gap: 2em;
+    background-color: #fff;
+    padding: 0.8em 1.2em;
+}
+
+.ui-fancy-quotes .quote blockquote::before {
+    display: block;
+    content: '\201C';
+    font-size: 4em;
+    line-height: 1;
+}
+
+.ui-fancy-quotes .media {
+    display: flex;
+    align-items: center;
+}
+
+.ui-fancy-quotes .quote .avatar {
+    display: block;
+    width: 8em;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #090;
+}
+
+@media (min-width: 750px) {
+    .ui-fancy-quotes {
+        flex-direction: row;
+    }
+}
+
+@container quote (min-width: 200px) {
+    .ui-fancy-quotes .quote .inner > .author-details {
+        display: flex;
+        border-top: 2px solid #ccc;
+        padding: 2em 1em;
+        gap: 1em;
+        margin-top: auto;
+    }
+
+    .ui-fancy-quotes .quote .inner {  
+        display: flex;
+        flex-direction: column;       
+    }
+
+    .ui-fancy-quotes .media {
+        width: 5em;
+    }
+
+    .ui-fancy-quotes .quote .inner .author-details .author-name > p {
+        padding-bottom: 1em;
+    }
+}
