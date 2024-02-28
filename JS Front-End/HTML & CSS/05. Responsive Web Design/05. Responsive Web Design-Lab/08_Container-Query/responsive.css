@@ -1,0 +1,13 @@
+.card h2 {
+  font-size: 1em;
+}
+
+.post {
+  container: post / inline-size;
+}
+
+@container post (min-width: 350px) {
+  .card h2 {
+    font-size: 10em;
+  }
+}
