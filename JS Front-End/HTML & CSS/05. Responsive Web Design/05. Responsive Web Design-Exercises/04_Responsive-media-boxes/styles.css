@@ -1,0 +1,65 @@
+html {
+    font-family: Helvetica, sans-serif;
+}
+
+body {
+    font: inherit;
+}
+
+h3 {
+    font: 1em/1.2 Georgia, serif;
+    font-weight: bold;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+section {
+    margin: 3em;
+    background-color: #fff;
+    max-width: 30em;
+    border-radius: 0.5em;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 1em 0.5em #ccc;
+}
+
+button {
+    align-self: flex-end;
+    background-color: #090;
+    color: #fff;
+    padding: 0.8em 0.5em;
+}
+
+.content {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 600px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 800px) {
+    html {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1300px) {
+    html {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 1800px) {
+    html {
+        font-size: 28px;
+    }
+}

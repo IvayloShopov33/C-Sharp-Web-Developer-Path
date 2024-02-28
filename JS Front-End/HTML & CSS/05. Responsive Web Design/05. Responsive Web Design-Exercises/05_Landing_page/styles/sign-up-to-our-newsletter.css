@@ -1,0 +1,39 @@
+.sign-up-to-our-newsletter {
+    background-color: #5e00b6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sign-up-to-our-newsletter header h3 {
+    flex-basis: 100%;
+    align-items: center;
+    color: #fff;
+    margin: auto;
+    margin-bottom: 0.4em;
+}
+
+.sign-up-to-our-newsletter-line {
+    align-self: center;
+    width: 5em;
+    border-bottom: 3px solid #000;
+    margin: auto;
+    margin-bottom: 2em;
+}
+
+.sign-up-to-our-newsletter-input {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2em;
+    gap: 1em;
+}
+.sign-up-to-our-newsletter-input input {
+    width: 15em;
+    margin-right: 1em;
+}
+
+.sign-up-to-our-newsletter button {
+    background-color: #fff;
+    padding: 0.3em 1.3em;
+    font-size: 1em;
+}

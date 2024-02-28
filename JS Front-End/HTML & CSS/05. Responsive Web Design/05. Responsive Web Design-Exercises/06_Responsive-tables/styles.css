@@ -1,0 +1,61 @@
+html {
+    font: 1em/1.25 "Open Sans", sans-serif;
+}
+
+body, input, table {
+    font: inherit;
+}
+
+body {
+    background-color: #f0f0f0;
+    padding: 2em 1em;
+}
+
+table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: auto;
+    width: 100%;
+}
+
+table tbody tr {
+    background-color: #fff;
+}
+
+table th, table tbody td {
+    border: 1px solid #afafaf;
+    padding: 0.625em;
+    text-align: center;
+}
+
+table thead th {
+    background-color: #2c2c2c;
+    color: #f8f8f8;
+    font-size: 1.2em;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: #dbdbdb;
+}
+
+@media (max-width: 600px) {
+    table, tbody, tr, th, td {
+        display: block;
+    }
+
+    table thead {
+        display: none;
+    }
+
+    table tbody td {
+        display: flex;
+    }
+
+    table tbody td::before {
+        display: inline-block;
+        content: attr(data-label);
+        font-weight: bold;
+        padding-right: 2em;
+        flex: 0 0 100px;
+    }
+}

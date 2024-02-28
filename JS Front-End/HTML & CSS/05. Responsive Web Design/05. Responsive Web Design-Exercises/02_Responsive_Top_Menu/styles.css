@@ -1,0 +1,86 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+article header, article main div > nav, article main div > ul, article footer {
+    padding: 2em;
+}
+
+article header, article main > div, article footer {
+    background-color: #0ff;
+}
+
+article header {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items: center;
+}
+
+article header > h1 {
+    align-self: flex-start;
+}
+
+article header nav > ul {
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    gap: 4em;
+}
+
+article header nav ul li > a {
+    text-decoration: none;
+}
+
+article footer {
+    padding: 1em;
+}
+
+article main div > h1 {
+    padding-left: 0.5em;
+    padding-top: 0.5em;
+}
+
+article main div nav > ul {
+    list-style: none;
+}
+
+article main div nav ul li > a {
+    text-decoration-line: none;
+}
+
+article main div nav ul > li {
+    padding-bottom: 1em;
+}
+
+article main div:last-child {
+    margin-top: 1em;
+}
+
+@media (min-width: 500px) {
+    article header {
+        flex-direction: row;
+    }
+
+    article header nav > ul {
+        flex-direction: row;
+    }
+
+    article main {
+        display: flex;       
+        gap: 1em;
+    }
+
+    article main div:last-child {
+        flex: 1 0 auto;
+        margin-top: -0.03em;
+    }
+}

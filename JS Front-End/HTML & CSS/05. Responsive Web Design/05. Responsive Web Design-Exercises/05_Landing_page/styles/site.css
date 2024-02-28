@@ -1,0 +1,39 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+@import url('reset.css');
+@import url('typography.css');
+@import url('background.css');
+@import url('site-title.css');
+@import url('navigation.css');
+@import url('need-a-website.css');
+@import url('team-and-testimonials.css');
+@import url('sign-up-to-our-newsletter.css');
+@import url('footer.css');
+
+.site{
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 600px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 800px) {
+    html {
+        font-size: 19px;
+    }
+}
+
+@media (min-width: 1300px) {
+    html {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1800px) {
+    html {
+        font-size: 22px;
+    }
+}

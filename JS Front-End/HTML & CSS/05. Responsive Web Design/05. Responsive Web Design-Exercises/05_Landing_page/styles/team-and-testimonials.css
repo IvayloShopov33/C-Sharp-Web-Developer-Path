@@ -1,0 +1,103 @@
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.our-team, .testimonials {
+    padding: 0 2em;
+    margin: auto; 
+}
+
+.cards {
+    padding-top: 3em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+.our-team header h3, .testimonials header h3 {
+    text-align: center;
+    width: 5em;
+    border-bottom: 3px solid #000;
+    margin: 2em auto;
+    padding-bottom: 1.5em;
+}
+
+.testimonials header h3 {
+    width: 6em;
+}
+
+.our-team h3, .testimonials header h3 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+}
+
+.team-card, .testimonials-card {
+    width: 30%;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.member-image, .testimonials-img {
+    margin: 0 auto 1.5em auto;
+    width: 8em;
+    height: 8em;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 0 0.5em 0.3em rgba(0, 0, 0, 0.2);
+}
+
+.member-name, .testimonials-name {
+    font-size: 1.3em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    padding-bottom: 0;
+}
+
+.member-position, .testimonials-position {
+    font-size: 0.9em;
+    color: #363636;
+}
+
+.member-description, .testimonials-info {
+    font-size: 1em;
+    font-family: Geneva, Tahoma, sans-serif;
+    font-style: italic;
+}
+
+@media (min-width: 800px) {
+    .team_card, .testimonials-card {
+        width: 40%;
+        text-align: center;
+        font-size: 1.2em;
+    }
+
+    .team_img, .testimonials-img {
+        width: 6.5em;
+        height: 6.5em;
+    }
+
+}
+
+@media (min-width: 1000px) {
+    .team_card, .testimonials-card {
+        width: 30%;
+        text-align: center;
+        font-size: 1.4em;
+    }
+
+    .team_img, .testimonials-img {
+        width: 8em;
+        height: 8em;
+    }
+
+}
+
+@media (min-width: 1800px) {
+    .our-team, .testimonials {
+      padding: 0 10em;
+    }    
+}

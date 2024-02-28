@@ -1,0 +1,19 @@
+.site header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 2em;
+}
+
+header span {
+    font-size: 2em;
+    color: #d43ae9;
+}
+
+header p {
+    text-transform: uppercase;
+    font-family: Geneva, Tahoma, sans-serif;
+    font-size: 0.65em;
+    font-weight: 400;
+    color: #646363;
+    letter-spacing: -1px;
+}

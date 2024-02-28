@@ -1,0 +1,38 @@
+html {
+    background:
+        repeating-linear-gradient(45deg, #0000 calc(-650%/13) calc(50%/13), rgba(216, 216, 216, 0.36) 0 calc(100%/13),
+            #0000 0 calc(150%/13), rgba(216, 216, 216, 0.36) 0 calc(200%/13),
+            #0000 0 calc(250%/13), rgba(216, 216, 216, 0.36) 0 calc(300%/13)), repeating-linear-gradient(45deg, #0000 calc(-650%/13) calc(50%/13), rgba(216, 216, 216, 0.36) 0 calc(100%/13),
+            #0000 0 calc(150%/13), rgba(216, 216, 216, 0.36) 0 calc(200%/13),
+            #0000 0 calc(250%/13), rgba(216, 216, 216, 0.36) 0 calc(300%/13)) 24px 24px,
+        repeating-linear-gradient(-45deg, #0000 calc(-650%/13) calc(50%/13), rgba(216, 216, 216, 0.36) 0 calc(100%/13),
+            #0000 0 calc(150%/13), rgba(216, 216, 216, 0.36) 0 calc(200%/13),
+            #0000 0 calc(250%/13), rgba(216, 216, 216, 0.36) 0 calc(300%/13)), repeating-linear-gradient(-45deg, #0000 calc(-650%/13) calc(50%/13), rgba(216, 216, 216, 0.36) 0 calc(100%/13),
+            #0000 0 calc(150%/13), rgba(216, 216, 216, 0.36) 0 calc(200%/13),
+            #0000 0 calc(250%/13), rgba(216, 216, 216, 0.36) 0 calc(300%/13)) 24px 24px #ffffff;
+    background-size: 48px 48px;
+
+}
+
+.testimonials {
+    background:
+        conic-gradient(at 10% 50%, #0000 75%, #ffffff 0),
+        conic-gradient(at 10% 50%, #0000 75%, #ffffff 0) calc(1*56px) calc(3*56px),
+        conic-gradient(at 10% 50%, #0000 75%, #ffffff 0) calc(2*56px) calc(1*56px),
+        conic-gradient(at 10% 50%, #0000 75%, #ffffff 0) calc(3*56px) calc(4*56px),
+        conic-gradient(at 10% 50%, #0000 75%, #ffffff 0) calc(4*56px) calc(2*56px),
+        conic-gradient(at 50% 10%, #0000 75%, #ffffff 0) 0 calc(4*56px),
+        conic-gradient(at 50% 10%, #0000 75%, #ffffff 0) calc(1*56px) calc(2*56px),
+        conic-gradient(at 50% 10%, #0000 75%, #ffffff 0) calc(2*56px) 0,
+        conic-gradient(at 50% 10%, #0000 75%, #ffffff 0) calc(3*56px) calc(3*56px),
+        conic-gradient(at 50% 10%, #0000 75%, #ffffff 0) calc(4*56px) calc(1*56px),
+        rgba(237, 237, 237, 0.45);
+    background-size: 280px 280px;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+}

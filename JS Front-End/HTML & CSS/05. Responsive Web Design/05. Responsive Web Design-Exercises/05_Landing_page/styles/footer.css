@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    gap: 2em;
+    box-shadow: 0 0 0.8em 1em rgba(0, 0, 0, 0.2);
+    padding: 1em 2em;
+    font-family: Geneva, Tahoma, sans-serif;
+    font-size: 1.2em;
+}
+
+.footer-header {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-title {
+    font-family: 'Patua One', serif;
+    padding-bottom: 0.4em;
+}
+
+.footer-map-header,
+.footer-contacts .footer-contacts-header {
+    font-size: 1.3em;
+    font-family: 'Patua One', serif;
+    padding-bottom: 0.1em;
+}
+
+.footer-map-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-map-content span {
+    width: 50%;
+    padding-bottom: 0.2em;
+}
+
+.footer-contacts a {
+    display: block;
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+
+.footer-contacts a ul {
+    position: relative;
+    list-style: none;
+    top: -1.4em;
+}
+
+.footer-contacts a span {
+    padding-left: 0.5em;
+}
+
+@media (min-width: 1200px) {
+
+    footer {
+        padding-top: 2em;
+        padding-bottom: 0;
+        flex-direction: row;
+        gap: 2em;
+    }
+
+    .footer-header {
+        flex: 1 1 30%;
+    }
+
+    .footer-map {
+        flex: 1 1 30%;
+    }
+
+    .footer-contacts {
+        flex: 1 1 30%;
+    }
+}
+
+@media (min-width: 1800px){
+    footer {
+       padding: 2em 10% 0 10%;
+    }
+}
