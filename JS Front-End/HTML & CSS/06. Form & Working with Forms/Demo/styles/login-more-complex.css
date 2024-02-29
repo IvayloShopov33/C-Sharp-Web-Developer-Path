@@ -1,0 +1,96 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: 14px/1.5 Lato, sans-serif;
+}
+
+body, input, button {
+    font: inherit;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    min-height: 100vh;
+    background-color: #eee;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    background-color: #fff;
+    border-radius: 0.3em;
+    padding: 2em;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    line-height: 1;
+    padding-bottom: 0.2em;
+}
+
+.field .helper {
+    font-size: 0.9em;
+    font-style: italic;
+    opacity: 0.3;
+    transition: opacity 0.3s ease-in;
+}
+
+input:is([type="text"], [type="password"]) {
+    display: block;
+    width: 100%;
+    padding: 0.5em 1em;
+    border: 2px solid #ccc;
+    border-radius: 0.2em;
+    outline: none;
+
+    &:user-invalid {
+        border-color: #f00;
+    }
+
+    &:user-valid {
+        border-color: #090;
+    }
+
+    &:focus {
+        border-color: #ffa500;
+
+        & ~ .helper {
+            opacity: 1;
+        }
+    }
+}
+
+.field:has(input:user-invalid) label {
+    color: #f00;
+}
+
+.field:has(input:user-valid) label {
+    color: #090;
+}
+
+.field:has(input:focus) label {
+    color: #ffa500;
+}
+
+input[type="submit"] {
+    display: block;
+    padding: 0.5em 1em;
+    border-radius: 0.2em;
+    background-color: #eee;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+input[type="submit"]:focus {
+    background-color: #ffa500;
+}

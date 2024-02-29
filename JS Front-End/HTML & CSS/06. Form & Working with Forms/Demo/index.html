@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with Forms - Demo</title>
+</head>
+
+<body>
+    <h1>Working with Forms - Demo</h1>
+
+    <h2>Search by Google</h2>
+    <form action="https://www.google.com/search" method="get">
+        <fieldset>
+            <legend>My first set of form elements</legend>
+
+            <label for="search-field">Search for:</label>
+            <input type="text" name="q" id="search-field">
+            <input type="submit" value="Search">
+        </fieldset>
+    </form>
+
+    <h2>Radio Buttons</h2>
+    <form action="#" method="get">
+        <p>Pick your poison:</p>
+        <input type="radio" name="poison" value="Option 1" id="poison-option1">
+        <label for="poison-option1">Beer</label>
+
+        <input type="radio" name="poison" value="Option 2" id="poison-option2">
+        <label for="poison-option2">Whiskey</label>
+
+        <input type="radio" name="poison" value="Option 3" id="poison-option3" checked>
+        <label for="poison-option3">Vodka</label>
+
+        <p>
+            <input type="submit" value="Let's go!">
+        </p>
+    </form>
+
+    <h2>Checkboxes</h2>
+
+    <form action="#" method="get">
+        <p>Pick your poison:</p>
+        <input type="checkbox" value="Poison2-ption 1" id="poison2-option1">
+        <label for="poison2-option1">Beer</label>
+
+        <input type="checkbox" value="Poison2-option 2" id="poison2-option2">
+        <label for="poison2-option2">Whiskey</label>
+
+        <input type="checkbox" value="Poison2-option 3" id="poison2-option3">
+        <label for="poison2-option3">Vodka</label>
+
+        <p>
+            <input type="submit" value="Let's go!">
+        </p>
+    </form>
+
+    <select name="city" id="city-select">
+        <option>Please pick a city</option>
+        <option value="sofia" selected>Sofia</option>
+        <option value="plovdiv">Plovdiv</option>
+    </select>
+
+    <p>
+        <form action="#">
+            <input type="text" name="username" id="login-username" placeholder="Username" required>
+            <input type="text" name="password" id="login-password" placeholder="Password" required>
+
+            <input type="submit" value="Login">
+        </form>
+    </p>
+
+    <p>
+        <input type="range" id="volume" min="0" max="10">
+        <label for="volume">Volume</label>
+    </p>
+</body>
+
+</html>

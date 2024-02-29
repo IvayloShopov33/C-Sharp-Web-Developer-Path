@@ -1,0 +1,104 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: 14px/1.5 Lato, sans-serif;
+}
+
+body, input, button {
+    font: inherit;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    min-height: 100vh;
+    background-color: #eee;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    background-color: #fff;
+    border-radius: 0.3em;
+    padding: 2em;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    line-height: 1;
+    padding-bottom: 0.2em;
+}
+
+input[type="text"], input[type="password"] {
+    display: block;
+    padding: 0.5em 1em;
+    border: 2px solid #ccc;
+    border-radius: 0.2em;
+    outline: none;
+}
+
+input[type="text"]:valid , input[type="password"]:valid {
+    border-color: #090;
+}
+
+input[type="text"]:focus , input[type="password"]:focus {
+    border-color: #ffa500;
+}
+
+input[type="text"]:focus ~ .helper, input[type="password"]:focus ~ .helper{
+    border-color: #ffa500;
+    opacity: 1;
+}
+
+input[type="text"]:invalid , input[type="password"]:invalid {
+    border-color: #f00;
+}
+
+input[type="text"]:valid ~ label, input[type="password"]:valid ~ label{
+    color: #090;
+}
+
+input[type="text"]:focus ~ label, input[type="password"]:focus ~ label {
+    color: #ffa500;
+}
+
+input[type="text"]:invalid ~ label, input[type="password"]:invalid ~ label{
+    color: #f00;
+}
+
+input[type="submit"] {
+    display: block;
+    padding: 0.5em 1em;
+    border-radius: 0.2em;
+    background-color: #eee;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+input[type="submit"]:focus {
+    background-color: #ffa500;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.field label {
+    order: -1;
+}
+
+.field .helper {
+    font-size: 0.9em;
+    font-style: italic;
+    opacity: 0.5;
+}
