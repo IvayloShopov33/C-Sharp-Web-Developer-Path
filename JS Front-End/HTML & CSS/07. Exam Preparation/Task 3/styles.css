@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Serif');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: 20px/1.5 "PT Sans", sans-serif;
+}
+
+body {
+    background-image: url('images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "PT Serif", serif; 
+}
+
+.site-section.columns h2, .site-section.sponsors h2, .site-section.partners h2 {
+    padding-bottom: 1em;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+} 
+
+.site-section.banner {
+    padding-bottom: 12em;
+}
+
+.site-section.banner .container {
+    color: #fff;
+    text-align: center;
+}
+
+.site-section.banner h2 {
+    font-size: 3.4em;
+    font-weight: normal;
+    line-height: 1.26;
+    margin-bottom: 1rem;
+}
+
+.site-section.banner p {
+    font-size: 1.2em;
+    max-width: 39.5rem;
+}
+
+.site-section {
+    padding: 2em;
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.site-header nav ul {
+    display: flex;
+}
+
+.site-header nav li {
+    list-style: none outside;
+}
+
+.site-header nav a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0 0.5em;
+}
+
+.site-title a {
+    display: block;
+    width: 130px;
+    height: 110px;
+    overflow: hidden;
+    text-indent: -200vw;
+    background-image: url('images/logo.webp');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.site-section.columns {
+    padding: 6em 0;
+    border-bottom: 2px solid #ccc;
+    background-color: #fff;
+}
+
+.site-section.columns .column a {
+    display: inline-block;
+    text-decoration: none;
+    color: #B0825C;
+    border: 1px solid #B0825C;
+    margin-top: 2em;
+    padding: 0 1em;
+}
+
+.site-section.columns .column h2 {
+    color: #37282B;
+}
+
+.site-section.columns .row {
+    display: flex;
+    gap: 2em;
+}
+
+.site-footer .row {
+    display: flex;
+    gap: 4em;
+}
+
+.site-section.sponsors {
+    padding-top: 4em;
+}
+
+.site-section.sponsors .container figure {
+    display: block;
+    overflow: hidden;
+    width: 7.5em;
+    height: auto;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    background-color: #DDDDDD;
+    padding: 1em;
+}
+
+.site-section.sponsors .image-container {
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+    margin-top: 3em;
+}
+
+.site-section.sponsors .container figure img {
+    width: 100%;
+    height: auto;
+}
+
+.site-section.partners {
+    padding-bottom: 4em;
+}
+
+.site-section.sponsors, .site-section.partners {
+    text-align: center;
+    background-color: #fff;
+}
+
+.site-section.sponsors .container h2, .site-section.partners .container h2 {
+    color: #B0825C;
+}
+
+.site-footer {
+    background-color: #171720;
+    color: #fff;  
+    border-top: 1px solid rgb(255, 255, 255, 0.3);
+}
+
+.site-footer h4 {
+    padding-bottom: 1.5em;
+}
+
+.site-footer ul li {
+    list-style: none outside;
+}
+
+.site-footer .container p {
+    padding: 0.5em 0;
+}
