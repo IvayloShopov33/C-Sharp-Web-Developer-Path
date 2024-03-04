@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: 18px/1.5 Karla, sans-serif;
+}
+
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/poster.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top center;
+}
+
+h1, h2, h3, h4, h5, h6, .site-heading {
+    font-family:'Cormorant Infant', serif;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+} 
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1em;
+    padding-left: 3em;
+    padding-right: 2em;
+    line-height: 1;
+}
+
+.site-header nav ul {
+    display: flex;
+    padding-top: 0.8em;
+}
+
+.site-header nav li {
+    list-style: none outside;
+}
+
+.site-header nav a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0 1.2em;
+}
+
+.site-title a {
+    display: block;
+    width: 100px;
+    height: 95px;
+    overflow: hidden;
+    text-indent: -200vw;
+    background-image: url('images/logo.webp');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.site-section.banner .container .site-heading {
+    font-size: 90px;
+    font-weight: bold;
+}
+
+.site-section.banner .container .subtitle {
+    padding-top: 10em;
+}
+
+.site-section.banner .container {
+    padding-top: 20em;
+    color: #fff;
+    text-align: center;
+}
+
+.site-section.banner {
+    padding-bottom: 5em;
+}
+
+.site-section.quotes {
+    background-color: #F8F0E9;
+    padding: 2em 0 4em 0;
+    display: flex;
+}
+
+.site-section.quotes .container .quote {
+    padding-top: 1.2em;
+    font-family: 'Cormorant Infant', serif;
+    font-size: 60px;
+    font-weight: 600;
+    font-style: italic;
+    line-height: 1;
+}
+
+.site-section.first-red-row {
+    text-align: center;
+    color: #fff;
+    background-color: #E14747;
+    padding: 3em 0;
+}
+
+.site-section.first-red-row .support {
+    padding-bottom: 1.3em;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: Karla, sans-serif;
+}
+
+.site-section.centered-container {
+    padding: 3em 0 2em 0;
+    background-color: #F8F0E9;
+    text-align: center;
+}
+
+.site-section.centered-container img {
+    width: 610px;
+    height: 460px;
+}
+
+.site-section.centered-container .third-heading {
+    padding: 1.3em 0;
+    font-size: 50px;
+    line-height: 1;
+    font-family: 'Cormorant Infant', serif;
+    font-weight: 600;
+}
+
+.site-section.centered-container .add-info {
+    font-size: 1.2em;
+    margin: 0 auto;
+    max-width: 610px;
+    text-align: start;
+    line-height: 1.3;
+}
+
+.site-section.centered-container .buttons {
+    padding-top: 3em;
+    width: 610px;
+    height: 230px;
+    margin: 0 auto;
+    text-align: start;
+    display: flex;
+    gap: 4em;
+    margin-bottom: 2em;
+}
+
+.site-section.centered-container .buttons .first-button {
+    align-self: start;
+}
+
+.site-section.centered-container .buttons .second-button {
+    align-self: flex-end;
+}
+
+.site-section.centered-container .buttons a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.3em 1em;
+    background-color: #fff;
+    border: 1px solid #000;
+    color: #000;
+}
+
+.site-section.second-red-row {
+    background-color: #E14747;
+    text-align: center;
+    color: #fff;
+}
+
+.site-section.second-red-row .fourth-heading {
+    font-family: 'Cormorant Infant', serif;
+    font-weight: bold;
+    font-size: 2.4em;
+    padding: 1.3em 0;
+}
+
+.site-section.second-red-row .info {
+    font-weight: 400;
+}
+
+.site-section.second-red-row .button {
+    display: inline-block;
+    padding: 0.4em 1em;
+    border-radius: 1em;
+    text-decoration: none;
+    color: #000;
+    background-color: #FAD87A;
+    margin: 5em 0 3.9em 0;
+}
+
+.site-footer {
+    background-color: #352B2A;
+    color: #fff;
+}
+
+.site-footer ul {
+    list-style: none outside;
+    padding: 3em 5em;
+}
+
+.site-footer ul li img {
+    width: 90px;
+    height: 50px;
+    margin-bottom: 1.5em;
+}
+
+.site-footer ul li p.copyright {
+    padding-top: 2em;
+    color: #6D5E57;
+}
