@@ -1,0 +1,16 @@
+.orange {
+    height: 200px;
+    background: #ffa500;
+    padding: 40px;
+}
+
+.green {
+    height: 100px;
+    background: #090;
+    padding: 40px;
+}
+
+.yellow {
+    background: #ff0;
+    padding: 40px;
+}
