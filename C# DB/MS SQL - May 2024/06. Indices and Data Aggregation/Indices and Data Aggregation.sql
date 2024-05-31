@@ -15,7 +15,7 @@ SELECT d.[Name], SUM([Salary]) AS [TotalSalaries], COUNT(*) AS [EmployeesTotalCo
 	HAVING SUM([Salary]) > 150000
 
 --Exercises
---PROBLEM 01 - Records’ Count
+--PROBLEM 01 - Recordsâ€™ Count
 USE [Gringotts]
 SELECT COUNT(*) AS [Count]
 	FROM [WizzardDeposits]
@@ -145,7 +145,7 @@ SELECT DISTINCT e.[DepartmentID], e.[Salary]
 SELECT TOP(10) e.[FirstName], e.[LastName], e.[DepartmentID]
 	FROM [Employees] e
 	WHERE e.[Salary] > (SELECT AVG([Salary])
-							FROM [Employees]
-							WHERE [DepartmentID] = e.[DepartmentID]
-							GROUP BY [DepartmentID])
+				FROM [Employees]
+				WHERE [DepartmentID] = e.[DepartmentID]
+				GROUP BY [DepartmentID])
 	ORDER BY e.[DepartmentID]
