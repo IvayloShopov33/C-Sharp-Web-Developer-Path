@@ -100,14 +100,14 @@ UPDATE c
 DELETE
 	FROM [LibrariesBooks]
 	WHERE [BookId] IN (SELECT b.[Id] FROM [Books] b
-							JOIN [Authors] a ON a.[Id] = b.[AuthorId]
-							WHERE a.[Name] = 'Alex Michaelides')
+				JOIN [Authors] a ON a.[Id] = b.[AuthorId]
+				WHERE a.[Name] = 'Alex Michaelides')
 
 DELETE
 	FROM [Books]
 	WHERE [Id] IN (SELECT b.[Id] FROM [Books] b
-						JOIN [Authors] a ON a.[Id] = b.[AuthorId]
-						WHERE a.[Name] = 'Alex Michaelides')
+			 	JOIN [Authors] a ON a.[Id] = b.[AuthorId]
+			    	WHERE a.[Name] = 'Alex Michaelides')
 
 DELETE
 	FROM [Authors]
