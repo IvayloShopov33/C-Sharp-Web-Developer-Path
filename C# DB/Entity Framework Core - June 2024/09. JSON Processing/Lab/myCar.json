@@ -1,0 +1,16 @@
+{
+  "Model": "Clio",
+  "Vendor": "Renault",
+  "Price": 2345.67,
+  "ManufacturedOn": "2024-07-13T21:05:16.8844429Z",
+  "Extras": [
+    "4x4",
+    "Lights",
+    "Trunk",
+    "climate control"
+  ],
+  "Engine": {
+    "HorsePower": 108,
+    "Volume": 1.9
+  }
+}
