@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<library xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <book>
+    <title>1984</title>
+    <author>George Orwell</author>
+    <isbn>9781443434973</isbn>
+    <price>19.99</price>
+  </book>
+  <book>
+    <title>Under the Yoke</title>
+    <author>Ivan Vazov</author>
+    <isbn>9781784351076</isbn>
+    <price>29.99</price>
+  </book>
+</library>
