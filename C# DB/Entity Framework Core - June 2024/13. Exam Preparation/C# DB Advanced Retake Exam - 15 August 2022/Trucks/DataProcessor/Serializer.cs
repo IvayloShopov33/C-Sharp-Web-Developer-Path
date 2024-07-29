@@ -1,10 +1,10 @@
 ﻿namespace Trucks.DataProcessor
 {
     using Newtonsoft.Json;
+    using System.Xml.Serialization;
 
     using Data;
     using Trucks.DataProcessor.ExportDto;
-    using System.Xml.Serialization;
 
     public class Serializer
     {
