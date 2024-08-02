@@ -1,11 +1,12 @@
 ﻿
 namespace Artillery.DataProcessor
 {
-    using Artillery.Data;
-    using Data.Models.Enums;
-    using Artillery.DataProcessor.ExportDto;
-    using Newtonsoft.Json;
     using System.Xml.Serialization;
+    using Newtonsoft.Json;
+    
+    using Data.Models.Enums;
+    using Artillery.Data;
+    using Artillery.DataProcessor.ExportDto;
 
     public class Serializer
     {
