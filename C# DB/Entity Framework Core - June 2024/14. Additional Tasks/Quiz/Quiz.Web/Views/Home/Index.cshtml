@@ -1,0 +1,39 @@
+﻿@model IEnumerable<UserQuizViewModel>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome!</h1>
+</div>
+
+<table class="table table-sm table-striped table-hover table-bordered">
+    <thead>
+        <tr>
+            <th>Quiz Name</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var quiz in Model) 
+        {
+            <tr>
+                <td>@quiz.QuizTitle</td>
+                <td>
+                    @if (quiz.QuizStatus == QuizStatus.NotStarted)
+                    {
+                        <a asp-controller="Quiz" asp-action="Test" asp-route-id="@quiz.QuizId" class="btn btn-success">Start Test</a>
+                    }
+                    else if (quiz.QuizStatus == QuizStatus.InProgress)
+                    {
+                        <a asp-controller="Quiz" asp-action="Test" asp-route-id="@quiz.QuizId" class="btn btn-warning">Continue Test</a>
+                    }
+                    else
+                    {
+                        <a asp-controller="Quiz" asp-action="Results" asp-route-id="@quiz.QuizId" class="btn btn-secondary">View Results</a>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

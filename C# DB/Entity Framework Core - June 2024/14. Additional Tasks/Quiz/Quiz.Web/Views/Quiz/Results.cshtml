@@ -1,0 +1,34 @@
+﻿@model int
+@{
+    ViewData["Title"] = "Results";
+}
+
+@{
+    var maxPoints = 17;
+    var userPoints = Model;
+    var pointsPercentage = ((decimal)userPoints / maxPoints) * 100;
+    var pointsPercentageFormattedString = $"{pointsPercentage:f2}";
+}
+
+@if (pointsPercentage <= 50)
+{
+    <h1>Too bad! Your points are: @Model</h1>
+}
+else if (pointsPercentage <= 65)
+{
+    <h1>Good result! Your points are: @Model</h1>
+}
+else if (pointsPercentage <= 85)
+{
+    <h1>Very good result! Your points are: @Model</h1>
+}
+else if (pointsPercentage <= 99)
+{
+    <h1>Excellent result! Your points are: @Model</h1>
+}
+else
+{
+    <h1>Congratulations! You reached the maximum possible score! Your points are: @Model</h1>
+}
+
+<h2>Your percentage score is: @pointsPercentageFormattedString%</h2>
