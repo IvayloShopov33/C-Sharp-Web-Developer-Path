@@ -24,7 +24,6 @@ namespace _6_task
                                 Console.WriteLine($"{a}{b}{c}{d}");
                                 return;
                             }
-
                             else if (product / sum == 3 && n % 3 == 0)
                             {
                                 Console.WriteLine($"{d}{c}{b}{a}");
