@@ -9,6 +9,7 @@ namespace _1._Sign_of_Integer_Numbers
             int number = int.Parse(Console.ReadLine());
             PositiveNegativeOrZero(number);
         }
+        
         static void PositiveNegativeOrZero(int number)
         {
             if (number>0)
