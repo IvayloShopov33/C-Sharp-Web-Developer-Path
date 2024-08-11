@@ -9,8 +9,10 @@ namespace _6.__Tri_bit_Switch
             int inputNumber = int.Parse(Console.ReadLine());
             int initialPosition = int.Parse(Console.ReadLine());
             string numberToBinary = Convert.ToString(inputNumber, 2);
+            
             char[] binaryToCharArray = numberToBinary.ToCharArray();
             Array.Reverse(binaryToCharArray);
+            
             for (int i = initialPosition; i < initialPosition+3; i++)
             {
                 if (binaryToCharArray[i]=='0')
@@ -22,8 +24,10 @@ namespace _6.__Tri_bit_Switch
                     binaryToCharArray[i] = '0';
                 }
             }
+            
             Array.Reverse(binaryToCharArray);
             string newDecimalNumberToString = string.Empty;
+            
             for (int i = 0; i < binaryToCharArray.Length; i++)
             {
                 newDecimalNumberToString += binaryToCharArray[i];
