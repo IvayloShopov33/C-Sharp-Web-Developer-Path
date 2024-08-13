@@ -13,5 +13,7 @@ namespace BlogApp.Data
         }
 
         public DbSet<Article> Articles { get; set; } = null!;
+
+        public DbSet<ApplicationUser> ApplicationUsers { get; set; } = null!;
     }
 }
