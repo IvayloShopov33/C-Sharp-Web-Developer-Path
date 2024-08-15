@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace ConsoleApp2
+namespace 2._Nums_1_10
 {
     class Program
     {
