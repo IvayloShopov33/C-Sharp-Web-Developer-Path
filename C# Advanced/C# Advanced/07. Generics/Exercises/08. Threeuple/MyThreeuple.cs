@@ -1,0 +1,23 @@
+﻿namespace _08._Threeuple
+{
+    public class MyThreeuple<T1, T2, T3>
+    {
+        public MyThreeuple(T1 firstItem, T2 secondItem, T3 thirdItem)
+        {
+            this.FirstItem = firstItem;
+            this.SecondItem = secondItem;
+            this.ThirdItem = thirdItem;
+        }
+
+        public T1 FirstItem { get; set; }
+
+        public T2 SecondItem { get; set; }
+
+        public T3 ThirdItem { get; set; }
+
+        public string GetItems()
+        {
+            return $"{this.FirstItem} -> {this.SecondItem} -> {this.ThirdItem}";
+        }
+    }
+}
