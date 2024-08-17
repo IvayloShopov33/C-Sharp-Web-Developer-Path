@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ConsoleApp4
 {
@@ -11,6 +9,7 @@ namespace ConsoleApp4
             //inches to centimeters
             double i = double.Parse(Console.ReadLine());
             double c = i * 2.54;
+            
             Console.WriteLine(c);
         }
     }
