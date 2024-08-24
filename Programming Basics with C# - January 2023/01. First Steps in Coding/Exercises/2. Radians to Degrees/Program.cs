@@ -8,6 +8,7 @@ namespace _02._Radians_to_Degrees
         {
             double radians = double.Parse(Console.ReadLine());
             double degrees = radians * 180 / Math.PI;
+            
             Console.WriteLine(degrees);
         }
     }
