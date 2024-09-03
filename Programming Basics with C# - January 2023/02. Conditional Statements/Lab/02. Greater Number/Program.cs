@@ -8,7 +8,8 @@ namespace _02._Greater_Number
         {
             int a = int.Parse(Console.ReadLine());
             int b = int.Parse(Console.ReadLine());
-            if (a>b)
+            
+            if (a > b)
             {
                 Console.WriteLine(a);
             }
