@@ -7,7 +7,8 @@ namespace _03._Even_or_Odd
         static void Main(string[] args)
         {
             int a = int.Parse(Console.ReadLine());
-            if (a%2==0)
+            
+            if (a % 2 == 0)
             {
                 Console.WriteLine("even");
             }
