@@ -1,4 +1,4 @@
-C# Web Server
+# C# Web Server
 A simple C# web server created for educational purposes.
 
 Steps to create a similar web server from scratch:
@@ -43,4 +43,4 @@ Steps to create a similar web server from scratch:
 38. Add advanced view engine features - conditionals statements and loops
 39. Introduce user information during view rendering
 
-This project is inspired by Ivaylo Kenov. Here is the link of his repository: https://github.com/ivaylokenov/CSharp-Web-Server
+This project is inspired by **Ivaylo Kenov**. Here is the **link** of his repository: https://github.com/ivaylokenov/CSharp-Web-Server
