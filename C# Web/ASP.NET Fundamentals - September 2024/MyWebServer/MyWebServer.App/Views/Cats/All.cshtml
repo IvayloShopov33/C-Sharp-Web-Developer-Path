@@ -1,0 +1,14 @@
+﻿<h1>All cats:</h1>
+
+<ul>
+    @foreach (var cat in Model)
+    {
+        <li>
+            @cat.Name is @cat.Age years old
+            @if (cat.Age == 13)
+            {
+                <span> - I am the biggest cat in the group!</span>
+            }
+        </li>
+    }
+</ul>
