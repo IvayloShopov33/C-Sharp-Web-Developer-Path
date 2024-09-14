@@ -9,14 +9,18 @@ namespace _05._Godzilla_vs._Kong
             double budget = double.Parse(Console.ReadLine());
             int extras = int.Parse(Console.ReadLine());
             double outfitExtraPrice = double.Parse(Console.ReadLine());
+
             double decorPrice = budget * 0.1;
             double outfitPrice = extras * outfitExtraPrice;
-            if (extras>150)
+
+            if (extras > 150)
             {
-                outfitPrice = outfitPrice - outfitPrice * 0.1;
+                outfitPrice -= outfitPrice * 0.1;
             }
+
             double sum = decorPrice + outfitPrice;
-            if (sum<=budget)
+
+            if (sum <= budget)
             {
                 Console.WriteLine("Action!");
                 Console.WriteLine($"Wingard starts filming with {budget-sum:f2} leva left.");
