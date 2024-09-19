@@ -21,7 +21,6 @@ namespace _03._Animal_Type
                     Console.WriteLine("unknown");
                     break;
             }
-
         }
     }
 }
