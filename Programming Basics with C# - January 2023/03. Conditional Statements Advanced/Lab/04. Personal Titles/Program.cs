@@ -8,9 +8,10 @@ namespace _04._Personal_Titles
         {
             double age = double.Parse(Console.ReadLine());
             string gender = Console.ReadLine();
-            if (gender=="m")
+            
+            if (gender == "m")
             {
-                if (age<16)
+                if (age < 16)
                 {
                     Console.WriteLine("Master");
                 }
@@ -19,9 +20,9 @@ namespace _04._Personal_Titles
                     Console.WriteLine("Mr.");
                 }
             }
-            else if (gender=="f")
+            else if (gender == "f")
             {
-                if (age<16)
+                if (age < 16)
                 {
                     Console.WriteLine("Miss");
                 }
