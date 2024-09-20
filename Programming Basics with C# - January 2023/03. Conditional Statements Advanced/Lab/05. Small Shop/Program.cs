@@ -10,30 +10,31 @@ namespace _05._Small_Shop
             string town = Console.ReadLine();
             double quantity = double.Parse(Console.ReadLine());
             double price = 0;
-            if (town=="Sofia")
+            
+            if (town == "Sofia")
             {
-                if (product=="coffee")
+                if (product == "coffee")
                 {
-                    price=0.5;
+                    price = 0.5;
                 }
-                else if(product=="water")
+                else if (product == "water")
                 {
                     price = 0.8;
                 }
-                else if (product=="beer")
+                else if (product == "beer")
                 {
                     price = 1.2;
                 }
-                else if (product=="sweets")
+                else if (product == "sweets")
                 {
                     price = 1.45;
                 }
-                else if (product=="peanuts")
+                else if (product == "peanuts")
                 {
                     price = 1.6;
                 }
             }
-            else if (town=="Plovdiv")
+            else if (town == "Plovdiv")
             {
                 if (product == "coffee")
                 {
@@ -56,7 +57,7 @@ namespace _05._Small_Shop
                     price = 1.5;
                 }
             }
-            else if (town=="Varna")
+            else if (town == "Varna")
             {
                 if (product == "coffee")
                 {
@@ -79,6 +80,7 @@ namespace _05._Small_Shop
                     price = 1.55;
                 }
             }
+            
             double totalPrice = quantity * price;
             Console.WriteLine(totalPrice);
         }
