@@ -8,14 +8,15 @@ namespace _07.Working_Hours
         {
             int hour = int.Parse(Console.ReadLine());
             string day = Console.ReadLine();
-            if (hour>=10 && hour<=18)
+            
+            if (hour >= 10 && hour <= 18)
             {
-                if (day=="Monday" || day=="Tuesday" || day=="Wednesday" || day=="Thursday" || day=="Friday" 
-                    || day=="Saturday")
+                if (day == "Monday" || day == "Tuesday" || day == "Wednesday" || 
+                    day == "Thursday" || day == "Friday" || day == "Saturday")
                 {
                     Console.WriteLine("open");
                 } 
-                else if(day=="Sunday")
+                else if (day == "Sunday")
                 {
                     Console.WriteLine("closed");
                 }
@@ -24,7 +25,6 @@ namespace _07.Working_Hours
             {
                 Console.WriteLine("closed");
             }
-
         }
     }
 }
