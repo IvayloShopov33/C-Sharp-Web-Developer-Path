@@ -26,7 +26,6 @@ namespace _09._Fruit_or_Vegetable
                 default:
                     Console.WriteLine("unknown");
                     break;
-
             }
         }
     }
