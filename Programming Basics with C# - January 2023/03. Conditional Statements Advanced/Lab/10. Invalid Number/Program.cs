@@ -8,7 +8,8 @@ namespace _10._Invalid_Number
         {
             int num = int.Parse(Console.ReadLine());
             bool isValid = num >= 100 && num <= 200 || num == 0;
-            if(!isValid)
+            
+            if (!isValid)
             {
                 Console.WriteLine("invalid");
             }
