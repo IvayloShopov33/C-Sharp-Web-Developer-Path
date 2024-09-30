@@ -10,15 +10,18 @@ namespace _03._New_House
             int quantity = int.Parse(Console.ReadLine());
             int budget = int.Parse(Console.ReadLine());
             double price = 0;
-            if (flowers=="Roses")
+            
+            if (flowers == "Roses")
             {
                 price = 5;
-                price = quantity * price;
-                if (quantity>80)
+                price *= quantity;
+                
+                if (quantity > 80)
                 {
-                    price = price - price * 0.1;
+                    price -= price * 0.1;
                 }
-                if (budget>=price)
+                
+                if (budget >= price)
                 {
                     Console.Write($"Hey, you have a great garden with {quantity} {flowers} and {budget-price:f2} leva left.");
                 }
@@ -30,11 +33,13 @@ namespace _03._New_House
             else if (flowers == "Dahlias")
             {
                 price = 3.8;
-                price = quantity * price;
+                price *= quantity;
+                
                 if (quantity > 90)
                 {
-                    price = price - price * 0.15;
+                    price -= price * 0.15;
                 }
+                
                 if (budget >= price)
                 {
                     Console.Write($"Hey, you have a great garden with {quantity} {flowers} and {budget - price:f2} leva left.");
@@ -47,11 +52,13 @@ namespace _03._New_House
             else if (flowers == "Tulips")
             {
                 price = 2.8;
-                price = quantity * price;
+                price *= quantity;
+                
                 if (quantity > 80)
                 {
-                    price = price - price * 0.15;
+                    price -= price * 0.15;
                 }
+                
                 if (budget >= price)
                 {
                     Console.Write($"Hey, you have a great garden with {quantity} {flowers} and {budget - price:f2} leva left.");
@@ -64,11 +71,13 @@ namespace _03._New_House
            else if (flowers == "Narcissus")
             {
                 price = 3;
-                price = quantity * price;
+                price *= quantity;
+               
                 if (quantity < 120)
                 {
-                    price = price + price * 0.15;
+                    price += price * 0.15;
                 }
+               
                 if (budget >= price)
                 {
                     Console.Write($"Hey, you have a great garden with {quantity} {flowers} and {budget - price:f2} leva left.");
@@ -81,11 +90,13 @@ namespace _03._New_House
             else
             {
                 price = 2.5;
-                price = quantity * price;
+                price *= quantity;
+                
                 if (quantity < 80)
                 {
-                    price = price + price * 0.2;
+                    price += price * 0.2;
                 }
+                
                 if (budget >= price)
                 {
                     Console.Write($"Hey, you have a great garden with {quantity} {flowers} and {budget - price:f2} leva left.");
