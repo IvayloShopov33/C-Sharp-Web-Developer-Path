@@ -10,6 +10,7 @@ namespace _04._Fishing_Boat
             string season = Console.ReadLine();
             int fishermen = int.Parse(Console.ReadLine());
             double price = 0;
+            
             switch (season)
             {
                 case "Spring":
@@ -23,9 +24,10 @@ namespace _04._Fishing_Boat
                     price = 2600;
                     break;
             }
+            
             if (fishermen <= 6)
             {
-                price = price - price * 0.10;
+                price -= price * 0.10;
                 
             }
             else if (fishermen <= 11)
@@ -36,11 +38,13 @@ namespace _04._Fishing_Boat
             {
                 price -= price * 0.25;
             }
+            
             if (fishermen % 2 == 0 && season != "Autumn")
             {
                 price -= price * 0.05;
             }
-            if (budget>=price)
+            
+            if (budget >= price)
             {
                 Console.WriteLine($"Yes! You have {budget-price:f2} leva left.");
             }
@@ -48,7 +52,6 @@ namespace _04._Fishing_Boat
             {
                 Console.WriteLine($"Not enough money! You need {price-budget:f2} leva.");
             }
-
         }
     }
-}1
+}
