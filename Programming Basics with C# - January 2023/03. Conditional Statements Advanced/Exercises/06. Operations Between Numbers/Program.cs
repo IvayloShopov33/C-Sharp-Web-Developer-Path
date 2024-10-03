@@ -9,15 +9,16 @@ namespace _06._Operations_Between_Numbers
             int num1 = int.Parse(Console.ReadLine());
             int num2 = int.Parse(Console.ReadLine());
             char operation = char.Parse(Console.ReadLine());
-            if (operation=='+' || operation=='-' || operation=='*')
+            
+            if (operation == '+' || operation == '-' || operation == '*')
             {
                 int result;
                 
-                if (operation=='+')
+                if (operation == '+')
                 {
                     result = num1 + num2;
                 }
-                else if (operation=='-')
+                else if (operation == '-')
                 {
                     result = num1 - num2;
                 }
@@ -25,8 +26,10 @@ namespace _06._Operations_Between_Numbers
                 {
                     result = num1 * num2;
                 }
-                string evenOrOdd = "";
-                if (result%2==0)
+                
+                string evenOrOdd = string.Empty;
+                
+                if (result % 2 == 0)
                 {
                     evenOrOdd = "even";
                 }
@@ -34,21 +37,21 @@ namespace _06._Operations_Between_Numbers
                 {
                     evenOrOdd = "odd";
                 }
+                
                 Console.WriteLine($"{num1} {operation} {num2} = {result} - {evenOrOdd}");
             }
             else // operation=='/' || operation=='%'
             {
-                if (num2==0)
+                if (num2 == 0)
                 {
                     Console.WriteLine($"Cannot divide {num1} by zero");
                 }
-                else if (operation=='/')
+                else if (operation == '/')
                 {
                     double result = (double)num1 / num2;
                     Console.WriteLine($"{num1} / {num2} = {result:f2}");
-
                 }
-                 else if (operation=='%')
+                 else if (operation == '%')
                 {
                     int result = num1 % num2;
                     Console.WriteLine($"{num1} % {num2} = {result}");
