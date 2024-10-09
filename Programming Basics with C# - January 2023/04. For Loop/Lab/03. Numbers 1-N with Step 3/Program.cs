@@ -7,7 +7,7 @@ namespace _03._Numbers_1_N_with_Step_3
         static void Main(string[] args)
         {
             int n = int.Parse(Console.ReadLine());
-            for (int i=1; i<=n; i=i+3)
+            for (int i = 1; i <= n; i += 3)
             {
                 Console.WriteLine(i);
             }
