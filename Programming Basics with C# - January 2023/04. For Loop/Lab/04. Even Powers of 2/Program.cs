@@ -7,13 +7,13 @@ namespace _04._Even_Powers_of_2
         static void Main(string[] args)
         {
             int n = int.Parse(Console.ReadLine());
-            for (int pow=0; pow<=n; pow++)
+            for (int pow = 0; pow <= n; pow++)
             {
-                if (pow%2==0)
+                if (pow % 2 == 0)
                 {
                     Console.WriteLine(Math.Pow(2, pow));
                 }
             }
-        }
-    
-}    }
+        }    
+    }    
+}
