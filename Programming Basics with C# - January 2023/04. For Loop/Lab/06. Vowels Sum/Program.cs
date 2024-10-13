@@ -8,30 +8,32 @@ namespace _06._Vowels_Sum
         {
             string text = Console.ReadLine();
             int sum = 0;
-            for (int i=0; i<text.Length; i++)
+
+            for (int i = 0; i < text.Length; i++)
             {
                 char character = text[i];
-                if (character=='a')
+                if (character == 'a')
                 {
-                    sum = sum + 1;
+                    sum++;
                 }
-                else if (character=='e')
+                else if (character == 'e')
                 {
-                    sum = sum + 2;
+                    sum += 2;
                 }
-                else if (character=='i')
+                else if (character == 'i')
                 {
-                    sum = sum + 3;
+                    sum += 3;
                 }
-                else if (character=='o')
+                else if (character == 'o')
                 {
-                    sum = sum + 4;
+                    sum += 4;
                 }
-                else if (character=='u')
+                else if (character == 'u')
                 {
-                    sum = sum + 5;
+                    sum += 5;
                 }
             }
+
             Console.WriteLine(sum);
         }
     }
