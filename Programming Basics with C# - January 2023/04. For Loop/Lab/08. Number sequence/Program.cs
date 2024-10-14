@@ -9,20 +9,21 @@ namespace _08._Number_sequence
             int n = int.Parse(Console.ReadLine());
             int maxNumber = int.MinValue;
             int minNumber = int.MaxValue;
+            
             for (int i = 0; i < n; i++)
             {
                 int number = int.Parse(Console.ReadLine());
-
-                if (number>maxNumber)
+                if (number > maxNumber)
                 {
                     maxNumber = number;
                 }
-                if (number<minNumber)
+                
+                if (number < minNumber)
                 {
                     minNumber = number;
-                }
-               
+                }          
             }
+            
             Console.WriteLine($"Max number: {maxNumber}");
             Console.WriteLine($"Min number: {minNumber}");
         }
