@@ -28,7 +28,7 @@ namespace _09._Left_and_Right_Sum
             }
             else
             {
-                Console.WriteLine($"No, diff = {Math.Abs(sum-sum1)}");
+                Console.WriteLine($"No, diff = {Math.Abs(sum - sum1)}");
             }
         }
     }
