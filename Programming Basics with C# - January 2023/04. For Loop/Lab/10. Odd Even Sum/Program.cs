@@ -9,10 +9,11 @@ namespace _10._Odd_Even_Sum
             int n = int.Parse(Console.ReadLine());
             int sumEven = 0;
             int sumOdd = 0;
+            
             for (int i = 0; i < n; i++)
             {
                 int number = int.Parse(Console.ReadLine());
-                if (i%2==0)
+                if (i % 2 == 0)
                 {
                     sumEven += number;
                 }
@@ -21,7 +22,8 @@ namespace _10._Odd_Even_Sum
                     sumOdd += number;
                 }
             }
-            if (sumEven==sumOdd)
+            
+            if (sumEven == sumOdd)
             {
                 Console.WriteLine("Yes");
                 Console.WriteLine($"Sum = {sumEven}");
@@ -29,7 +31,7 @@ namespace _10._Odd_Even_Sum
             else
             {
                 Console.WriteLine("No");
-                Console.WriteLine($"Diff = {Math.Abs(sumEven-sumOdd)}");
+                Console.WriteLine($"Diff = {Math.Abs(sumEven - sumOdd)}");
             }
         }
     }
