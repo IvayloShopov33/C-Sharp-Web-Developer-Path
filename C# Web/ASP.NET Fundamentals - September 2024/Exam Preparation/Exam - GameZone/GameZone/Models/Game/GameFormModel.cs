@@ -1,4 +1,3 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
 using GameZone.Data.Models;
@@ -23,7 +22,6 @@ namespace GameZone.Models.Game
         public string ReleasedOn { get; set; } = DateTime.UtcNow.ToString(GameReleasedOnDateFormat);
 
         [Required]
-        [ForeignKey(nameof(Genre))]
         public int GenreId { get; set; }
 
         public List<Genre> Genres { get; set; } = new List<Genre>();
