@@ -10,20 +10,22 @@ namespace _04._Clever_Lily
             double washingMachine = double.Parse(Console.ReadLine());
             int toyPrice = int.Parse(Console.ReadLine());
             int money = 0;
+            
             for (int i = 1; i <= age; i++)
             {
-                if (i%2==0)
-                    money = money + (i * 5) - 1;
+                if (i % 2 == 0)
+                    money += (i * 5) - 1;
                 else 
-                    money = money + toyPrice;
+                    money += toyPrice;
             }
-            if (money>=washingMachine)
+            
+            if (money >= washingMachine)
             {
-                Console.WriteLine($"Yes! {money-washingMachine:f2}");
+                Console.WriteLine($"Yes! {money - washingMachine:f2}");
             }
             else
             {
-                Console.WriteLine($"No! {washingMachine-money:f2}");
+                Console.WriteLine($"No! {washingMachine - money:f2}");
             }
         }
     }
