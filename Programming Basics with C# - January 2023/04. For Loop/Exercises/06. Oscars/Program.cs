@@ -9,6 +9,7 @@ namespace _06._Oscars
             string nameActor = Console.ReadLine();
             double points = double.Parse(Console.ReadLine());
             int assessmenterQuantity = int.Parse(Console.ReadLine());
+            
             string assessmenterName;
             double assessmenterPoints=0.0;
             int length;
@@ -17,20 +18,21 @@ namespace _06._Oscars
             for (int i = 1; i <= assessmenterQuantity; i++)
             {
                 assessmenterName = Console.ReadLine();
-                 assessmenterPoints = double.Parse(Console.ReadLine());
+                assessmenterPoints = double.Parse(Console.ReadLine());
+                
                 length = assessmenterName.Length;
-                 finalPoints = points + ((length * assessmenterPoints) / 2);
+                finalPoints = points + ((length * assessmenterPoints) / 2);
                 points = finalPoints;
                 
-                if (finalPoints>1250.5)
+                if (finalPoints > 1250.5)
                 {
                     Console.WriteLine($"Congratulations, {nameActor} got a nominee for leading role with {finalPoints:F1}!");
                     break;
                 }
             }
             
-            if (finalPoints<=1250.5)              
-                Console.WriteLine($"Sorry, { nameActor} you need {1250.5 - finalPoints:F1} more!");
+            if (finalPoints <= 1250.5)              
+                Console.WriteLine($"Sorry, {nameActor} you need {1250.5 - finalPoints:F1} more!");
         }
     }
 }
