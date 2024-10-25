@@ -7,7 +7,7 @@ namespace _01._Read_Text
         static void Main(string[] args)
         {
             string input = Console.ReadLine();
-            while (input!="Stop")
+            while (input != "Stop")
             {
                 Console.WriteLine(input);
                 input = Console.ReadLine();
