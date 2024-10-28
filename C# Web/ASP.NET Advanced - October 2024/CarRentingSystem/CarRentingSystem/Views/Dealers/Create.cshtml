@@ -1,0 +1,30 @@
+﻿@model CreateDealerFormModel
+
+@{
+    ViewData["Title"] = "Become a dealer";
+}
+
+<div class="row">
+    <div class="col-sm-12 offset-lg-2 col-lg-8 offset-xl-3 col-xl-6">
+        <h2 class="header-margin text-center">@ViewData["Title"]</h2>
+        <form method="post">
+            <div class="form-group div-margin">
+                <label asp-for="Name">Name</label>
+                <input asp-for="Name" class="form-control">
+                <span asp-validation-for="Name" class="small text-danger"></span>
+            </div>
+            <div class="form-group div-margin">
+                <label asp-for="PhoneNumber">Phone Number</label>
+                <input asp-for="PhoneNumber" class="form-control">
+                <span asp-validation-for="PhoneNumber" class="small text-danger"></span>
+            </div>
+            <div class="text-center div-margin">
+                <button type="submit" class="btn btn-block btn-primary mt-3">@ViewData["Title"]</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,62 @@
+﻿@model AllCarsQueryModel
+
+@{
+    ViewData["Title"] = "All Cars";
+}
+
+<form method="get">
+    <div class="row">
+        <div class="form-group col-md-3">
+            <div class="form-group">
+                <label asp-for="Make">Makes</label>
+                <select asp-for="Make" class="form-control">
+                    <option value="">All</option>
+                    @foreach (var make in Model.Makes)
+                    {
+                        <option value="@make">@make</option>
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="form-group col-md-3 search-term">
+            <label asp-for="SearchTerm">Search</label>
+            <input asp-for="SearchTerm" class="form-control" placeholder="Mercedes S-Class...">
+        </div>
+        <div class="form-group col-md-3">
+            <div class="form-group">
+                <label asp-for="Sorting">Sorting</label>
+                <select asp-for="Sorting" class="form-control">
+                    <option value="0" selected>CreatedOn</option>
+                    <option value="1">Year</option>
+                    <option value="2">MakeAndModel</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</form>
+
+@if (!Model.Cars.Any())
+{
+    <h2>No cars found by the given criteria.</h2>
+}
+
+<partial name="_CarsPartial" model="@Model.Cars" />
+
+<div class="row">
+    <div class="col-md-6">
+        <a class="btn btn-primary @(Model.CurrentPage == 1 ? "disabled" : string.Empty)" 
+            asp-controller="Cars" asp-action="All" 
+            asp-route-currentPage="@(Model.CurrentPage - 1)"
+            asp-route-make="@Model.Make"
+            asp-route-searchTerm="@Model.SearchTerm"
+            asp-route-sorting="@((int)Model.Sorting)">Previous page</a>
+    </div>
+    <div class="col-md-6">
+        <a class="btn btn-primary @(Model.CurrentPage == Math.Ceiling((double)Model.TotalCars / AllCarsQueryModel.CarsPerPage) ? "disabled" : string.Empty)" 
+            asp-controller="Cars" asp-action="All" 
+            asp-route-currentPage="@(Model.CurrentPage + 1)"
+            asp-route-make="@Model.Make"
+            asp-route-searchTerm="@Model.SearchTerm"
+           asp-route-sorting="@((int)Model.Sorting)">Next page</a>
+    </div>
+</div>

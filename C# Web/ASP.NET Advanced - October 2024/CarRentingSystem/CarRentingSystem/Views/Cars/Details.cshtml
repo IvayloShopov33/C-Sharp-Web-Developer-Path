@@ -1,0 +1,45 @@
+﻿@model DetailsCarServiceModel
+
+@{
+    ViewBag.Title = $"{Model.Make} {Model.Model} ({Model.Year})";
+}
+
+<h2 class="text-center">@ViewBag.Title</h2>
+<hr />
+
+<div class="row mx-auto">
+    <div class="col-sm-12 offset-lg-2 col-lg-8 offset-xl-3 col-xl-6">
+        <img src="@Model.ImageUrl"
+             class="card-img-top img-fluid card-image rounded" data-toggle="tooltip"
+             data-placement="bottom" title="@Model.Year @Model.Model">
+        <div class="mb-3">
+            <p class="font-weight-bold"><span class="fw-bold">Make: </span>@Model.Make</p>
+            <span asp-validation-for="Make" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <p class="form-label font-weight-bold"><span class="fw-bold">Model: </span>@Model.Model</p>
+            <span asp-validation-for="Model" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <p class="form-label font-weight-bold"><span class="fw-bold">Description: </span>@Model.Description</p>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <p asp-for="End" class="form-label font-weight-bold"><span class="fw-bold">Year of Production: </span>@Model.Year</p>
+            <span asp-validation-for="Year" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <p asp-for="End" class="form-label font-weight-bold"><span class="fw-bold">Category: </span>@Model.Category</p>
+            <span asp-validation-for="Category" class="text-danger"></span>
+        </div>
+
+        @if (this.User.IsAdmin())
+        {
+            <a asp-area="Admins" asp-controller="Admins" asp-action="AllCars" class="btn btn-warning btn-dark-text btn-rounded mb-2 w-100 p-3 fw-bold">Back to All Cars</a>
+        }
+        else
+        {
+            <a asp-controller="Cars" asp-action="All" class="btn btn-warning btn-dark-text btn-rounded mb-2 w-100 p-3 fw-bold">Back to All Cars</a>
+        }        
+    </div>
+</div>

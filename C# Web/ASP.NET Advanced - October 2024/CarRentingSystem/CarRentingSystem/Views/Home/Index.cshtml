@@ -1,0 +1,74 @@
+﻿@model ICollection<CarServiceModel>
+
+@{
+    ViewData["Title"] = "Home Page";
+    var isFirst = true;
+}
+
+@if (!Model.Any())
+{
+    <div class="jumbotron">
+        <h1 class="display-4">Welcome to the best car renting site!</h1>
+        <p class="lead">There are no any available cars in the system right now.</p>
+        <hr class="my-4">        
+        <p class="lead">
+            <a asp-controller="Cars" asp-action="Create" class="btn btn-primary btn-lg" role="button">Create a Car</a>
+        </p>
+    </div>
+}
+
+@if (Model.Any())
+{
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+        @foreach (var car in Model)
+        {
+            <div class="carousel-item @(isFirst ? "active" : "")">
+                <img class="d-block mx-auto carousel-img" src="@car.ImageUrl" alt="@car.Make @car.Model - (@car.Year @car.CategoryName)">
+                <div class="carousel-caption d-none d-md-block">
+                        <h5><a class="btn btn-primary" asp-controller="Cars" asp-action="Details" asp-route-id="@car.Id" asp-route-information="@car.GetInformation()">@car.Make @car.Model (@car.Year)</a></h5>
+                </div>
+            </div>
+
+            isFirst = false;
+        }
+        </div>
+        <a class="carousel-control-prev carousel-btn" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next carousel-btn" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <div class="row">
+        <div class="col-12 text-center">
+            <button class="btn btn-warning mt-4" id="statistics-button">Show Statistics</button>
+        </div>
+    </div>
+
+    <div class="jumbotron d-none mt-4" id="statistics">
+        <div class="row">
+            <h2 class="col-md-4 text-center" id="total-cars"></h2>
+            <h2 class="col-md-4 text-center" id="total-users"></h2>
+            <h2 class="col-md-4 text-center" id="total-rents"></h2>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    <script>
+        $('#statistics-button').on('click', e => {
+            $.get('/api/statistics', (data) => {
+                $('#total-cars').text(data.totalCars + " Cars");
+                $('#total-users').text(data.totalUsers + " Users");
+                $('#total-rents').text(data.totalRents + " Rents");
+                
+                $('#statistics').removeClass('d-none');
+                $('#statistics-button').hide();
+            });
+        });
+    </script>
+}
