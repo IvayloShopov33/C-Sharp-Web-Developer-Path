@@ -9,16 +9,19 @@ namespace _01._Old_Books
             string favoriteBook = Console.ReadLine();
             int count = 0;
             string input = Console.ReadLine();
-            while (input!="No More Books") 
+            
+            while (input != "No More Books") 
             {
-                if (input==favoriteBook)
+                if (input == favoriteBook)
                 {
                     break;
                 }
+                
                 count++;
                 input = Console.ReadLine();
             }
-            if (input==favoriteBook)
+            
+            if (input == favoriteBook)
             {
                 Console.WriteLine($"You checked {count} books and found it.");
             }
