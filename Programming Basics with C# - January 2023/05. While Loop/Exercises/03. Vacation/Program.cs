@@ -13,33 +13,38 @@ namespace _03._Vacation
             double money;
             int daysCount = 0;
             int spendCount = 0;
-            while (availableMoney<neededMoney)
+            
+            while (availableMoney < neededMoney)
             {
                 input = Console.ReadLine();
                 money = double.Parse(Console.ReadLine());
                 daysCount++;
-                if (input=="save")
+                
+                if (input == "save")
                 {
                     availableMoney += money;
-                    spendCount = 0; //нулиране на брояч
+                    spendCount = 0;
                 }
                 else
                 {
                     spendCount++;
-                    if (spendCount==5)
+                    if (spendCount == 5)
                     {
                         Console.WriteLine($"You can't save the money.");
                         Console.WriteLine(daysCount);
+                        
                         break;
                     }
+                    
                     availableMoney -= money;
-                    if (availableMoney<0)
+                    if (availableMoney < 0)
                     {
                         availableMoney = 0;
                     }
                 }
             }
-            if (availableMoney>=neededMoney)
+            
+            if (availableMoney >= neededMoney)
             {
                 Console.WriteLine($"You saved the money for {daysCount} days.");
             }
