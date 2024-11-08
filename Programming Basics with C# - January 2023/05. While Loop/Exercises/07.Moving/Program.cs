@@ -11,21 +11,23 @@ namespace _07.Moving
             int height = int.Parse(Console.ReadLine());
             int volume = length * width * height;
             string input = Console.ReadLine();
-            while(input!="Done")
+            
+            while(input != "Done")
             {
                 int cartons = int.Parse(input);
-                if (cartons<volume)
+                if (cartons < volume)
                 {
                     volume -= cartons;
                     input = Console.ReadLine();
                 }
                 else
                 {
-                    Console.WriteLine($"No more free space! You need {Math.Abs(volume-cartons)} Cubic meters more.");
+                    Console.WriteLine($"No more free space! You need {Math.Abs(volume - cartons)} Cubic meters more.");
                     break;
                 }
             }
-            if (input=="Done")
+            
+            if (input == "Done")
             {
                 Console.WriteLine($"{volume} Cubic meters left.");
             }
