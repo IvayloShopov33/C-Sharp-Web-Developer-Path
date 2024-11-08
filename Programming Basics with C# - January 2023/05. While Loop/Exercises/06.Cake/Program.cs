@@ -10,25 +10,26 @@ namespace _06.Cake
             int width = int.Parse(Console.ReadLine());
             string input = Console.ReadLine();
             int pieceAmount = length * width;
-            while (input!="STOP")
+            
+            while (input != "STOP")
             {
                 int pieceTaken = int.Parse(input);
-                if (pieceTaken<pieceAmount)
+                if (pieceTaken < pieceAmount)
                 {
                     pieceAmount -= pieceTaken;
                     input = Console.ReadLine();
                 }
                 else
                 {
-                    Console.WriteLine($"No more cake left! You need {Math.Abs(pieceAmount-pieceTaken)} pieces more.");
+                    Console.WriteLine($"No more cake left! You need {Math.Abs(pieceAmount - pieceTaken)} pieces more.");
                     break;
                 }
             }
-            if (input=="STOP")
+            
+            if (input == "STOP")
             {
                 Console.WriteLine($"{pieceAmount} pieces are left.");
-            }
-            
+            }            
         }
     }
 }
