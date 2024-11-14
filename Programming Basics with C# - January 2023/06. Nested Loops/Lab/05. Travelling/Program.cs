@@ -10,15 +10,17 @@ namespace _05._Travelling
             double budget;
             string input = Console.ReadLine();
                        
-            while (input!="End")
+            while (input != "End")
             {
                 destination = input;
                 budget = double.Parse(Console.ReadLine());
-                while (budget>0)
+                
+                while (budget > 0)
                 {
                     double money = double.Parse(Console.ReadLine());
-                     budget -= money;
+                    budget -= money;
                 }
+                
                 Console.WriteLine($"Going to {destination}!");
                 input = Console.ReadLine();
             }
