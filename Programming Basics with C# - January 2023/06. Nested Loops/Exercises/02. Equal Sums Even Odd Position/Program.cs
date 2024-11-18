@@ -11,17 +11,19 @@ namespace _02._Equal_Sums_Even_Odd_Position
            
             for (int num = first; num <= second; num++)
             {
-                int oddSum=0;
-                int evenSum=0;
-                string currentNum = num.ToString(); //превръща числото в текст
-                for (int digit = 0; digit <6; digit++)
+                int oddSum = 0;
+                int evenSum = 0;
+                string currentNum = num.ToString();
+                
+                for (int digit = 0; digit < 6; digit++)
                 {
-                    if (digit%2==0)
+                    if (digit % 2 == 0)
                         evenSum += currentNum[digit];
                     else
                         oddSum += currentNum[digit];
                 }
-                if (evenSum==oddSum)
+                
+                if (evenSum == oddSum)
                     Console.Write($"{num} ");
             }
         }
