@@ -68,8 +68,5 @@ namespace _06_Cinema_Tickets
                 Console.WriteLine($"{percentageKids:F2}% kids tickets.");
             }
         }
-
-
     }
 }
-
