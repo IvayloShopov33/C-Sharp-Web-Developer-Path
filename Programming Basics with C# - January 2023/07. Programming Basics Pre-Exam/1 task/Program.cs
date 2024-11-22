@@ -12,14 +12,13 @@ namespace _1_task
             int museumTickets = int.Parse(Console.ReadLine());
 
             double nightsSum = nights * 20;
-            double transportCardsSum= transportCards*1.6;
+            double transportCardsSum = transportCards * 1.6;
             double museumTicketsSum = museumTickets * 6;
             double sumForOne = nightsSum + transportCardsSum + museumTicketsSum;
             double sumForAll = sumForOne * people;
             double sum = sumForAll + 0.25 * sumForAll;
 
             Console.WriteLine($"{sum:f2}");
-
         }
     }
 }
