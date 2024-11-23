@@ -19,18 +19,18 @@ namespace _2_task
 
             if (sum1 > 25)
             {
-                sum = sum - sum * 0.35;
+                sum -= sum * 0.35;
             }
 
-            sum = sum - sum * 0.1;
+            sum -= sum * 0.1;
 
             if (sum >= price)
             {
-                Console.WriteLine($"Yes! {sum-price:f2} lv left.");
+                Console.WriteLine($"Yes! {sum - price:f2} lv left.");
             }
             else
             {
-                Console.WriteLine($"Not enough money! {price-sum:f2} lv needed.");
+                Console.WriteLine($"Not enough money! {price - sum:f2} lv needed.");
             }
         }
     }
