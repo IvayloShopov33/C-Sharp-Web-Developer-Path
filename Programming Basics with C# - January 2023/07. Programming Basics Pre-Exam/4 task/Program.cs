@@ -8,6 +8,7 @@ namespace _4_task
         {
             int n = int.Parse(Console.ReadLine());
             double kilometers = double.Parse(Console.ReadLine());
+            
             double sum = 0;
             double sum1 = 0;
 
@@ -28,9 +29,9 @@ namespace _4_task
             }
 
             if (sum1 >= 1000) 
-                Console.WriteLine($"You've done a great job running {Math.Ceiling(sum1-1000)} more kilometers!");
+                Console.WriteLine($"You've done a great job running {Math.Ceiling(sum1 - 1000)} more kilometers!");
             else
-                Console.WriteLine($"Sorry Mrs. Ivanova, you need to run {Math.Ceiling(1000-sum1)} more kilometers");
+                Console.WriteLine($"Sorry Mrs. Ivanova, you need to run {Math.Ceiling(1000 - sum1)} more kilometers");
         }
     }
 }
