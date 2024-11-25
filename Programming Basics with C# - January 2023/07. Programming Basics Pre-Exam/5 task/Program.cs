@@ -7,8 +7,8 @@ namespace _5_task
         static void Main(string[] args)
         {
             string name = Console.ReadLine();
-            int mostGoals=0;
-            string topScorer=string.Empty;
+            int mostGoals = 0;
+            string topScorer = string.Empty;
 
             while (name != "END")
             {
@@ -38,7 +38,6 @@ namespace _5_task
             { 
                 Console.WriteLine($"He has scored {mostGoals} goals."); 
             }
-
         }
     }
 }
