@@ -22,11 +22,13 @@ namespace _6_task
                             if (sum == product && n % 10 == 5)
                             {
                                 Console.WriteLine($"{a}{b}{c}{d}");
+                                
                                 return;
                             }
                             else if (product / sum == 3 && n % 3 == 0)
                             {
                                 Console.WriteLine($"{d}{c}{b}{a}");
+                                
                                 return;
                             }
                         }
