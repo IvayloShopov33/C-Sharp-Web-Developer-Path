@@ -7,11 +7,12 @@ namespace _05._Month_Printer
         static void Main(string[] args)
         {
             int numberOfMonth = int.Parse(Console.ReadLine());
-            if(numberOfMonth==1)
+            
+            if (numberOfMonth == 1)
                 Console.WriteLine("January");
-            else if (numberOfMonth==2)
+            else if (numberOfMonth == 2)
                 Console.WriteLine("February");
-            else if (numberOfMonth==3)
+            else if (numberOfMonth == 3)
                 Console.WriteLine("March");
             else if (numberOfMonth == 4)
                 Console.WriteLine("April");
@@ -31,7 +32,7 @@ namespace _05._Month_Printer
                 Console.WriteLine("November");
             else if (numberOfMonth == 12)
                 Console.WriteLine("December");
-            else if (numberOfMonth>12 || numberOfMonth<1)
+            else if (numberOfMonth > 12 || numberOfMonth < 1)
                 Console.WriteLine("Error!");
         }
     }
