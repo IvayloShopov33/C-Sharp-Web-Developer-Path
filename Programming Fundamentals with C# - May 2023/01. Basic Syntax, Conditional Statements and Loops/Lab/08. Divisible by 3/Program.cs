@@ -8,7 +8,7 @@ namespace _08._Divisible_by_3
         {
             for (int i = 1; i <= 100; i++)
             {
-                if (i%3==0)
+                if (i % 3 == 0)
                 {
                     Console.WriteLine(i);
                 }
