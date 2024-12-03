@@ -8,12 +8,15 @@ namespace _09._Sum_of_Odd_Numbers
         {
             int n = int.Parse(Console.ReadLine());
             int sum = 0;
+            
             for (int i = 1; i <= n; i++)
             {
-                int m = i + i - 1;
+                int m = 2 * i - 1;
                 Console.WriteLine(m);
+                
                 sum += m;
             }
+            
             Console.WriteLine($"Sum: {sum}");
         }
     }
