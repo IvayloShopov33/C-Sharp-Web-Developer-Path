@@ -9,9 +9,11 @@ namespace _03.Vacation
             int people = int.Parse(Console.ReadLine());
             string typeOfGroup = Console.ReadLine();
             string day = Console.ReadLine();
+            
             double price = 0;
             double totalPrice = 0;
-            if (typeOfGroup=="Students")
+            
+            if (typeOfGroup == "Students")
             {
                 if (day == "Friday")
                 {
@@ -28,17 +30,19 @@ namespace _03.Vacation
                     price = 10.46;
                     totalPrice = price * people;
                 }
-                if (people>=30)
+                
+                if (people >= 30)
                 {
-                    totalPrice-=0.15 * totalPrice;
+                    totalPrice -= 0.15 * totalPrice;
                 }
             }
-            else if (typeOfGroup=="Business")
+            else if (typeOfGroup == "Business")
             {
                 if (people >= 100)
                 {
                     people -= 10;
                 }
+                
                 if (day == "Friday")
                 {
                     price = 10.9;
@@ -55,7 +59,7 @@ namespace _03.Vacation
                     totalPrice = price * people;
                 }               
             }
-            else if(typeOfGroup=="Regular")
+            else if (typeOfGroup == "Regular")
             {
                 if (day == "Friday")
                 {
@@ -72,11 +76,13 @@ namespace _03.Vacation
                     price = 22.5;
                     totalPrice = price * people;
                 }
-                if (people>=10 && people<=20)
+                
+                if (people >= 10 && people <= 20)
                 {
                     totalPrice -= 0.05 * totalPrice;
                 }
             }
+            
             Console.WriteLine($"Total price: {totalPrice:f2}");
         }
     }
