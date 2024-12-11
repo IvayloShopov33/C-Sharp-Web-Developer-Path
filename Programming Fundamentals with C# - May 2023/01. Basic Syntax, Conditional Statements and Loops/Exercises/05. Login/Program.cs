@@ -9,11 +9,12 @@ namespace _05._Login
         {
             string username = Console.ReadLine();
             string expectedPassword = new string(username.Reverse().ToArray());
-            int loginCounter=0;
+            int loginCounter = 0;
+            
             while (true)
             {
                 string newUsername = Console.ReadLine();
-                if (newUsername==expectedPassword)
+                if (newUsername == expectedPassword)
                 {
                     Console.WriteLine($"User {username} logged in.");
                     return;
