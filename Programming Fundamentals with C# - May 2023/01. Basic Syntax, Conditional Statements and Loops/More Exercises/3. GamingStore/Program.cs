@@ -8,11 +8,13 @@ namespace _3.GamingStore_exceptio
         {
             double balanceOfMoney = double.Parse(Console.ReadLine());
             string game = Console.ReadLine();
+            
             double price = 0;
             double spentMoney = 0;
             bool flag;
             bool flag1 = false;
-            while (game!= "Game Time")
+            
+            while (game != "Game Time")
             {
                 flag = false;
                 if (game == "OutFall 4")
@@ -32,15 +34,17 @@ namespace _3.GamingStore_exceptio
                     Console.WriteLine("Not Found");
                     flag = true;
                 }
-                if (balanceOfMoney<price && !flag)
+                
+                if (balanceOfMoney < price && !flag)
                 {
                     Console.WriteLine("Too Expensive");
                 }
-                else if (balanceOfMoney>=price && !flag)
+                else if (balanceOfMoney >= price && !flag)
                 {
                     balanceOfMoney -= price;
                     spentMoney += price;
-                    if (balanceOfMoney<=0)
+                    
+                    if (balanceOfMoney <= 0)
                     {
                         Console.WriteLine("Out of money!");
                         flag1 = true;
@@ -50,12 +54,12 @@ namespace _3.GamingStore_exceptio
                         Console.WriteLine($"Bought {game}");
                     }
                 }
-
-
+                
                 game = Console.ReadLine();
             }
+            
             if (!flag1)
-            Console.WriteLine($"Total spent: ${spentMoney:f2}. Remaining: ${balanceOfMoney:f2}");
+                Console.WriteLine($"Total spent: ${spentMoney:f2}. Remaining: ${balanceOfMoney:f2}");
         }
     }
 }
