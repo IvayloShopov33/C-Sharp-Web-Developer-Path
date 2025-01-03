@@ -11,13 +11,15 @@ namespace _12._Refactor_Special_Numbers
             {
                 int number = i;
                 int sum = 0;
-                while (number> 0)
+                
+                while (number > 0)
                 {
                     int digit = number % 10;
                     sum += digit;
                     number = number / 10;
                 }
-                if (sum==5 || sum==7 || sum==11)
+                
+                if (sum == 5 || sum == 7 || sum == 11)
                 {
                     Console.WriteLine($"{i} -> True");
                 }
