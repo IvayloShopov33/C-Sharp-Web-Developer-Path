@@ -10,6 +10,7 @@ namespace _1._Integer_Operations
             int secondNumber = int.Parse(Console.ReadLine());
             int thirdNumber = int.Parse(Console.ReadLine());
             int fourthtNumber = int.Parse(Console.ReadLine());
+
             int result = ((firstNumber + secondNumber) / thirdNumber) * fourthtNumber;
             Console.WriteLine(result);
         }
