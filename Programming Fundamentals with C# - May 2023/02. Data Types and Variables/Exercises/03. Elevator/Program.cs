@@ -8,7 +8,8 @@ namespace _3._Elevator
         {
             int numberOfPeople = int.Parse(Console.ReadLine());
             int capacityOfElevator = int.Parse(Console.ReadLine());
-            if (numberOfPeople<=capacityOfElevator)
+            
+            if (numberOfPeople <= capacityOfElevator)
             {
                 Console.WriteLine('1');
             }
@@ -19,6 +20,7 @@ namespace _3._Elevator
                 {
                     courses++;
                 }
+                
                 Console.WriteLine(courses);
             }
         }
