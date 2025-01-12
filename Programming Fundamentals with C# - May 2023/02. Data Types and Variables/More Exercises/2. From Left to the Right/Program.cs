@@ -15,13 +15,14 @@ namespace _2._From_Left_to_the_Right_exception
                 long number1 = long.Parse(numbers[0]);
                 long number2 = long.Parse(numbers[1]);
                 long sum = 0;
-                if (number1>number2)
+                
+                if (number1 > number2)
                 {
-                    while (number1!=0)
+                    while (number1 != 0)
                     {
                         long digit = Math.Abs(number1 % 10);
                         sum += digit;
-                        number1 =Math.Abs(number1)/ 10;
+                        number1 = Math.Abs(number1) / 10;
                     }
                 }
                 else
@@ -33,6 +34,7 @@ namespace _2._From_Left_to_the_Right_exception
                         number2 = Math.Abs(number2) / 10;
                     }
                 }
+                
                 Console.WriteLine(Math.Abs(sum));
             }
         }
