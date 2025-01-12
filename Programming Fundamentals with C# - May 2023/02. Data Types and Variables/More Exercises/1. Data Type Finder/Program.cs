@@ -7,11 +7,13 @@ namespace _1._Data_Type_Finder_exception
         static void Main(string[] args)
         {
             string input = Console.ReadLine();
+            
             int integer;
             float floater;
             bool flag;
             char ch;
-            while (input!="END")
+            
+            while (input != "END")
             {
                 if (int.TryParse(input, out integer))
                     Console.WriteLine($"{input} is integer type");
@@ -23,6 +25,7 @@ namespace _1._Data_Type_Finder_exception
                     Console.WriteLine($"{input} is character type");
                 else
                     Console.WriteLine($"{input} is string type");
+                
                 input = Console.ReadLine();
             }
         }
