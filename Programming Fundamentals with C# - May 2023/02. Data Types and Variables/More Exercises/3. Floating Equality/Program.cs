@@ -8,7 +8,8 @@ namespace _3._Floating_Equality
         {
             double a = double.Parse(Console.ReadLine());
             double b = double.Parse(Console.ReadLine());
-            if (Math.Abs(a-b)< 0.000001)
+            
+            if (Math.Abs(a - b) < 0.000001)
             {
                 Console.WriteLine("True");
             }
