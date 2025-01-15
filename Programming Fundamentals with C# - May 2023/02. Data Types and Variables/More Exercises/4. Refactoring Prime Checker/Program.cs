@@ -16,7 +16,7 @@ namespace _4._Refactoring_Prime_Checker_exception
                 }
                 else
                 {
-                    for (int divisor = 2; divisor <number; divisor++)
+                    for (int divisor = 2; divisor < number; divisor++)
                     {
                         if (number % divisor == 0)
                         {
@@ -24,7 +24,8 @@ namespace _4._Refactoring_Prime_Checker_exception
                         }
                     }
                 }
-                Console.WriteLine("{0} -> {1}",number , isPrime);
+                
+                Console.WriteLine("{0} -> {1}", number, isPrime);
             }
         }
     }
