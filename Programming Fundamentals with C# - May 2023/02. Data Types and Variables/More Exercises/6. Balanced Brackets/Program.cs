@@ -9,48 +9,48 @@ namespace _06._Balanced_Brackets
             int linesCount = int.Parse(Console.ReadLine());
             int count = 0;
             bool isNotBalanced = false;
+            
             for (int i = 0; i < linesCount; i++)
             {
                 string input = Console.ReadLine();
-                if (input=="(")
+                if (input == "(")
                 {
                     count++;
-                    if (count>1)
+                    if (count > 1)
                     {
                         isNotBalanced = true;
                     }
                 }
-                if (input==")")
+                
+                if (input == ")")
                 {
                     count--;
-                    if (count<0)
+                    if (count < 0 && !isNotBalanced)
                     {
-                        if (!isNotBalanced)
-                        {
-                            isNotBalanced = true;
-                        }
+                        isNotBalanced = true;
                     }
                 }
             }
-            if (isNotBalanced && count!=0)
+            
+            if (isNotBalanced && count != 0)
                 Console.WriteLine("UNBALANCED");
-            else if (!isNotBalanced && count!=0)
+            else if (!isNotBalanced && count != 0)
                 Console.WriteLine("UNBALANCED");
             else if (!isNotBalanced && count == 0)
                 Console.WriteLine("BALANCED");
             else if (isNotBalanced || count != 0)
             {
-                if (count==0 || !isNotBalanced)
+                if (count == 0 || !isNotBalanced)
                 Console.WriteLine("UNBALANCED");
             }
             else if (!isNotBalanced || count != 0)
             {
-                if (count==0 || isNotBalanced)
+                if (count == 0 || isNotBalanced)
                 Console.WriteLine("UNBALANCED");
             }
             else if (!isNotBalanced && count == 0)
             {
-                if (isNotBalanced || count!=0)
+                if (isNotBalanced || count != 0)
                 Console.WriteLine("BALANCED");
             }
         }
