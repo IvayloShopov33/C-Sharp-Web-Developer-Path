@@ -10,7 +10,7 @@ namespace _03._Rounding_Numbers
             double[] numbers = Console.ReadLine().Split(' ').Select(double.Parse).ToArray();
             for (int i = 0; i < numbers.Length; i++)
             {
-                int number = (int)Math.Round(numbers[i],MidpointRounding.AwayFromZero);
+                int number = (int)Math.Round(numbers[i], MidpointRounding.AwayFromZero);
                 Console.WriteLine($"{numbers[i]} => {number}");
             }
         }
