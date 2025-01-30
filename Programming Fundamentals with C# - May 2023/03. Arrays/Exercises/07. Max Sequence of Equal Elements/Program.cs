@@ -9,8 +9,9 @@ namespace _7._Max_Sequence_of_Equal_Elements
         {
             int[] seguenceOfNumbers = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
             int maxSequenceOfEqualElements = 0;
-             int currentSequenceOfEqualElements = 1;
+            int currentSequenceOfEqualElements = 1;
             int number = 0;
+            
             for (int i = 0; i < seguenceOfNumbers.Length; i++)
             {
                 if (i != seguenceOfNumbers.Length - 1)
@@ -24,12 +25,14 @@ namespace _7._Max_Sequence_of_Equal_Elements
                         currentSequenceOfEqualElements = 1;
                     }
                 }
-                if (maxSequenceOfEqualElements<currentSequenceOfEqualElements)
+                
+                if (maxSequenceOfEqualElements < currentSequenceOfEqualElements)
                 {
                     maxSequenceOfEqualElements = currentSequenceOfEqualElements;
                     number = seguenceOfNumbers[i];
                 }
             }
+            
             for (int i = 0; i < maxSequenceOfEqualElements; i++)
             {
                 Console.Write($"{number} ");
