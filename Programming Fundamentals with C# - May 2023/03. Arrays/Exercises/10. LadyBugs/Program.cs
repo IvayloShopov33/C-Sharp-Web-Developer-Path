@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Linq;
 
-
 namespace _10._LadyBugs
 {
     class Program
@@ -17,11 +16,10 @@ namespace _10._LadyBugs
                 if (bugIndexesOnTheField[i] >= 0 && bugIndexesOnTheField[i] < field.Length)
                 {
                     field[bugIndexesOnTheField[i]] = 1;
-
                 }
             }
 
-            string input =string.Empty;
+            string input = string.Empty;
             while ((input = Console.ReadLine()) != "end")
             {
                 string[] index = input.Split(' ');
@@ -29,7 +27,7 @@ namespace _10._LadyBugs
                 string direction = index[1];
                 int flyLength = int.Parse(index[2]);
 
-                if (ladybugIndex<0 || ladybugIndex>field.Length-1 || field[ladybugIndex]==0)
+                if (ladybugIndex < 0 || ladybugIndex > field.Length - 1 || field[ladybugIndex] == 0)
                 {
                     continue;
                 }
@@ -46,18 +44,18 @@ namespace _10._LadyBugs
 
                     if (field[landbugIndex] == 1)
                     {
-                        while (field[landbugIndex]==1)
+                        while (field[landbugIndex] == 1)
                         {
                             landbugIndex += flyLength;
 
-                            if (landbugIndex>field.Length-1)
+                            if (landbugIndex > field.Length - 1)
                             {
                                 break;
                             }
                         }
                     }
 
-                    if (landbugIndex<=field.Length-1)
+                    if (landbugIndex <= field.Length - 1)
                     {
                         field[landbugIndex] = 1;
                     }
@@ -72,19 +70,19 @@ namespace _10._LadyBugs
                         continue;
                     }
 
-                    if (field[landbugIndex]==1)
+                    if (field[landbugIndex] == 1)
                     {
-                        while (field[landbugIndex]==1)
+                        while (field[landbugIndex] == 1)
                         {
                             landbugIndex -= flyLength;
-                            if (landbugIndex<0)
+                            if (landbugIndex < 0)
                             {
                                 break;
                             }
                         }
                     }
 
-                    if (landbugIndex>=0)
+                    if (landbugIndex >= 0)
                     {
                         field[landbugIndex] = 1;
                     }
