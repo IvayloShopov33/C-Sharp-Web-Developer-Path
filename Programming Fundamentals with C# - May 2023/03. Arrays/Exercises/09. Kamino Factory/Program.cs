@@ -16,7 +16,6 @@ namespace _09._Kamino_Factory
             int bestSum = 0;
             int curentDNA = 0, dnaIndex = 1;
 
-
             while (input != "Clone them!")
             {
                 int position = 0;
