@@ -8,9 +8,11 @@ namespace _5._Longest_Increasing_Subsequence__LIS_
         static void Main(string[] args)
         {
             int[] nums = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+            
             int[] lis;          
             int[] len = new int[nums.Length];
             int[] prev = new int[nums.Length];
+            
             int maxLength = 0;
             int lastIndex = 1;
 
@@ -18,16 +20,17 @@ namespace _5._Longest_Increasing_Subsequence__LIS_
             {
                 len[i] = 1;
                 prev[i] = -1;
+                
                 for (int j = 0; j < i; j++)
                 {
-                    if (nums[j]<nums[i] && len[j]>=len[i])
+                    if (nums[j] < nums[i] && len[j] >= len[i])
                     {
                         len[i] = 1 + len[j];
                         prev[i] = j;
                     }
                 }
 
-                if (len[i]>maxLength)
+                if (len[i] > maxLength)
                 {
                     maxLength = len[i];
                     lastIndex = i;
