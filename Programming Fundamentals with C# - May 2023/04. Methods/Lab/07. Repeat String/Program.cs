@@ -8,9 +8,11 @@ namespace _7._Repeat_String
         {
             string str = Console.ReadLine();
             int strCount = int.Parse(Console.ReadLine());
+            
             string finalString = RepeatString(str, strCount);
             Console.WriteLine(finalString);
         }
+        
         static string RepeatString(string str, int strCount) 
         {
             string finalString = string.Empty;
@@ -18,6 +20,7 @@ namespace _7._Repeat_String
             {
                 finalString += str;
             }
+            
             return finalString;
         }
     }
