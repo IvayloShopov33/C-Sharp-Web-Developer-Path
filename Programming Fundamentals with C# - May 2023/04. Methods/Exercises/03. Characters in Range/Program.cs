@@ -8,14 +8,17 @@ namespace _3._Characters_in_Range
         {
             char a = char.Parse(Console.ReadLine());
             char b = char.Parse(Console.ReadLine());
+            
             CharactersInRange(a, b);
         }
+        
         static void CharactersInRange(char a, char b)
         {
-            if (a>b)
+            if (a > b)
             {
                 int start = b + 1;
                 int end = a;
+                
                 for (int i = start; i < end; i++)
                 {
                     Console.Write($"{(char)i} ");
