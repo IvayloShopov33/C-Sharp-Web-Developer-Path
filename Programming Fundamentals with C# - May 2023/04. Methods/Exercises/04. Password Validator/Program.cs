@@ -8,12 +8,15 @@ namespace _4._Password_Validator
         static void Main(string[] args)
         {
             string password = Console.ReadLine();
+            
             bool amountOfSynvoles = false;
             bool digitsAndLetters = false;
             bool countDigits = false;
-            amountOfSynvoles=PasswordLength(password, amountOfSynvoles );
-            digitsAndLetters=DigitsAndNumbers(password, digitsAndLetters);
-            countDigits= TwoDigits(password, countDigits);
+            
+            amountOfSynvoles = PasswordLength(password, amountOfSynvoles);
+            digitsAndLetters = DigitsAndNumbers(password, digitsAndLetters);
+            countDigits = TwoDigits(password, countDigits);
+            
             if (amountOfSynvoles && digitsAndLetters && countDigits)
             {
                 Console.WriteLine("Password is valid");
@@ -22,7 +25,7 @@ namespace _4._Password_Validator
 
         static bool PasswordLength(string password, bool amountOfSynvoles)
         {
-            if (password.Length<6 || password.Length>10)
+            if (password.Length < 6 || password.Length > 10)
             {
                 Console.WriteLine("Password must be between 6 and 10 characters");
             }
@@ -30,12 +33,13 @@ namespace _4._Password_Validator
             {
                 amountOfSynvoles = true;
             }
+            
             return amountOfSynvoles;
         }
 
         static bool DigitsAndNumbers(string password, bool digitsAndLetters)
         {
-            bool g=password.All(char.IsLetterOrDigit);
+            bool g = password.All(char.IsLetterOrDigit);
             if (!g)
             {
                 Console.WriteLine("Password must consist only of letters and digits");                
@@ -44,6 +48,7 @@ namespace _4._Password_Validator
             {
                 digitsAndLetters = true;
             }
+            
             return digitsAndLetters;
         }
 
@@ -58,7 +63,8 @@ namespace _4._Password_Validator
                     digitsCount++;
                 }
             }
-            if (digitsCount<2)
+            
+            if (digitsCount < 2)
             {
                 Console.WriteLine("Password must have at least 2 digits");                
             }
@@ -66,6 +72,7 @@ namespace _4._Password_Validator
             {
                 countDigits = true;
             }
+            
             return countDigits;
         }
     }
