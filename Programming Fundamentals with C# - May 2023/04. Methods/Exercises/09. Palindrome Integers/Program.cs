@@ -7,7 +7,7 @@ namespace _9._Palindrome_Integers
         static void Main(string[] args)
         {
             string input = Console.ReadLine();
-            while (input!="END")
+            while (input != "END")
             {
                 bool isPalindrome = Palindrome(input);
                 if (isPalindrome)
@@ -18,20 +18,23 @@ namespace _9._Palindrome_Integers
                 {
                     Console.WriteLine("false");
                 }
+                
                  input = Console.ReadLine();
             }
         }
+        
         static bool Palindrome(string input)
         {
             bool isPalindrome = true;
             for (int i = 0; i < input.Length; i++)
             {
-                if (input[i]!=input[input.Length-1-i])
+                if (input[i] != input[input.Length - 1 - i])
                 {
                     isPalindrome = false;
                     break;
                 }
             }
+            
             return isPalindrome;
         }
     }
