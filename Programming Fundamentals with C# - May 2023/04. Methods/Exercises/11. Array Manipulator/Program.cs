@@ -9,6 +9,7 @@ namespace _11._Array_Manipulator
         {
             int[] numbers = Console.ReadLine().Split().Select(int.Parse).ToArray();
             string command;
+            
             while ((command = Console.ReadLine()) != "end")
             {
                 string[] commandArguments = command.Split();
@@ -31,35 +32,43 @@ namespace _11._Array_Manipulator
                 {
                     int count = int.Parse(commandArguments[1]);
                     string typeNumber = commandArguments[2];
+                    
                     PrintFirstElements(numbers, count, typeNumber);
                 }
                 else if (commandArguments[0] == "last")
                 {
                     int count = int.Parse(commandArguments[1]);
                     string typeNumber = commandArguments[2];
+                    
                     PrintLastElements(numbers, count, typeNumber);
                 }
             }
+            
             Console.WriteLine($"[{string.Join(", ", numbers)}]");
         }
+        
         static int[] ExchangeElements(int[] numbers, int index)
         {
             if (CheckForOutOfRange(numbers, index))
             {
                 Console.WriteLine("Invalid index");
+                
                 return numbers;
             }
 
             int[] changedArray = new int[numbers.Length];
             int changedArrayIndex = 0;
+            
             for (int i = index + 1; i < numbers.Length; i++)
             {
                 changedArray[changedArrayIndex++] = numbers[i];
             }
-            //       i 0 1 2 3 4 5 if index=1
+            
+            // i 0 1 2 3 4 5 if index = 1
             // numbers 1 2 3 4 5 6
             // changed 0 0 0 0 0 0
             // changed 3 4 5 6 0 0
+            
             for (int i = 0; i <= index; i++)
             {
                 changedArray[changedArrayIndex++] = numbers[i];
@@ -68,48 +77,48 @@ namespace _11._Array_Manipulator
 
             return changedArray;
         }
+        
         static bool CheckForOutOfRange(int[] numbers, int index)
         {
             return index < 0 || index >= numbers.Length;
         }
+        
         static void PrintMaxIndex(int[] numbers, string typeNumber)
         {
             int maxIndex = -1;
             int maxNumber = int.MinValue;
+            
             for (int i = 0; i < numbers.Length; i++)
             {
                 int number = numbers[i];
-                if (IsOddOrEven(typeNumber, number))
+                if (IsOddOrEven(typeNumber, number) && maxNumber <= number)
                 {
-                    if (maxNumber <= number)
-                    {
-                        maxNumber = number;
-                        maxIndex = i;
-                    }
-
+                    maxNumber = number;
+                    maxIndex = i;
                 }
             }
+            
             PrintNotDefaultIndex(maxIndex);
         }
+        
         static void PrintMinIndex(int[] numbers, string typeOfNumber)
         {
             int minIndex = -1;
             int minNumber = int.MaxValue;
+            
             for (int i = 0; i < numbers.Length; i++)
             {
                 int number = numbers[i];
-                if (IsOddOrEven(typeOfNumber, number))
+                if (IsOddOrEven(typeOfNumber, number) && minNumber >= number)
                 {
-                    if (minNumber >= number)
-                    {
-                        minNumber = number;
-                        minIndex = i;
-                    }
-
+                    minNumber = number;
+                    minIndex = i;
                 }
             }
+            
             PrintNotDefaultIndex(minIndex);
         }
+        
         static void PrintFirstElements(int[] numbers, int count, string typeNumber)
         {
             if (count > numbers.Length)
@@ -117,25 +126,34 @@ namespace _11._Array_Manipulator
                 Console.WriteLine("Invalid count");
                 return;
             }
+            
             string firstElements = string.Empty;
             int elementsCount = 0;
+            
             for (int i = 0; i < numbers.Length; i++)
             {
                 if (IsOddOrEven(typeNumber, numbers[i]))
                 {
                     firstElements += $"{numbers[i]}, ";
                     elementsCount++;
+                    
                     if (elementsCount == count)
                     {
                         break;
                     }
                 }
             }
+            
             if (elementsCount == 0)
+            {
                 Console.WriteLine("[]");
+            }
             else
+            {
                 Console.WriteLine($"[{firstElements.Trim(' ', ',')}]");
+            }
         }
+        
         static void PrintLastElements(int[] numbers, int count, string typeNumber)
         {
             if (count > numbers.Length)
@@ -143,14 +161,17 @@ namespace _11._Array_Manipulator
                 Console.WriteLine("Invalid count");
                 return;
             }
+            
             string lastElements = string.Empty;
             int elementsCount = 0;
+            
             for (int i = numbers.Length - 1; i >= 0; i--)
             {
                 if (IsOddOrEven(typeNumber, numbers[i]))
                 {
                     lastElements = $"{numbers[i]}, " + lastElements;
                     elementsCount++;
+                    
                     if (elementsCount == count)
                     {
                         break;
@@ -158,17 +179,27 @@ namespace _11._Array_Manipulator
                 }
             }
             if (elementsCount == 0)
+            {
                 Console.WriteLine("[]");
+            }
             else
+            {
                 Console.WriteLine($"[{lastElements.Trim(' ', ',')}]");
+            }
         }
+        
         static void PrintNotDefaultIndex(int index)
         {
             if (index != -1)
+            {
                 Console.WriteLine(index);
+            }
             else
+            {
                 Console.WriteLine("No matches");
+            }
         }
+        
         static bool IsOddOrEven(string typeNumber, int number)
         {
             return (typeNumber == "even" && number % 2 == 0) ||
