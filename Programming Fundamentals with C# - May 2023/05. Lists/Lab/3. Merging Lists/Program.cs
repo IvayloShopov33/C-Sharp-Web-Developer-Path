@@ -10,14 +10,15 @@ namespace _3._Merging_Lists
         {
             List<int> list1 = Console.ReadLine().Split().Select(int.Parse).ToList();
             List<int> list2 = Console.ReadLine().Split().Select(int.Parse).ToList();
+            
             int biggestCount = 0;
             int smallestCount = 0;
+            
             if (list1.Count <= list2.Count)
             {
                 biggestCount = list2.Count;
                 smallestCount = list1.Count;
             }
-
             else
             {
                 biggestCount = list1.Count;
@@ -25,7 +26,6 @@ namespace _3._Merging_Lists
             }
 
             List<int> finalList = new List<int>();
-
             for (int i = 0; i < smallestCount; i++)
             {
                 finalList.Add(list1[i]);
@@ -38,9 +38,7 @@ namespace _3._Merging_Lists
                 {
                     finalList.Add(list2[i]);
                 }
-
             }
-
             else
             {
                 for (int i = smallestCount; i < biggestCount; i++)
@@ -48,8 +46,8 @@ namespace _3._Merging_Lists
                     finalList.Add(list1[i]);
                 }
             }
+            
             Console.WriteLine(string.Join(' ', finalList));
         }
-
     }
 }
