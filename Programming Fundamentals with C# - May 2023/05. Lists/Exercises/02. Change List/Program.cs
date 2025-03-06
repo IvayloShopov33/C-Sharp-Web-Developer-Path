@@ -10,14 +10,14 @@ namespace _2._Change_List
         {
             List<int> numbers = Console.ReadLine().Split().Select(int.Parse).ToList();
             string[] input = Console.ReadLine().Split(' ');
+            
             while (input[0] != "end")
             {
                 if (input[0] == "Delete")
                 {
                     numbers = Delete(input[1], numbers);
                 }
-
-                else if (input[0]=="Insert")
+                else if (input[0] == "Insert")
                 {
                     numbers = Insert(input[1], input[2], numbers);
                 }
@@ -32,6 +32,7 @@ namespace _2._Change_List
         {
             int element = int.Parse(v);
             numbers.RemoveAll(x => x == element);
+            
             return numbers;
         }
 
@@ -40,6 +41,7 @@ namespace _2._Change_List
             int element = int.Parse(v1);
             int position = int.Parse(v2);
             numbers.Insert(position, element);
+            
             return numbers;
         }
     }
