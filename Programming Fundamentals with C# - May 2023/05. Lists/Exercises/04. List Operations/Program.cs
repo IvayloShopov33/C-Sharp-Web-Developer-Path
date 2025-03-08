@@ -10,13 +10,13 @@ namespace _04._List_Operations
         {
             List<int> numbers = Console.ReadLine().Split().Select(int.Parse).ToList();
             string[] input = Console.ReadLine().Split();
+            
             while (input[0] != "End")
             {
                 if (input[0] == "Add")
                 {
                     numbers = Add(input[1], numbers);
                 }
-
                 else if (input[0] == "Insert")
                 {
                     int index = int.Parse(input[2]);
@@ -29,7 +29,6 @@ namespace _04._List_Operations
                         numbers = Insert(input[1], index, numbers);
                     }
                 }
-
                 else if (input[0] == "Remove")
                 {
                     int index = int.Parse(input[1]);
@@ -42,7 +41,6 @@ namespace _04._List_Operations
                         numbers = Remove(index, numbers);
                     }
                 }
-
                 else if (input[0] == "Shift")
                 {
                     if (input[1] == "left")
@@ -65,6 +63,7 @@ namespace _04._List_Operations
         {
             int number = int.Parse(v);
             numbers.Add(number);
+            
             return numbers;
         }
 
@@ -72,12 +71,14 @@ namespace _04._List_Operations
         {
             int number = int.Parse(v1);
             numbers.Insert(index, number);
+            
             return numbers;
         }
 
         private static List<int> Remove(int index, List<int> numbers)
         {
             numbers.RemoveAt(index);
+            
             return numbers;
         }
 
