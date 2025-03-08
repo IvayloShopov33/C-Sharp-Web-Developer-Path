@@ -10,10 +10,11 @@ namespace _3._House_Party
             int commandsCount = int.Parse(Console.ReadLine());
             string[] input;
             List<string> guest = new List<string>();
+            
             for (int i = 1; i <= commandsCount; i++)
             {
                 input = Console.ReadLine().Split();
-                if (input.Length==3)
+                if (input.Length == 3)
                 {
                     if (guest.Contains(input[0]))
                     {
@@ -24,8 +25,7 @@ namespace _3._House_Party
                         guest.Add(input[0]);
                     }
                 }
-
-                else if (input.Length==4)
+                else if (input.Length == 4)
                 {
                     if (guest.Contains(input[0]))
                     {
