@@ -47,6 +47,7 @@ namespace _5._Bomb_Numbers
                     }
                 }
             }
+            
             Console.WriteLine(numbers.Sum());
         }
     }
