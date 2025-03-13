@@ -10,31 +10,35 @@ namespace _8._Anonymous_Threat
         {
             List<string> text = Console.ReadLine().Split().ToList();
             string[] input = Console.ReadLine().Split();
+            
             while (input[0] != "3:1")
             {
                 if (input[0] == "merge")
                 {
                     int startIndex = int.Parse(input[1]);
                     int endIndex = int.Parse(input[2]);
+                    
                     if (startIndex < 0)
                     {
                         startIndex = 0;
                     }
+                    
                     if (endIndex >= text.Count)
                     {
                         endIndex = text.Count - 1;
                     }
-                    for (int i = startIndex+1; i <= endIndex; i++)
+                    
+                    for (int i = startIndex + 1; i <= endIndex; i++)
                     {
                         text[startIndex] += text[startIndex + 1];
                         text.RemoveAt(startIndex + 1);
                     }
-
                 }
                 else if (input[0] == "divide")
                 {
                     int index = int.Parse(input[1]);
                     int parts = int.Parse(input[2]);
+                    
                     string element = text[index];
                     text.RemoveAt(index);
 
@@ -77,11 +81,13 @@ namespace _8._Anonymous_Threat
                             elementCharArray.RemoveRange(0, count);
                             divideElements.Add(curentElement);
                         }
+                        
                         string lastCharakters = "";
                         for (int m = 0; m < elementCharArray.Count; m++)
                         {
                             lastCharakters += elementCharArray[m];
                         }
+                        
                         divideElements.Add(lastCharakters);
                         elementCharArray.RemoveRange(0, elementCharArray.Count - 1);
 
@@ -92,8 +98,10 @@ namespace _8._Anonymous_Threat
                         }
                     }
                 }
+                
                 input = Console.ReadLine().Split();
             }
+            
             Console.WriteLine(string.Join(' ', text));
         }
     }
