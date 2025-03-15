@@ -10,13 +10,15 @@ namespace _1._Messaging
         {
             List<int> numbers = Console.ReadLine().Split().Select(int.Parse).ToList();
             string message = Console.ReadLine();
+            
             List<char> messageToChar = message.ToList();
             int sumOfDigits;
             string finalMessage = string.Empty;
+            
             for (int i = 0; i < numbers.Count; i++)
             {
                 int number = numbers[i];
-                    sumOfDigits = 0;
+                sumOfDigits = 0;
                 while (number != 0)
                 {
                     int digit = number % 10;
@@ -32,6 +34,7 @@ namespace _1._Messaging
                         {
                             finalMessage += messageToChar[j];
                             messageToChar.RemoveAt(j);
+                            
                             break;
                         }
                     }
@@ -42,17 +45,20 @@ namespace _1._Messaging
                     {
                         sumOfDigits -= messageToChar.Count;
                     }
+                    
                     for (int j = 0; j < messageToChar.Count; j++)
                     {
                         if (j == sumOfDigits)
                         {
                             finalMessage += messageToChar[j];
                             messageToChar.RemoveAt(j);
+                            
                             break;
                         }
                     }
                 }
             }
+            
             Console.WriteLine(string.Join(' ', finalMessage));
         }
     }
