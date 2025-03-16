@@ -12,6 +12,7 @@ namespace _2._Car_Race
             int finishLine = (numbers.Count - 1) / 2;
             float sum = 0;
             float sum1 = 0;
+            
             for (int i = 0; i < finishLine; i++)
             {
                 if (numbers[i] == 0)
@@ -23,7 +24,8 @@ namespace _2._Car_Race
                     sum += numbers[i];
                 }
             }
-            for (int i = numbers.Count-1; i > finishLine; i--)
+            
+            for (int i = numbers.Count - 1; i > finishLine; i--)
             {
                 if (numbers[i] == 0)
                 {
@@ -34,11 +36,12 @@ namespace _2._Car_Race
                     sum1 += numbers[i];
                 }
             }
-            if (sum<sum1)
+            
+            if (sum < sum1)
             {
                 Console.WriteLine($"The winner is left with total time: {sum}");
             }
-            else if (sum>sum1)
+            else if (sum > sum1)
             {
                 Console.WriteLine($"The winner is right with total time: {sum1}");
             }
