@@ -10,7 +10,7 @@ namespace _02._The_Lift
             int peopleWaiting = int.Parse(Console.ReadLine());
             int[] liftState = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
 
-            int totalAvailableSpots = liftState.Length * 4- liftState.Sum();
+            int totalAvailableSpots = liftState.Length * 4 - liftState.Sum();
             int totalPeopleInQueue = peopleWaiting;
 
             for (int i = 0; i < liftState.Length; i++)
