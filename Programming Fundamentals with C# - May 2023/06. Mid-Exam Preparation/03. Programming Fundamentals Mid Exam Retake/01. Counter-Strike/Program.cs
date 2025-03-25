@@ -8,27 +8,30 @@ namespace _01._Counter_Strike
         {
             int energy = int.Parse(Console.ReadLine());
             string input = Console.ReadLine();
+            
             int battlesWon = 0;
             bool lost = false;
-            while (input!="End of battle")
+            
+            while (input != "End of battle")
             {
                 int distance = int.Parse(input);
-                if (energy<distance)
+                if (energy < distance)
                 {                 
                     Console.WriteLine($"Not enough energy! Game ends with {battlesWon} won battles and {energy} energy");
                     lost = true;
+                    
                     break;
                 }
 
                 energy -= distance;
                 battlesWon++;
 
-                if (battlesWon%3==0)
+                if (battlesWon % 3 == 0)
                 {
                     energy += battlesWon;
                 }
 
-               input=Console.ReadLine();
+               input = Console.ReadLine();
             }
 
             if (!lost)
