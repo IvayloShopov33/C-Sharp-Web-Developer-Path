@@ -10,6 +10,7 @@ namespace _03._Moving_Target
         {
             List<int> targets = Console.ReadLine().Split().Select(int.Parse).ToList();
             string[] actions = Console.ReadLine().Split();
+            
             while (actions[0] != "End")
             {
                 int index = int.Parse(actions[1]);
@@ -17,34 +18,36 @@ namespace _03._Moving_Target
                 {
                     if (index >= 0 && index < targets.Count)
                     {
-                        int value = int.Parse(actions[2]);
-                        targets.Insert(index, value);
+                        int @value = int.Parse(actions[2]);
+                        targets.Insert(index, @value);
                     }
                     else
                     {
                         Console.WriteLine("Invalid placement!");
                     }
                 }
-
                 else if (actions[0] == "Shoot")
                 {
                     if (index >= 0 && index < targets.Count)
                     {
                         int power = int.Parse(actions[2]);
                         if (targets[index] <= power)
+                        {
                             targets.RemoveAt(index);
-
+                        }
                         else
+                        {
                             targets[index] -= power;
+                        }
                     }
                 }
-
-                else if (actions[0]=="Strike")
+                else if (actions[0] == "Strike")
                 {
                     int radius = int.Parse(actions[2]);
                     int startIndex = index - radius;
                     int endIndex = index + radius;
-                    if (startIndex>=0 && endIndex<targets.Count)
+                    
+                    if (startIndex >= 0 && endIndex < targets.Count)
                     {
                         targets.RemoveRange(startIndex, endIndex - startIndex + 1);
                     }
@@ -53,8 +56,7 @@ namespace _03._Moving_Target
                         Console.WriteLine("Strike missed!");
                     }
                 }
-
-
+                
                 actions = Console.ReadLine().Split();
             }
 
