@@ -8,15 +8,17 @@ namespace _03._Hearth_Delivery
     {
         static void Main(string[] args)
         {
-            int[] houses = Console.ReadLine().Split('@').Select(int.Parse).ToArray();
-            
+            int[] houses = Console.ReadLine().Split('@').Select(int.Parse).ToArray();            
             string[] input = Console.ReadLine().Split();
+            
             int lastIndex = 0;
             int index = 0;
+            
             while (input[0] != "Love!")
             {
                 int length = int.Parse(input[1]);
                 index += length;
+                
                 if (index < houses.Length)
                 {
                     for (int i = 0; i < houses.Length; i++)
@@ -25,31 +27,38 @@ namespace _03._Hearth_Delivery
                         {
                             lastIndex = i;
                             if (houses[i] == 0)
+                            {
                                 Console.WriteLine($"Place {i} already had Valentine's day.");
-
+                            }
                             else
                             {
                                 houses[i] -= 2;
-                                if (houses[i]==0)
+                                if (houses[i] == 0)
+                                {
                                     Console.WriteLine($"Place {i} has Valentine's day.");
+                                }
                             }
+                            
                             break;
                         }
                     }
                 }
-
                 else
                 {
                     index = 0;
                     lastIndex = 0;
+                    
                     if (houses[0] == 0)
+                    {
                         Console.WriteLine($"Place {0} already had Valentine's day.");
-
+                    }
                     else
                     {
                         houses[0] -= 2;
                         if (houses[0] == 0)
+                        {
                             Console.WriteLine($"Place {0} has Valentine's day.");
+                        }
                     }
                 }
 
@@ -59,7 +68,8 @@ namespace _03._Hearth_Delivery
             Console.WriteLine($"Cupid's last position was {lastIndex}.");
             List<int> housesToList = houses.ToList();
             housesToList.RemoveAll(x => x == 0);
-            if (housesToList.Count==0)
+            
+            if (housesToList.Count == 0)
             {
                 Console.WriteLine("Mission was successful.");
             }
