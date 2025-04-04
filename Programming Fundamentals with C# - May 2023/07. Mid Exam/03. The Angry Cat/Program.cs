@@ -25,7 +25,7 @@ namespace _03._The_Angry_Cat
                     }
                 }
 
-                for (int i = entryPoint+1; i < priceRatings.Length; i++)
+                for (int i = entryPoint + 1; i < priceRatings.Length; i++)
                 {
                     if (priceRatings[i] < entryPointItem)
                     {
