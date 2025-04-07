@@ -9,6 +9,7 @@ namespace _3._Songs
         {
             int countOfSongs = int.Parse(Console.ReadLine());
             List<Song> songs = new List<Song>();
+            
             for (int i = 1; i <= countOfSongs; i++)
             {
                 string[] input = Console.ReadLine().Split('_');
@@ -22,6 +23,7 @@ namespace _3._Songs
                     Name = songName,
                     Time = duration
                 };
+                
                 songs.Add(song);
             }
 
@@ -33,7 +35,6 @@ namespace _3._Songs
                     Console.WriteLine(song.Name);
                 }
             }
-
             else
             {
                 foreach (var song in songs)
@@ -46,13 +47,13 @@ namespace _3._Songs
             }
         }
     }
-        public class Song
-        {
-            public string TypeList { get; set; }
-
-            public string Name { get; set; }
-
-            public string Time { get; set; }
-        }
     
+    public class Song
+    {
+        public string TypeList { get; set; }
+
+        public string Name { get; set; }
+
+        public string Time { get; set; }
+    }    
 }
