@@ -9,6 +9,7 @@ namespace _5._Students_2._0
         {
             string[] input = Console.ReadLine().Split();
             List<Student> students = new List<Student>();
+            
             while (input[0] != "end")
             {
                 string firstName = input[0];
@@ -21,23 +22,24 @@ namespace _5._Students_2._0
                 {
                     Student student = new Student
                     {
-                        firstName = firstName,
-                        lastName = lastName,
-                        age = age,
-                        homeTown = homeTown
+                        FirstName = firstName,
+                        LastName = lastName,
+                        Age = age,
+                        HomeTown = homeTown
                     };
+                    
                     students.Add(student);
                 }
+                
                 input = Console.ReadLine().Split();
             }
 
             string givenCity = Console.ReadLine();
-
             foreach (var student in students)
             {
-                if (student.homeTown == givenCity)
+                if (student.HomeTown == givenCity)
                 {
-                    Console.WriteLine($"{student.firstName} {student.lastName} is {student.age} years old.");
+                    Console.WriteLine($"{student.FirstName} {student.LastName} is {student.Age} years old.");
                 }
             }
         }
@@ -46,25 +48,27 @@ namespace _5._Students_2._0
         {
             foreach (Student student in students)
             {
-                if (student.firstName == firstName && student.lastName == lastName)
+                if (student.FirstName == firstName && student.LastName == lastName)
                 {
-                    student.age = age;
-                    student.homeTown = homeTown;
+                    student.Age = age;
+                    student.HomeTown = homeTown;
+                    
                     return true;
                 }
             }
+            
             return false;
         }
     }
 
     public class Student
     {
-        public string firstName { get; set; }
+        public string FirstName { get; set; }
 
-        public string lastName { get; set; }
-        public string age { get; set; }
+        public string LastName { get; set; }
+        
+        public string Age { get; set; }
 
-        public string homeTown { get; set; }       
+        public string HomeTown { get; set; }       
     }
-
 }
