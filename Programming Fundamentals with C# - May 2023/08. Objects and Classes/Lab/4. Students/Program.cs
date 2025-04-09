@@ -9,30 +9,32 @@ namespace _4._Students
         {
             string[] input = Console.ReadLine().Split();
             List<Student> students = new List<Student>();
+            
             while (input[0] != "end")
             {
                 string firstName = input[0];
                 string lastName = input[1];
                 string age = input[2];
                 string homeTown = input[3];
+                
                 Student student = new Student
                 {
-                    firstName = firstName,
-                    lastName = lastName,
-                    age = age,
-                    homeTown = homeTown
+                    FirstName = firstName,
+                    LastName = lastName,
+                    Age = age,
+                    HomeTown = homeTown,
                 };
+                
                 students.Add(student);
                 input = Console.ReadLine().Split();
             }
 
             string givenCity = Console.ReadLine();
-
             foreach (var student in students)
             {
                 if (student.homeTown == givenCity)
                 {
-                    Console.WriteLine($"{student.firstName} {student.lastName} is {student.age} years old.");
+                    Console.WriteLine($"{student.FirstName} {student.LastName} is {student.Age} years old.");
                 }
             }
         }
@@ -40,12 +42,13 @@ namespace _4._Students
 
     public class Student
     {
-        public string firstName { get; set; }
+        public string FirstName { get; set; }
 
-        public string lastName { get; set; }
-        public string age { get; set; }
+        public string LastName { get; set; }
+        
+        public string Age { get; set; }
 
-        public string homeTown { get; set; }
+        public string HomeTown { get; set; }
     }
 
 }
