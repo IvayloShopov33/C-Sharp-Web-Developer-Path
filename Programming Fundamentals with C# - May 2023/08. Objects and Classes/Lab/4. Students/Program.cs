@@ -32,7 +32,7 @@ namespace _4._Students
             string givenCity = Console.ReadLine();
             foreach (var student in students)
             {
-                if (student.homeTown == givenCity)
+                if (student.HomeTown == givenCity)
                 {
                     Console.WriteLine($"{student.FirstName} {student.LastName} is {student.Age} years old.");
                 }
@@ -50,5 +50,4 @@ namespace _4._Students
 
         public string HomeTown { get; set; }
     }
-
 }
