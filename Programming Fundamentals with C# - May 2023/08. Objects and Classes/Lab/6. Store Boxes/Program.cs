@@ -10,28 +10,30 @@ namespace _6._Store_Boxes
         {
             string[] input = Console.ReadLine().Split();
             List<Box> boxes = new List<Box>();
-            while (input[0]!="end")
+            
+            while (input[0] != "end")
             {
-                string SerialNumber = input[0];
+                string serialNumber = input[0];
                 string itemName = input[1];
-                int ItemQuantity = int.Parse(input[2]);
-                float ItemPrice=float.Parse(input[3]);
+                int itemQuantity = int.Parse(input[2]);
+                float itemPrice = float.Parse(input[3]);
+                
                 Item item = new Item
                 {
-                    Name=itemName,
-                    Price=ItemPrice
+                    Name = itemName,
+                    Price = itemPrice,
                 };
 
-                float priceOfTheBox = ItemQuantity * ItemPrice;
+                float priceOfTheBox = itemQuantity * itemPrice;
                 Box box = new Box
                 {
-                    SerialNumber = SerialNumber,
+                    SerialNumber = serialNumber,
                     Item = item,
-                    ItemQuantity = ItemQuantity,
-                    PriceOfTheBox = priceOfTheBox
+                    ItemQuantity = itemQuantity,
+                    PriceOfTheBox = priceOfTheBox,
                 };
+                
                 boxes.Add(box);
-
                 input = Console.ReadLine().Split();
             }
 
@@ -41,21 +43,24 @@ namespace _6._Store_Boxes
                 Console.WriteLine($"-- {box.Item.Name} - ${box.Item.Price:f2}: {box.ItemQuantity}");
                 Console.WriteLine($"-- ${box.PriceOfTheBox:f2}");
             }
-
         }
     }
 
-     class Item
+    public class Item
     {
         public string Name { get; set; }
+         
         public float Price { get; set; }
     }
 
-     class Box
+    public class Box
     {
         public string SerialNumber { get; set; }
+         
         public Item Item { get; set; }
+         
         public int ItemQuantity { get; set; }
+         
         public float PriceOfTheBox { get; set; }
     }
 }
