@@ -10,22 +10,24 @@ namespace _2._Articles
             string title = articleParts[0];
             string content = articleParts[1];
             string author = articleParts[^1];
+            
             Article article = new Article(title, content, author);
             int commandsCount = int.Parse(Console.ReadLine());
+            
             for (int i = 0; i < commandsCount; i++)
             {
                 string[] commands = Console.ReadLine().Split(": ", StringSplitOptions.RemoveEmptyEntries);
-                if (commands[0]=="Edit")
+                if (commands[0] == "Edit")
                 {
                     string newContent = commands[1];
                     article.Edit(newContent);
                 }
-                else if (commands[0]=="ChangeAuthor")
+                else if (commands[0] == "ChangeAuthor")
                 {
                     string newAuthor = commands[1];
                     article.ChangeAuthor(newAuthor);
                 }
-                else if (commands[0]=="Rename")
+                else if (commands[0] == "Rename")
                 {
                     string newTitle = commands[1];
                     article.Rename(newTitle);
@@ -33,7 +35,6 @@ namespace _2._Articles
             }
 
             Console.WriteLine(article);
-
         }
     }
 
