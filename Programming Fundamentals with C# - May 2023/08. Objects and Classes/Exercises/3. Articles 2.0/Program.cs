@@ -13,6 +13,7 @@ namespace _3._Articles_2._0
                 string title = articlesParts[0];
                 string content = articlesParts[1];
                 string author = articlesParts[2];
+                
                 Article article = new Article(title, content, author);
                 Console.WriteLine(article);
             }
@@ -27,9 +28,11 @@ namespace _3._Articles_2._0
             Content = content;
             Author = author;
         }
+        
         public string Title { get; set; }
 
         public string Content { get; set; }
+        
         public string Author { get; set; }
 
         public override string ToString()
