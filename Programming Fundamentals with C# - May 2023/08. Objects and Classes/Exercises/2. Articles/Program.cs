@@ -42,9 +42,9 @@ namespace _2._Articles
     {
         public Article(string title, string content, string author)
         {
-            Title = title;
-            Content = content;
-            Author = author;
+            this.Title = title;
+            this.Content = content;
+            this.Author = author;
         }
         public string Title { get; set; }
 
@@ -54,22 +54,22 @@ namespace _2._Articles
 
         public void Edit(string newContent)
         {
-            Content = newContent;
+            this.Content = newContent;
         }
 
         public void ChangeAuthor(string newAuthor)
         {
-            Author = newAuthor;
+            this.Author = newAuthor;
         }
 
         public void Rename(string newTitle)
         {
-            Title = newTitle;
+            this.Title = newTitle;
         }
 
         public override string ToString()
         {
-            return $"{Title} - {Content}: {Author}";
+            return $"{this.Title} - {this.Content}: {this.Author}";
         }
     }
 }
