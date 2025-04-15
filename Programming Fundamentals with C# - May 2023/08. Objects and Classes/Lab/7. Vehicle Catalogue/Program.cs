@@ -85,8 +85,8 @@ namespace _7._Vehicle_Catalogue
     {
         public Catalog()
         {
-            Trucks = new List<Truck>();
-            Cars = new List<Car>();
+            this.Trucks = new List<Truck>();
+            this.Cars = new List<Car>();
         }
         
         public List<Truck> Trucks { get; set; }
