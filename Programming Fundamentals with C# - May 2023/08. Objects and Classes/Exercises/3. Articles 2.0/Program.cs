@@ -24,9 +24,9 @@ namespace _3._Articles_2._0
     {
         public Article(string title, string content, string author)
         {
-            Title = title;
-            Content = content;
-            Author = author;
+            this.Title = title;
+            this.Content = content;
+            this.Author = author;
         }
         
         public string Title { get; set; }
@@ -37,8 +37,7 @@ namespace _3._Articles_2._0
 
         public override string ToString()
         {
-            return $"{Title} - {Content}: {Author}";
+            return $"{this.Title} - {this.Content}: {this.Author}";
         }
-
     }
 }
