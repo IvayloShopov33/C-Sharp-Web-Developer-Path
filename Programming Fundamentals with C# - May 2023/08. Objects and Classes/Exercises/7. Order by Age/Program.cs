@@ -10,6 +10,7 @@ namespace _7._Order_by_Age
         {
             List<IdentityOfAPerson> identitiesOfAPeople = new List<IdentityOfAPerson>();
             InitializePeople(identitiesOfAPeople);
+            
             identitiesOfAPeople = SortAndPrintPeople(identitiesOfAPeople);
         }
 
@@ -18,12 +19,13 @@ namespace _7._Order_by_Age
             string[] personInformation = Console.ReadLine().Split();
             while (personInformation[0] != "End")
             {
-
                 string name = personInformation[0];
                 string id = personInformation[1];
                 int age = int.Parse(personInformation[2]);
+                
                 IdentityOfAPerson identityOfAPerson = new IdentityOfAPerson(name, id, age);
                 bool alreadyHaveThisId = identitiesOfAPeople.Any(x => x.ID == id);
+                
                 if (alreadyHaveThisId)
                 {
                     IdentityOfAPerson person = identitiesOfAPeople.First(g => g.ID == id);
@@ -33,11 +35,12 @@ namespace _7._Order_by_Age
                 else
                 {
                     identitiesOfAPeople.Add(identityOfAPerson);
-
                 }
+                
                 personInformation = Console.ReadLine().Split();
             }
         }
+        
         static List<IdentityOfAPerson> SortAndPrintPeople(List<IdentityOfAPerson> identitiesOfAPeople)
         {
             identitiesOfAPeople = identitiesOfAPeople.OrderBy(h => h.Age).ToList();
@@ -48,7 +51,6 @@ namespace _7._Order_by_Age
 
             return identitiesOfAPeople;
         }
-
     }
 
     public class IdentityOfAPerson
@@ -59,7 +61,9 @@ namespace _7._Order_by_Age
             this.ID = id;
             this.Age = age;
         }
+        
         public string Name { get; set; }
+        
         public string ID { get; set; }
 
         public int Age { get; set; }
