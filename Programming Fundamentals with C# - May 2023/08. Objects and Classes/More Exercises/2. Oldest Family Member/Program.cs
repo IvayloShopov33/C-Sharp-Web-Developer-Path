@@ -16,12 +16,15 @@ namespace _2._Oldest_Family_Member
                 string[] personDetails = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
                 string name = personDetails[0];
                 int age = int.Parse(personDetails[1]);
+                
                 Person person = new Person(name, age);
                 AddMemberToTheFamily(people, person);
             }
+            
             Person theOldest = GetOldestMember(people);
             Console.WriteLine($"{theOldest.Name} {theOldest.Age}");
         }
+        
         static void AddMemberToTheFamily(List<Person> people, Person person)
         {          
             people.Add(person);
@@ -30,6 +33,7 @@ namespace _2._Oldest_Family_Member
         static Person GetOldestMember(List<Person> people)
         {
             people = people.OrderByDescending(g => g.Age).ToList();
+            
             return people[0];
         }
     }
@@ -38,10 +42,12 @@ namespace _2._Oldest_Family_Member
     {
         public Person(string name, int age)
         {
-            Name = name;
-            Age = age;
+            this.Name = name;
+            this.Age = age;
         }
+        
         public string Name { get; set; }
+        
         public int Age { get; set; }
     }
 }
