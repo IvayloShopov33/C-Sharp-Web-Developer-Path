@@ -10,6 +10,7 @@ namespace _3._Speed_Racing
         {
             List<Car> cars = new List<Car>();
             InitializeCars(cars);
+            
             CommandsToDriveCars(cars);
             PrintCarsDetails(cars);
         }
@@ -24,10 +25,12 @@ namespace _3._Speed_Racing
                 double fuelAmount = double.Parse(carDetails[1]);
                 double fuelConsumptionPerKilometer = double.Parse(carDetails[2]);
                 double distanceTraveled = 0;
+                
                 Car car = new Car(model, fuelAmount, fuelConsumptionPerKilometer, distanceTraveled);
                 cars.Add(car);
             }
         }
+        
         static void CommandsToDriveCars(List<Car> cars)
         {
             string[] command = Console.ReadLine().Split();
@@ -35,8 +38,10 @@ namespace _3._Speed_Racing
             {
                 string modelDriven = command[1];
                 double kilometersDriven = double.Parse(command[2]);
+                
                 Car drivenCar = cars.First(g => g.Model == modelDriven);
                 double neededFuel = drivenCar.FuelConsumptionPerKilometer * kilometersDriven;
+                
                 if (neededFuel <= drivenCar.FuelAmount)
                 {
                     drivenCar.FuelAmount -= neededFuel;
@@ -46,9 +51,11 @@ namespace _3._Speed_Racing
                 {
                     Console.WriteLine("Insufficient fuel for the drive");
                 }
+                
                 command = Console.ReadLine().Split();
             }
         }
+        
         static void PrintCarsDetails(List<Car> cars)
         {
             foreach (Car car in cars)
@@ -56,8 +63,6 @@ namespace _3._Speed_Racing
                 Console.WriteLine($"{car.Model} {car.FuelAmount:f2} {car.DistanceTraveled}");
             }
         }
-
-
     }
 
     public class Car
@@ -69,10 +74,13 @@ namespace _3._Speed_Racing
             this.FuelConsumptionPerKilometer = fuelConsumptionPerKilometer;
             this.DistanceTraveled = distanceTraveled;
         }
+        
         public string Model { get; private set; }
+        
         public double FuelAmount { get; set; }
+        
         public double FuelConsumptionPerKilometer { get; set; }
+        
         public double DistanceTraveled { get; set; }
-
     }
 }
