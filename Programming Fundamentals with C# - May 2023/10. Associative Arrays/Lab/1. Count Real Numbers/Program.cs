@@ -11,6 +11,7 @@ namespace _1._Count_Real_Numbers
             int[] numbers = Console.ReadLine().Split().Select(int.Parse).ToArray();
             SortedDictionary<int, int> sortedNumbers =
                 new SortedDictionary<int, int>();
+            
             foreach (int number in numbers)
             {
                 if (!sortedNumbers.ContainsKey(number))
