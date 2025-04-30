@@ -10,6 +10,7 @@ namespace _2._Odd_Occurrences
             string[] words = Console.ReadLine().Split();
             Dictionary<string, int> validWords =
                 new Dictionary<string, int>();
+            
             foreach (string word in words)
             {
                 string wordToLowerCase = word.ToLower();
@@ -25,9 +26,9 @@ namespace _2._Odd_Occurrences
 
             foreach (var word in validWords)
             {
-                if (word.Value%2==1)
+                if (word.Value % 2 == 1)
                 {
-                    Console.Write(word.Key+" ");
+                    Console.Write(word.Key + " ");
                 }
             }
         }
