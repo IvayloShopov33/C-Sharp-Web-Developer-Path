@@ -10,15 +10,18 @@ namespace _3._Word_Synonyms
             int wordsCount = int.Parse(Console.ReadLine());
             Dictionary<string, List<string>> synonyms =
                 new Dictionary<string, List<string>>();
+            
             for (int i = 1; i <= wordsCount; i++)
             {
                 string key = Console.ReadLine();
-                string value = Console.ReadLine();
+                string @value = Console.ReadLine();
+                
                 if (!synonyms.ContainsKey(key))
                 {
                     synonyms.Add(key, new List<string>());
                 }
-                synonyms[key].Add(value);
+                
+                synonyms[key].Add(@value);
             }
 
             foreach (var item in synonyms)
