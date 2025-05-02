@@ -9,6 +9,7 @@ namespace _4._Word_Filter
         {
             string[] words = Console.ReadLine().Split().ToArray();
             words = words.Where(g => g.Length % 2 == 0).ToArray();
+            
             foreach (string word in words)
             {
                 Console.WriteLine(word);
