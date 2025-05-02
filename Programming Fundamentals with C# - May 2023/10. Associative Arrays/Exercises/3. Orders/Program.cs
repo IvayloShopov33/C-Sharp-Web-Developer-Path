@@ -12,14 +12,17 @@ namespace _3._Orders
             List<Product> productsInList = new List<Product>();
             Dictionary<string, decimal> products =
                 new Dictionary<string, decimal>();
-            while (productDetails[0]!="buy")
+            
+            while (productDetails[0] != "buy")
             {
                 string name = productDetails[0];
                 decimal price = decimal.Parse(productDetails[1]);
                 int quantity = int.Parse(productDetails[2]);
+                decimal totalPrice = 0.0m;
+                
                 Product product = new Product(name, price, quantity);
                 productsInList.Add(product);
-                decimal totalPrice = 0.0m;
+                
                 if (!products.ContainsKey(name))
                 {
                     totalPrice = price * quantity;
@@ -29,13 +32,16 @@ namespace _3._Orders
                 {
                     Product sameProduct = productsInList.First(g => g.Name == name);
                     sameProduct.Quantity += quantity;
-                    if (sameProduct.Price!=price)
+                    
+                    if (sameProduct.Price != price)
                     {
                         sameProduct.Price = price;
                     }
+                    
                     totalPrice = sameProduct.Price * sameProduct.Quantity;
                     products[name] = totalPrice;
                 }
+                
                 productDetails = Console.ReadLine().Split();
             }
 
@@ -50,13 +56,15 @@ namespace _3._Orders
     {
         public Product(string name, decimal price, int quantity)
         {
-            Name = name;
-            Price = price;
-            Quantity = quantity;
+            this.Name = name;
+            this.Price = price;
+            this.Quantity = quantity;
         }
+        
         public string Name { get; private set; }
+        
         public decimal Price { get; set; }
+        
         public int Quantity { get; set; }
-
     }
 }
