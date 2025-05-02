@@ -10,6 +10,7 @@ namespace _1._Count_Chars_in_a_String
             string[] words = Console.ReadLine().Split();
             Dictionary<char, int> charsOccurences =
                 new Dictionary<char, int>();
+            
             foreach (string word in words)
             {
                 char[] wordToCharArray = word.ToCharArray();
@@ -19,6 +20,7 @@ namespace _1._Count_Chars_in_a_String
                     {
                         charsOccurences.Add(wordToCharArray[i], 0);
                     }
+                    
                     charsOccurences[wordToCharArray[i]]++;
                 }
             }
