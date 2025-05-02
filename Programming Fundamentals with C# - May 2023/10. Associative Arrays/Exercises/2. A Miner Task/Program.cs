@@ -10,6 +10,7 @@ namespace _2._A_Miner_Task
             Dictionary<string, int> resources =
                 new Dictionary<string, int>();
             string resource = Console.ReadLine();
+            
             while (resource != "stop")
             {
                 int quantity = int.Parse(Console.ReadLine());
@@ -21,6 +22,7 @@ namespace _2._A_Miner_Task
                 {
                     resources[resource] += quantity;
                 }
+                
                 resource = Console.ReadLine();
             }
 
