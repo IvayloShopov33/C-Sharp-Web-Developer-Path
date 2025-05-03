@@ -10,11 +10,13 @@ namespace _4._SoftUni_Parking
             Dictionary<string, string> carsInParking =
                 new Dictionary<string, string>();
             int commandsCount = int.Parse(Console.ReadLine());
+            
             for (int i = 0; i < commandsCount; i++)
             {
                 string[] commands = Console.ReadLine().Split();
-                    string username = commands[1];
-                if (commands[0]=="register")
+                string username = commands[1];
+                
+                if (commands[0] == "register")
                 {
                     string licensePlateNumber = commands[2];
                     if (!carsInParking.ContainsKey(username))
@@ -27,7 +29,7 @@ namespace _4._SoftUni_Parking
                         Console.WriteLine($"ERROR: already registered with plate number {carsInParking[username]}");
                     }
                 }
-                else if (commands[0]=="unregister")
+                else if (commands[0] == "unregister")
                 {
                     if (!carsInParking.ContainsKey(username))
                     {
