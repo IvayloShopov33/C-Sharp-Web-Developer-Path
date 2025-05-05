@@ -10,6 +10,7 @@ namespace _6._Student_Academy
         {
             Dictionary<string, List<double>> students =
                 new Dictionary<string, List<double>>();
+            
             InitializeStudentsAndTheirGrades(students);
             PrintValidStudentsWithTheirGrades(students);
         }
@@ -21,10 +22,12 @@ namespace _6._Student_Academy
             {
                 string name = Console.ReadLine();
                 double grade = double.Parse(Console.ReadLine());
+                
                 if (!students.ContainsKey(name))
                 {
                     students.Add(name, new List<double>());
                 }
+                
                 students[name].Add(grade);
             }
         }
@@ -33,7 +36,6 @@ namespace _6._Student_Academy
         {
             foreach (KeyValuePair<string, List<double>> student in students)
             {
-
                 double averageGrage = student.Value.Average();
                 if (averageGrage >= 4.5 && averageGrage <= 6)
                 {
