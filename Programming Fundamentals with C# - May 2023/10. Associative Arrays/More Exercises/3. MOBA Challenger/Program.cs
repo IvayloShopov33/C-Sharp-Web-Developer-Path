@@ -10,7 +10,8 @@ namespace _3._MOBA_Challenger
         {
             List<Player> players = new List<Player>();
             string input = Console.ReadLine();
-            while (input!="Season end")
+            
+            while (input != "Season end")
             {
                 if (input.Contains("->"))
                 {
@@ -18,7 +19,8 @@ namespace _3._MOBA_Challenger
                     string name = playerDetails[0];
                     string position = playerDetails[1];
                     int skill = int.Parse(playerDetails[2]);
-                    if (!players.Any(g=>g.Name==name))
+                    
+                    if (!players.Any(g => g.Name == name))
                     {
                         Player player = new Player(name, new Dictionary<string, int>());
                         player.PositionAndSkill.Add(position, skill);
@@ -33,7 +35,7 @@ namespace _3._MOBA_Challenger
                         }
                         else
                         {
-                            if (selectedPlayer.PositionAndSkill[position]<skill)
+                            if (selectedPlayer.PositionAndSkill[position] < skill)
                             {
                                 selectedPlayer.PositionAndSkill[position] = skill;
                             }
@@ -45,19 +47,21 @@ namespace _3._MOBA_Challenger
                     string[] fighters = input.Split(" vs ");
                     string firstPlayer = fighters[0];
                     string secondPlayer = fighters[1];
-                    if (players.Any(x=>x.Name==firstPlayer) && players.Any(x=>x.Name==secondPlayer))
+                    
+                    if (players.Any(x => x.Name == firstPlayer) && players.Any(x => x.Name == secondPlayer))
                     {
                         Player firstFighter = players.First(x => x.Name == firstPlayer);
                         Player secondFighter = players.First(x => x.Name == secondPlayer);
                         int firstPlayerWins = 0;
                         int secondPlayerWins = 0;
-                        if (firstFighter.PositionAndSkill.Count>=secondFighter.PositionAndSkill.Count)
+                        
+                        if (firstFighter.PositionAndSkill.Count >= secondFighter.PositionAndSkill.Count)
                         {
                             foreach (var item in firstFighter.PositionAndSkill)
                             {
                                 if (secondFighter.PositionAndSkill.ContainsKey(item.Key))
                                 {
-                                    if (firstFighter.PositionAndSkill[item.Key]> secondFighter.PositionAndSkill[item.Key])
+                                    if (firstFighter.PositionAndSkill[item.Key] > secondFighter.PositionAndSkill[item.Key])
                                     {
                                         firstPlayerWins++;
                                     }
@@ -86,38 +90,41 @@ namespace _3._MOBA_Challenger
                             }
                         }
 
-                        if (firstPlayerWins>secondPlayerWins)
+                        if (firstPlayerWins > secondPlayerWins)
                         {
                             players.Remove(secondFighter);
                         }
-                        else if (firstPlayerWins<secondPlayerWins)
+                        else if (firstPlayerWins < secondPlayerWins)
                         {
                             players.Remove(firstFighter);
-
                         }
                     }
                 }
+                
                 input = Console.ReadLine();
             }
 
-            foreach (var player in players.OrderByDescending(x=>x.PositionAndSkill.Values.Sum()).ThenBy(x=>x.Name))
+            foreach (var player in players.OrderByDescending(x => x.PositionAndSkill.Values.Sum()).ThenBy(x => x.Name))
             {
                 Console.WriteLine($"{player.Name}: {player.PositionAndSkill.Values.Sum()} skill");
-                foreach (var playerDetails in player.PositionAndSkill.OrderByDescending(x=>x.Value).ThenBy(g=>g.Key))
+                foreach (var playerDetails in player.PositionAndSkill.OrderByDescending(x => x.Value).ThenBy(g => g.Key))
                 {
                     Console.WriteLine($"- {playerDetails.Key} <::> {playerDetails.Value}");
                 }
             }
         }
     }
+    
     public class Player
     {
         public Player(string name, Dictionary<string, int> positionAndSkill)
         {
-            Name = name;
-            PositionAndSkill = positionAndSkill;
+            this.Name = name;
+            this.PositionAndSkill = positionAndSkill;
         }
+        
         public string Name { get; private set; }
+        
         public Dictionary<string, int> PositionAndSkill { get; set; }
     }
 }
