@@ -26,12 +26,12 @@ namespace _5._Dragon_Army
                     damage = int.Parse(dragonDetails[2]);
                 }
                 
-                if (dragonDetails[3]!="null")
+                if (dragonDetails[3] != "null")
                 {
                     health = int.Parse(dragonDetails[3]);
                 }
                 
-                if (dragonDetails[4]!="null")
+                if (dragonDetails[4] != "null")
                 {
                     armor = int.Parse(dragonDetails[4]);
                 }
@@ -43,7 +43,7 @@ namespace _5._Dragon_Army
                 }
                 
                 Dragon existingDragon = dragons[type].FirstOrDefault(g => g.Name == name);
-                if (existingDragon!=null)
+                if (existingDragon != null)
                 {
                     existingDragon.Damage = damage;
                     existingDragon.Health = health;
@@ -62,7 +62,7 @@ namespace _5._Dragon_Army
                 double averageArmor = item.Value.Average(f => f.Armor);
                 Console.WriteLine($"{item.Key}::({averageDamage:f2}/{averageHealth:f2}/{averageArmor:f2})");
                 
-                foreach (Dragon dragonsToPrint in item.Value.OrderBy(g=>g.Name))
+                foreach (Dragon dragonsToPrint in item.Value.OrderBy(g => g.Name))
                 {
                     Console.WriteLine($"-{dragonsToPrint.Name} -> damage: {dragonsToPrint.Damage}, health: {dragonsToPrint.Health}, armor: {dragonsToPrint.Armor}");
                 }
