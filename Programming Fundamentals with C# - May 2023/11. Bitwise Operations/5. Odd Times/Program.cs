@@ -13,12 +13,13 @@ namespace _5._Odd_Times
                 int count = 0;
                 for (int j = i; j < numbers.Length; j++)
                 {
-                    if (numbers[i]==numbers[j])
+                    if (numbers[i] == numbers[j])
                     {
                         count++;
                     }
                 }
-                if (count%2==1)
+                
+                if (count % 2 == 1)
                 {
                     Console.WriteLine(numbers[i]);
                     return;
