@@ -13,13 +13,13 @@ namespace _6.__Tri_bit_Switch
             char[] binaryToCharArray = numberToBinary.ToCharArray();
             Array.Reverse(binaryToCharArray);
             
-            for (int i = initialPosition; i < initialPosition+3; i++)
+            for (int i = initialPosition; i < initialPosition + 3; i++)
             {
-                if (binaryToCharArray[i]=='0')
+                if (binaryToCharArray[i] == '0')
                 {
                     binaryToCharArray[i] = '1';
                 }
-                else if (binaryToCharArray[i]=='1')
+                else if (binaryToCharArray[i] == '1')
                 {
                     binaryToCharArray[i] = '0';
                 }
