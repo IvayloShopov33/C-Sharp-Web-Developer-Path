@@ -6,6 +6,7 @@
         {
             string[] words = System.Console.ReadLine().Split();
             string result = string.Empty;
+            
             foreach (var word in words)
             {
                 for (int i = 0; i < word.Length; i++)
@@ -13,6 +14,7 @@
                     result += word;
                 }
             }
+            
             System.Console.WriteLine(result);
         }
     }
