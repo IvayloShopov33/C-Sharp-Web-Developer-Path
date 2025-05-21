@@ -8,11 +8,13 @@ namespace _3._Substring
         {
             string substring = Console.ReadLine();
             string secondString = Console.ReadLine();
+            
             while (secondString.Contains(substring))
             {
                 int indexOfTheSubstring = secondString.IndexOf(substring);
                 secondString = secondString.Remove(indexOfTheSubstring, substring.Length);
             }
+            
             Console.WriteLine(secondString);
         }
     }
