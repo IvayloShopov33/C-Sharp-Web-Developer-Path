@@ -9,6 +9,7 @@ namespace _1._Valid_Usernames
         {
             string[] usernames = Console.ReadLine().Split(", ");
             List<string> validUsernames = new List<string>();
+
             foreach (string username in usernames)
             {
                 bool isVaild = true;
@@ -24,6 +25,7 @@ namespace _1._Valid_Usernames
                             break;
                         }
                     }
+
                     if (isVaild)
                     {
                         validUsernames.Add(username);
