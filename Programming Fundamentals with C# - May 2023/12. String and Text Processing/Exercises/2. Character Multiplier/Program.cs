@@ -10,6 +10,7 @@ namespace _2._Character_Multiplier
             string firstString = strings[0];
             string secondString = strings[1];
             int sum = 0;
+
             if (firstString.Length > secondString.Length)
             {
                 sum = SumWhenFirstLengthIsBigger(firstString, secondString, sum);
@@ -22,6 +23,7 @@ namespace _2._Character_Multiplier
             {
                 sum = SumWhenLengthsAreEqual(firstString, secondString, sum);
             }
+
             PrintTotalSumOfCharacters(sum);
         }
 
@@ -31,6 +33,7 @@ namespace _2._Character_Multiplier
             {
                 sum += firstString[i] * secondString[i];
             }
+
             for (int i = secondString.Length; i < firstString.Length; i++)
             {
                 sum += firstString[i];
@@ -45,6 +48,7 @@ namespace _2._Character_Multiplier
             {
                 sum += firstString[i] * secondString[i];
             }
+
             for (int i = firstString.Length; i < secondString.Length; i++)
             {
                 sum += secondString[i];
