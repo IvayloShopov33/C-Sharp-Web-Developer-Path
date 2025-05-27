@@ -8,6 +8,7 @@ namespace _3._Extract_File
         {
             string[] filePath = Console.ReadLine().Split("\\");
             string fileExtension, fileName;
+
             InitializeFileNameAndHisExtension(filePath, out fileExtension, out fileName);
             PrintFileNameAndHisExtension(fileExtension, fileName);
         }
