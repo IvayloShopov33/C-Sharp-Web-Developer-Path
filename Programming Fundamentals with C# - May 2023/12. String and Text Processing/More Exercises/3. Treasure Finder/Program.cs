@@ -9,31 +9,37 @@ namespace _3._Treasure_Finder
         {
             int[] key = Console.ReadLine().Split().Select(int.Parse).ToArray();
             string commands = Console.ReadLine();
-            while (commands!="find")
+
+            while (commands != "find")
             {
                 string decryptedCommand = string.Empty;
                 char[] commandToCharArray = commands.ToCharArray();
                 int j = 0;
+
                 for (int i = 0; i < commandToCharArray.Length; i++)
                 {
-                    if (j==key.Length)
+                    if (j == key.Length)
                     {
                         j = 0;
                     }
+
                     int newCharASCIICode = commandToCharArray[i] - key[j];
                     char newChar = (char)newCharASCIICode;
-                    decryptedCommand+=newChar;
+
+                    decryptedCommand += newChar;
                     j++;
                 }
 
-                int startingIndexOfType = decryptedCommand.IndexOf('&')+1;
+                int startingIndexOfType = decryptedCommand.IndexOf('&') + 1;
                 int finalIndexOfType = decryptedCommand.LastIndexOf('&');
                 int lengthOfTheType = finalIndexOfType - startingIndexOfType;
                 string type = decryptedCommand.Substring(startingIndexOfType, lengthOfTheType);
+
                 int startingIndexOfCoordinates = decryptedCommand.IndexOf('<') + 1;
                 int finalIndexOfCoordinates = decryptedCommand.IndexOf('>');
                 int lengthOfTheCoordinates = finalIndexOfCoordinates - startingIndexOfCoordinates;
                 string coordinates = decryptedCommand.Substring(startingIndexOfCoordinates, lengthOfTheCoordinates);
+
                 Console.WriteLine($"Found {type} at {coordinates}");
                 commands = Console.ReadLine();
             }
