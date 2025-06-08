@@ -17,7 +17,7 @@ namespace _5._HTML
             Console.WriteLine("</article>");
             
             string comment = Console.ReadLine();
-            while (comment!="end of comments")
+            while (comment != "end of comments")
             {
                 Console.WriteLine("<div>");
                 Console.WriteLine($"   {comment}");
