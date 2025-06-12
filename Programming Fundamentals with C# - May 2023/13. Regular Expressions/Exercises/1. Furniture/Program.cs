@@ -10,6 +10,7 @@ namespace _1._Furniture
         {
             List<string> furnitures = new List<string>();
             double totalSum = 0;
+
             totalSum = InitializeValidFurnitures(furnitures, totalSum);
             PrintValidFurnituresWithTotalSum(furnitures, totalSum);
         }
@@ -18,6 +19,7 @@ namespace _1._Furniture
         {
             string input = Console.ReadLine();
             string pattern = @"^>>(?<furnitureName>[A-Za-z]+)<<(?<price>\d+(\.\d+)?)!(?<quantity>\d+)(\.\d+)?$";
+
             while (input != "Purchase")
             {
                 Match match = Regex.Match(input, pattern);
@@ -25,10 +27,12 @@ namespace _1._Furniture
                 {
                     string furnitureName = match.Groups["furnitureName"].Value;
                     furnitures.Add(furnitureName);
+
                     double pricePerUnit = double.Parse(match.Groups["price"].Value);
                     int quantity = int.Parse(match.Groups["quantity"].Value);
                     totalSum += pricePerUnit * quantity;
                 }
+
                 input = Console.ReadLine();
             }
 
@@ -42,6 +46,7 @@ namespace _1._Furniture
             {
                 Console.WriteLine(string.Join(Environment.NewLine, furnitures));
             }
+
             Console.WriteLine($"Total money spend: {totalSum:f2}");
         }
 
