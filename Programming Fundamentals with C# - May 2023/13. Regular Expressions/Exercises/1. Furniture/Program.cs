@@ -49,6 +49,5 @@ namespace _1._Furniture
 
             Console.WriteLine($"Total money spend: {totalSum:f2}");
         }
-
     }
 }
