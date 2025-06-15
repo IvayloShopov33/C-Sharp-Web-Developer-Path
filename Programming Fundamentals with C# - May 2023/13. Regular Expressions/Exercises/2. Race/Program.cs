@@ -13,6 +13,7 @@ namespace _2._Race
             string[] participants = Console.ReadLine().Split(", ", StringSplitOptions.RemoveEmptyEntries);
             Dictionary<string, int> results =
                 new Dictionary<string, int>();
+
             InitializeRacersWithTheirKilometers(participants, results);
             PrintFirstThreeRacers(results);
 
@@ -72,6 +73,7 @@ namespace _2._Race
                 MatchCollection nameCollection = Regex.Matches(input, @"([A-Za-z]+)");
                 MatchCollection kilometersCollection = Regex.Matches(input, @"(\d)");
                 string name = string.Join(string.Empty, nameCollection);
+
                 if (results.ContainsKey(name))
                 {
                     results[name] += kilometersCollection.Select(x => int.Parse(x.Value)).Sum();
@@ -83,6 +85,7 @@ namespace _2._Race
         {
             IEnumerable<KeyValuePair<string, int>> finalists = results.OrderByDescending(x => x.Value).Take(3);
             int counter = 1;
+
             foreach (KeyValuePair<string, int> finalist in finalists)
             {
                 string suffix = counter == 1 ? "st" : counter == 2 ? "nd" : "rd";
@@ -90,6 +93,5 @@ namespace _2._Race
                 counter++;
             }
         }
-
     }
 }
