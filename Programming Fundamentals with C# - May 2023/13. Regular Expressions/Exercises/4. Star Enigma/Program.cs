@@ -14,6 +14,7 @@ namespace _4._Star_Enigma
             List<string> attackedPlanets = new List<string>();
             List<string> destroyedPlanets = new List<string>();
             Regex regex = new Regex(pattern);
+
             DecryptingMessages(attackedPlanets, destroyedPlanets, regex);
             PrintAttackedAndDestroyedPlanets(attackedPlanets, destroyedPlanets);
         }
@@ -26,6 +27,7 @@ namespace _4._Star_Enigma
                 string message = Console.ReadLine();
                 char[] messageToCharArray = message.ToCharArray();
                 int specialLettersCount = 0;
+
                 foreach (char character in messageToCharArray)
                 {
                     if (character == 's' || character == 't' || character == 'a' || character == 'r'
@@ -34,6 +36,7 @@ namespace _4._Star_Enigma
                         specialLettersCount++;
                     }
                 }
+
                 StringBuilder decryptedMessage = new StringBuilder();
                 foreach (char character in messageToCharArray)
                 {
@@ -41,6 +44,7 @@ namespace _4._Star_Enigma
                     char newCharacter = (char)characterASCIICode;
                     decryptedMessage.Append(newCharacter);
                 }
+
                 Match match = regex.Match(decryptedMessage.ToString());
                 if (match.Success)
                 {
@@ -66,6 +70,7 @@ namespace _4._Star_Enigma
                     Console.WriteLine($"-> {planet}");
                 }
             }
+
             Console.WriteLine($"Destroyed planets: {destroyedPlanets.Count}");
             if (destroyedPlanets.Count > 0)
             {
