@@ -18,7 +18,9 @@ namespace _5._Nether_Realms
             {
                 input[i] = input[i].Replace(" ", "");
             }
+
             Array.Sort(input);
+
             return input;
         }
 
@@ -28,17 +30,21 @@ namespace _5._Nether_Realms
             {
                 MatchCollection matchCollectionOfHealth = Regex.Matches(input[i], @"[^0-9+\-*/.\s]");
                 int health = 0;
+
                 foreach (Match match in matchCollectionOfHealth)
                 {
                     char character = char.Parse(match.Value);
                     health += character;
                 }
+
                 MatchCollection matchCollectionOfDamage = Regex.Matches(input[i], @"([\+|\-]*\d+(\.\d+)?)");
                 double damage = 0;
+
                 foreach (Match match in matchCollectionOfDamage)
                 {
                     damage += double.Parse(match.Value);
                 }
+
                 foreach (char character in input[i])
                 {
                     if (character == '*')
@@ -50,6 +56,7 @@ namespace _5._Nether_Realms
                         damage /= 2;
                     }
                 }
+
                 Console.WriteLine($"{input[i]} - {health} health, {damage:f2} damage");
             }
         }
