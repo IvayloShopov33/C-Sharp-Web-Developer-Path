@@ -9,6 +9,7 @@ namespace _6._Extract_Emails
         {
             string pattern = @"\b(?<user>[A-Za-z0-9]+([\._-][A-Za-z0-9]+)*)@(?<host>[A-Za-z0-9]+([\.-][A-Za-z0-9]+)*\.[A-Za-z]{2,})\b";
             string[] input = Console.ReadLine().Split();
+
             foreach (string item in input)
             {
                 if (char.IsLetterOrDigit(item[0]))
