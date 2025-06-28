@@ -6,6 +6,7 @@ namespace ParkingSystem.Data
     {
         [Required]
         public string CarMake { get; set; }
+        
         [Required]
         public string PlateNumber { get; set; }
     }
