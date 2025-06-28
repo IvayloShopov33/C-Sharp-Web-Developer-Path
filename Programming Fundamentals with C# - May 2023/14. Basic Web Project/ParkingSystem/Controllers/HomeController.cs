@@ -7,7 +7,7 @@ namespace ParkingSystem.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            return View(Data.DataAccess.Cars);
+            return this.View(Data.DataAccess.Cars);
         }
     }
 }
