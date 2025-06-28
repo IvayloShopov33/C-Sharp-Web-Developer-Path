@@ -8,6 +8,7 @@ namespace _1._The_Imitation_Game
         {
             string message = Console.ReadLine();
             string input;
+            
             while ((input = Console.ReadLine()) != "Decode")
             {
                 string[] commands = input.Split('|');
@@ -31,6 +32,7 @@ namespace _1._The_Imitation_Game
                     message = message.Replace(substring, replacement);
                 }
             }
+            
             Console.WriteLine($"The decrypted message is: {message}");
         }
     }
