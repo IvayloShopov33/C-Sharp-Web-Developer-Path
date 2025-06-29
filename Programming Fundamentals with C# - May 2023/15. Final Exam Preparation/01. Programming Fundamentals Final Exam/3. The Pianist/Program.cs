@@ -10,9 +10,11 @@ namespace _3._The_Pianist
         {
             List<Masterpiece> masterpieces = new List<Masterpiece>();
             InitializeMasterpieces(masterpieces);
+
             Commands(masterpieces);
             PrintMasterpieces(masterpieces);
         }
+
         static void InitializeMasterpieces(List<Masterpiece> masterpieces)
         {
             int initialPiecesCount = int.Parse(Console.ReadLine());
@@ -22,6 +24,7 @@ namespace _3._The_Pianist
                 string piece = pieceDetails[0];
                 string composer = pieceDetails[1];
                 string key = pieceDetails[2];
+
                 Masterpiece masterpiece = new Masterpiece(piece, composer, key);
                 masterpieces.Add(masterpiece);
             }
@@ -34,19 +37,23 @@ namespace _3._The_Pianist
             {
                 bool isThere = false;
                 string newPiece = commands[1];
+
                 if (commands[0] == "Add")
                 {
                     string newComposer = commands[2];
                     string newKey = commands[3];
+
                     foreach (Masterpiece masterpiece in masterpieces)
                     {
                         if (masterpiece.Piece == newPiece)
                         {
                             Console.WriteLine($"{newPiece} is already in the collection!");
                             isThere = true;
+
                             break;
                         }
                     }
+
                     if (!isThere)
                     {
                         Masterpiece newMasterpiece = new Masterpiece(newPiece, newComposer, newKey);
@@ -63,10 +70,12 @@ namespace _3._The_Pianist
                             Masterpiece masterpieceToRemove = masterpieces.First(g => g.Piece == newPiece);
                             masterpieces.Remove(masterpieceToRemove);
                             Console.WriteLine($"Successfully removed {newPiece}!");
+
                             isThere = true;
                             break;
                         }
                     }
+
                     if (!isThere)
                     {
                         Console.WriteLine($"Invalid operation! {newPiece} does not exist in the collection.");
@@ -80,17 +89,20 @@ namespace _3._The_Pianist
                         if (masterpiece.Piece == newPiece)
                         {
                             Masterpiece masterpieceToChangeKey = masterpieces.First(g => g.Piece == newPiece);
-                            masterpieceToChangeKey.Key = newKey;
-                            isThere = true;
+                            masterpieceToChangeKey.Key = newKey;                           
                             Console.WriteLine($"Changed the key of {newPiece} to {newKey}!");
+
+                            isThere = true;
                             break;
                         }
                     }
+
                     if (!isThere)
                     {
                         Console.WriteLine($"Invalid operation! {newPiece} does not exist in the collection.");
                     }
                 }
+
                 commands = Console.ReadLine().Split('|');
             }
         }
@@ -103,17 +115,20 @@ namespace _3._The_Pianist
             }
         }
     }
+
     public class Masterpiece
     {
         public Masterpiece(string piece, string composer, string key)
         {
-            Piece = piece;
-            Composer = composer;
-            Key = key;
+            this.Piece = piece;
+            this.Composer = composer;
+            this.Key = key;
         }
-        public string Piece { get; private set; }
-        public string Composer { get; private set; }
-        public string Key { get; set; }
 
+        public string Piece { get; private set; }
+
+        public string Composer { get; private set; }
+
+        public string Key { get; set; }
     }
 }
