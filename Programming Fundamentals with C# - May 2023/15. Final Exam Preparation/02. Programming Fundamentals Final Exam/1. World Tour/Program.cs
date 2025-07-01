@@ -8,6 +8,7 @@ namespace _1._World_Tour
         {
             string input = Console.ReadLine();
             string[] commands = Console.ReadLine().Split(':');
+
             while (commands[0] != "Travel")
             {
                 if (commands[0] == "Add Stop")
@@ -23,6 +24,7 @@ namespace _1._World_Tour
                 {
                     int startIndex = int.Parse(commands[1]);
                     int endIndex = int.Parse(commands[2]);
+
                     if ((startIndex >= 0 && startIndex <= input.Length - 1) &&
                         (endIndex >= 0 && endIndex <= input.Length - 1) &&
                          endIndex >= startIndex)
@@ -35,14 +37,17 @@ namespace _1._World_Tour
                 {
                     string oldText = commands[1];
                     string newText = commands[2];
+
                     if (input.Contains(oldText))
                     {
                         input = input.Replace(oldText, newText);
                     }
                 }
+
                 Console.WriteLine(input);
                 commands = Console.ReadLine().Split(':');
             }
+
             Console.WriteLine($"Ready for world tour! Planned stops: {input}");
         }
     }
