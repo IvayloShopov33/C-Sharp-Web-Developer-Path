@@ -10,6 +10,7 @@ namespace _3._Plant_Discovery
         {
             List<Plant> plants = new List<Plant>();
             InitializePlantsAndTheirDetails(plants);
+            
             UpgradePlantsDetails(plants);
             PrintPlantsDetails(plants);
         }
@@ -24,6 +25,7 @@ namespace _3._Plant_Discovery
                 int rarity = int.Parse(plantDetails[1]);
                 List<int> rating = new List<int>();
                 Plant plant = new Plant(plantName, rarity, rating);
+                
                 if (plants.Any(x => x.PlantName == plantName))
                 {
                     Plant plantToUprageRarity = plants.First(g => g.PlantName == plantName);
@@ -44,13 +46,17 @@ namespace _3._Plant_Discovery
                 string[] commandDetails = commands[1].Split(" - ");
                 string givenPlantName = commandDetails[0];
                 bool plantToChangeDetails = plants.Any(g => g.PlantName == givenPlantName);
+                
                 if (!plantToChangeDetails)
                 {
                     Console.WriteLine("error");
                     commands = Console.ReadLine().Split(": ");
+                    
                     continue;
                 }
+                
                 Plant plantToChange = plants.First(g => g.PlantName == givenPlantName);
+                
                 if (commands[0] == "Rate")
                 {
                     int ratingToAdd = int.Parse(commandDetails[1]);
@@ -65,6 +71,7 @@ namespace _3._Plant_Discovery
                 {
                     plantToChange.Rating.Clear();
                 }
+                
                 commands = Console.ReadLine().Split(": ");
             }
         }
@@ -85,16 +92,20 @@ namespace _3._Plant_Discovery
             }
         }
     }
+    
     public class Plant
     {
         public Plant(string plantName, int rarity, List<int> rating)
         {
-            PlantName = plantName;
-            PlantRarity = rarity;
-            Rating = rating;
+            this.PlantName = plantName;
+            this.PlantRarity = rarity;
+            this.Rating = rating;
         }
+        
         public string PlantName { get; private set; }
+        
         public int PlantRarity { get; set; }
+        
         public List<int> Rating { get; private set; }
     }
 }
