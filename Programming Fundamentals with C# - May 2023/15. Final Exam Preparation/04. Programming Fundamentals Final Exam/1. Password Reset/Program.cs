@@ -8,6 +8,7 @@ namespace _1._Password_Reset
         {
             string password = Console.ReadLine();
             string[] commands = Console.ReadLine().Split();
+
             while (commands[0] != "Done")
             {
                 if (commands[0] == "TakeOdd")
@@ -21,6 +22,7 @@ namespace _1._Password_Reset
                 {
                     int index = int.Parse(commands[1]);
                     int length = int.Parse(commands[2]);
+
                     password = password.Remove(index, length);
                 }
                 else if (commands[0] == "Substitute")
@@ -35,12 +37,15 @@ namespace _1._Password_Reset
                     {
                         Console.WriteLine("Nothing to replace!");
                         commands = Console.ReadLine().Split();
+
                         continue;
                     }
                 }
+
                 Console.WriteLine(password);
                 commands = Console.ReadLine().Split();
             }
+
             Console.WriteLine($"Your password is: {password}");
         }
     }
