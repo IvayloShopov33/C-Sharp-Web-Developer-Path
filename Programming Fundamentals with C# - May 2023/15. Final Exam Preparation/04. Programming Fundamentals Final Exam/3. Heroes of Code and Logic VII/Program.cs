@@ -10,6 +10,7 @@ namespace _3._Heroes_of_Code_and_Logic_VII
         {
             List<Hero> heroes = new List<Hero>();
             InitializeHeroesWithTheirDetails(heroes);
+
             RecieveCommands(heroes);
             PrintHeroes(heroes);
         }
@@ -23,6 +24,7 @@ namespace _3._Heroes_of_Code_and_Logic_VII
                 string heroName = heroDetails[0];
                 int heroHP = int.Parse(heroDetails[1]);
                 int heroMP = int.Parse(heroDetails[2]);
+
                 Hero hero = new Hero(heroName, heroHP, heroMP);
                 heroes.Add(hero);
             }
@@ -35,10 +37,12 @@ namespace _3._Heroes_of_Code_and_Logic_VII
             {
                 string nameOfHero = commands[1];
                 Hero selectedHero = heroes.First(x => x.Name == nameOfHero);
+
                 if (commands[0] == "CastSpell")
                 {
                     int neededMP = int.Parse(commands[2]);
                     string spellName = commands[3];
+
                     if (selectedHero.MP >= neededMP)
                     {
                         selectedHero.MP -= neededMP;
@@ -53,6 +57,7 @@ namespace _3._Heroes_of_Code_and_Logic_VII
                 {
                     int damage = int.Parse(commands[2]);
                     string attacker = commands[3];
+
                     if (selectedHero.HP > damage)
                     {
                         selectedHero.HP -= damage;
@@ -68,6 +73,7 @@ namespace _3._Heroes_of_Code_and_Logic_VII
                 {
                     int amount = int.Parse(commands[2]);
                     int newMP = selectedHero.MP + amount;
+
                     if (newMP <= 200)
                     {
                         selectedHero.MP += amount;
@@ -85,6 +91,7 @@ namespace _3._Heroes_of_Code_and_Logic_VII
                 {
                     int amount = int.Parse(commands[2]);
                     int newHP = selectedHero.HP + amount;
+
                     if (newHP <= 100)
                     {
                         selectedHero.HP += amount;
@@ -98,6 +105,7 @@ namespace _3._Heroes_of_Code_and_Logic_VII
                         Console.WriteLine($"{nameOfHero} healed for {enoughHP} HP!");
                     }
                 }
+
                 commands = Console.ReadLine().Split(" - ");
             }
         }
@@ -121,8 +129,11 @@ namespace _3._Heroes_of_Code_and_Logic_VII
             this.HP = hp;
             this.MP = mp;
         }
+
         public string Name { get; private set; }
+
         public int HP { get; set; }
+
         public int MP { get; set; }
     }
 }
