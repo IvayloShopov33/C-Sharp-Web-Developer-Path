@@ -10,6 +10,7 @@ namespace _3._P_rates
         {
             List<City> cities = new List<City>();
             InitializeCities(cities);
+
             ReceiveCommands(cities);
             PrintRemainedCities(cities);
         }
@@ -22,6 +23,7 @@ namespace _3._P_rates
                 string cityName = targetedCities[0];
                 int population = int.Parse(targetedCities[1]);
                 int gold = int.Parse(targetedCities[2]);
+
                 if (cities.Any(x => x.Name == cityName))
                 {
                     City cityToUpdate = cities.First(x => x.Name == cityName);
@@ -33,6 +35,7 @@ namespace _3._P_rates
                     City city = new City(cityName, population, gold);
                     cities.Add(city);
                 }
+
                 targetedCities = Console.ReadLine().Split("||");
             }
         }
@@ -45,13 +48,16 @@ namespace _3._P_rates
                 string command = commands[0];
                 string city = commands[1];
                 City selectedCity = cities.First(g => g.Name == city);
+
                 if (command == "Plunder")
                 {
                     int people = int.Parse(commands[2]);
                     int goldQuantity = int.Parse(commands[3]);
+
                     selectedCity.Population -= people;
                     selectedCity.Gold -= goldQuantity;
                     Console.WriteLine($"{city} plundered! {goldQuantity} gold stolen, {people} citizens killed.");
+
                     if (selectedCity.Population == 0 || selectedCity.Gold == 0)
                     {
                         Console.WriteLine($"{city} has been wiped off the map!");
@@ -71,6 +77,7 @@ namespace _3._P_rates
                         Console.WriteLine($"{goldAmount} gold added to the city treasury. {city} now has {selectedCity.Gold} gold.");
                     }
                 }
+
                 commands = Console.ReadLine().Split("=>");
             }
         }
@@ -80,6 +87,7 @@ namespace _3._P_rates
             if (cities.Count > 0)
             {
                 Console.WriteLine($"Ahoy, Captain! There are {cities.Count} wealthy settlements to go to:");
+
                 foreach (City city in cities)
                 {
                     Console.WriteLine($"{city.Name} -> Population: {city.Population} citizens, Gold: {city.Gold} kg");
@@ -100,8 +108,11 @@ namespace _3._P_rates
             this.Population = population;
             this.Gold = gold;
         }
+
         public string Name { get; private set; }
+
         public int Population { get; set; }
+
         public int Gold { get; set; }
     }
 }
