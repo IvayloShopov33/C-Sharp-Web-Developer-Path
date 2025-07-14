@@ -6,10 +6,12 @@
         {
             Stack<char> stackToReverseText = new Stack<char>();
             string inputText = Console.ReadLine();
+            
             foreach (char character in inputText)
             {
                 stackToReverseText.Push(character);
             }
+            
             while (stackToReverseText.Count > 0)
             {
                 Console.Write(stackToReverseText.Pop());
