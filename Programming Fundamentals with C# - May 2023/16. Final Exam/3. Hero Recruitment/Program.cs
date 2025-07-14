@@ -7,8 +7,8 @@ namespace _3._Hero_Recruitment
     {
         static void Main(string[] args)
         {
-            Dictionary<string, List<string>> heroes =
-                new Dictionary<string, List<string>>();
+            Dictionary<string, List<string>> heroes = new Dictionary<string, List<string>>();
+            
             ReceivingCommands(heroes);
             PrintHeroesWithTheirSpellNames(heroes);
         }
@@ -20,6 +20,7 @@ namespace _3._Hero_Recruitment
             {
                 string action = commands[0];
                 string heroName = commands[1];
+                
                 if (action == "Enroll")
                 {
                     if (heroes.ContainsKey(heroName))
@@ -65,6 +66,7 @@ namespace _3._Hero_Recruitment
                         }
                     }
                 }
+                
                 commands = Console.ReadLine().Split();
             }
         }
