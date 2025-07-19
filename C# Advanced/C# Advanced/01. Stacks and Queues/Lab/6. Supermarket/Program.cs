@@ -6,6 +6,7 @@
         {
             Queue<string> clients = new Queue<string>();
             string nameOrCommand = Console.ReadLine();
+
             while (nameOrCommand != "End")
             {
                 if (nameOrCommand == "Paid" && clients.Count > 0)
@@ -16,10 +17,13 @@
                     }
                 }
                 else
+                {
                     clients.Enqueue(nameOrCommand);
+                }
 
                 nameOrCommand = Console.ReadLine();
             }
+
             Console.WriteLine($"{clients.Count} people remaining.");
         }
     }
