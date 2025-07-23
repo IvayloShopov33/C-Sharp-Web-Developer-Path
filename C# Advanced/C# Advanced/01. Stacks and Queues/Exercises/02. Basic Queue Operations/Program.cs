@@ -7,6 +7,7 @@
             Queue<int> queue = new Queue<int>();
             int[] numbersToTakeAction = Console.ReadLine().Split().Select(int.Parse).ToArray();
             int[] numbers = Console.ReadLine().Split().Select(int.Parse).ToArray();
+
             for (int i = 0; i < numbersToTakeAction[0]; i++)
             {
                 //put the numbers to the queue
@@ -20,7 +21,7 @@
             }
 
             //check if the queue is emty
-            if (queue.Count==0) 
+            if (queue.Count == 0) 
             {
                 Console.WriteLine(0);
             }
