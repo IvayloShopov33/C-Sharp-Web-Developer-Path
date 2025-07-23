@@ -7,6 +7,7 @@
             Stack<int> stackOfTheNumbers = new Stack<int>();
             int[] numbersToTakeAction = Console.ReadLine().Split().Select(int.Parse).ToArray();
             int[] numbers = Console.ReadLine().Split().Select(int.Parse).ToArray();
+
             for (int i = 0; i < numbersToTakeAction[0]; i++)
             {
                 //push the numbers to the stack
