@@ -7,6 +7,7 @@
             Queue<int> orders = new Queue<int>();
             int foodQuantity = int.Parse(Console.ReadLine());
             int[] ordersQuantities = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
+
             foreach (int order in ordersQuantities)
             {
                 //put the order to the queue
@@ -14,7 +15,8 @@
             }
 
             //print the biggest order
-            Console.WriteLine(orders.Max()); 
+            Console.WriteLine(orders.Max());
+
             foreach (int orderToServe in ordersQuantities)
             {
                 //check if the quantity of food is finished
@@ -25,6 +27,7 @@
                 }
                 
                 foodQuantity -= orderToServe;
+
                 //remove the served order from the queue
                 orders.Dequeue(); 
             }
