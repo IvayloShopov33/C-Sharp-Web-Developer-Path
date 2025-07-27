@@ -8,6 +8,7 @@
             int[] arrayOfClothes = Console.ReadLine().Split().Select(int.Parse).ToArray();
             int capacityOfARack = int.Parse(Console.ReadLine());
             int initialCapacityOfARack = capacityOfARack;
+
             foreach (int garment in arrayOfClothes)
             {
                 clothes.Push(garment);
@@ -26,7 +27,9 @@
                 {
                     capacityOfARack = initialCapacityOfARack;
                     if (clothes.Count > 1)
+                    {
                         countOfRacks++;
+                    }
                 }
                 else
                 {
@@ -37,7 +40,9 @@
             }
             
             if (clothes.Count == 0)
+            {
                 Console.WriteLine(countOfRacks);
+            }
         }
     }
 }
