@@ -5,7 +5,8 @@
         static void Main(string[] args)
         {
             Queue<int[]> tourOfTheTruck = new Queue<int[]>();
-            int pumpStation=int.Parse(Console.ReadLine());
+            int pumpStation = int.Parse(Console.ReadLine());
+
             for (int i = 0; i < pumpStation; i++)
             {
                 int[] pumpDetails = Console.ReadLine().Split().Select(int.Parse).ToArray();  
@@ -22,9 +23,11 @@
                 {
                     int truckPetrol = details[0];
                     int truckDistance = details[1];
+
                     currentPetrol += truckPetrol;
                     currentPetrol -= truckDistance;
-                    if (currentPetrol<0)
+
+                    if (currentPetrol < 0)
                     {
                         tourOfTheTruck.Enqueue(tourOfTheTruck.Dequeue());
                         startIndex++;
@@ -32,7 +35,7 @@
                     }
                 }
                 
-                if (currentPetrol>=0)
+                if (currentPetrol >= 0)
                 {
                     Console.WriteLine(startIndex);
                     break;
