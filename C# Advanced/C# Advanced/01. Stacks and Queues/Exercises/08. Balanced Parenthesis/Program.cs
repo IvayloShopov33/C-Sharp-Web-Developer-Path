@@ -9,6 +9,7 @@
             bool isBalanced = true;
             int countOfOpenBrackets = 0;
             int countOfClosedBrackets = 0;
+
             for (int i = 0; i < parentheses.Length; i++)
             {
                 char @char = parentheses[i];
@@ -38,7 +39,7 @@
                 }
             }
 
-            if (isBalanced && countOfOpenBrackets==countOfClosedBrackets)
+            if (isBalanced && countOfOpenBrackets == countOfClosedBrackets)
             {
                 Console.WriteLine("YES");
             }                    
