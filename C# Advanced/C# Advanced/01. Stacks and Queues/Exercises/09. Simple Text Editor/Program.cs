@@ -9,6 +9,7 @@ namespace _9._Simple_Text_Editor
             Stack<string> previousStatesOfTheText = new Stack<string>();
             StringBuilder text = new StringBuilder();
             int commandsCount = int.Parse(Console.ReadLine());
+
             for (int i = 1; i <= commandsCount; i++)
             {
                 string[] commands = Console.ReadLine().Split();
@@ -19,6 +20,7 @@ namespace _9._Simple_Text_Editor
                     //add a string to the end of the stringBuilder
                     string textToAppend = commands[1];
                     text.Append(textToAppend);
+
                     previousStatesOfTheText.Push(text.ToString());
                 }
                 else if (commandNumber == 2)
@@ -26,6 +28,7 @@ namespace _9._Simple_Text_Editor
                     //remove last N characters from the stringBuilder
                     int countOfCharsToDelete = int.Parse(commands[1]);
                     text = text.Remove(text.Length - countOfCharsToDelete, countOfCharsToDelete);
+
                     previousStatesOfTheText.Push(text.ToString());
                 }
                 else if (commandNumber == 3)
