@@ -7,13 +7,16 @@
             Queue<string> cars = new Queue<string>();
             int greenLightDuration = int.Parse(Console.ReadLine());
             int initialGreenLightDuration = greenLightDuration;
+
             int freeWindowDuration = int.Parse(Console.ReadLine());
             string commandOrCar = Console.ReadLine();
+
             int carsPassed = 0;
-            bool isThereACrash=false;
+            bool isThereACrash = false;
+
             while (commandOrCar != "END")
             {
-                if (isThereACrash == false)
+                if (!isThereACrash)
                 {
 
                     if (commandOrCar == "green")
@@ -45,6 +48,7 @@
                                     char crashingCharacter = car[freeWindowDuration + greenLightDuration];
                                     Console.WriteLine("A crash happened!");
                                     Console.WriteLine($"{car} was hit at {crashingCharacter}.");
+
                                     isThereACrash = true;
                                     break;
                                 }
