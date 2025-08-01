@@ -18,13 +18,13 @@
             {
                 if (!isThereACrash)
                 {
-
                     if (commandOrCar == "green")
                     {
                         greenLightDuration = initialGreenLightDuration;
                         while (cars.Count > 0)
                         {
                             string car = cars.Dequeue();
+
                             if (car.Length < greenLightDuration)
                             {
                                 carsPassed++;
