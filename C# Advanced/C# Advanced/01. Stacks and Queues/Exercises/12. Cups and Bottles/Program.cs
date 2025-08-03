@@ -7,6 +7,7 @@
             Stack<int> bottles = new Stack<int>();
             List<int> cupsValues = Console.ReadLine().Split().Select(int.Parse).ToList();
             int[] bottlesValues = Console.ReadLine().Split().Select(int.Parse).ToArray();
+
             foreach (int bottle in bottlesValues)
             {
                 bottles.Push(bottle);
@@ -19,7 +20,7 @@
                 int cup = cupsValues.First(); 
                 cupsValues.RemoveAt(0);
 
-                 //check if the bottle has more litters of water than the cup
+                //check if the bottle has more litters of water than the cup
                 if (bottle >= cup)
                 {
                     wastedLittersOfWater += bottle - cup;
