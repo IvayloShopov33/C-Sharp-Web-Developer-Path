@@ -6,8 +6,10 @@
         {
             int[] matrixSize = Console.ReadLine().Split(", ").Select(int.Parse).ToArray();
             int[,] matrix = new int[matrixSize[0], matrixSize[1]];
+
             int rows = matrixSize[0];
             int columns = matrixSize[1];
+
             for (int row = 0; row < rows; row++)
             {
                 int[] rowsValues = Console.ReadLine().Split(", ").Select(int.Parse).ToArray();
@@ -30,8 +32,10 @@
 
             //print the rows of the matrix
             Console.WriteLine(rows);
+
             //print the columns of the matrix
             Console.WriteLine(columns);
+
             //print the sum of all matrix elements
             Console.WriteLine(totalSumOfAllElements);
         }
