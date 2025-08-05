@@ -5,9 +5,11 @@
         static void Main(string[] args)
         {
             int[] matrixDetails = Console.ReadLine().Split(", ").Select(int.Parse).ToArray();
+
             int rows = matrixDetails[0];
             int cols = matrixDetails[1];
             int[,] matrix = new int[rows, cols];
+
             for (int row = 0; row < matrix.GetLength(0); row++)
             {
                 int[] valuesOfRow = Console.ReadLine().Split().Select(int.Parse).ToArray();
@@ -27,6 +29,7 @@
                     //adding the element from the same column to the total sum of the column
                     sumOfEachColumn += matrix[row, col];
                 }
+
                 Console.WriteLine(sumOfEachColumn);
             }
         }
