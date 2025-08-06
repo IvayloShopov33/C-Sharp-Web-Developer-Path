@@ -4,8 +4,9 @@
     {
         static void Main(string[] args)
         {
-            int sizeOfTheSquareMatrix=int.Parse(Console.ReadLine());
-            int[,] squareMatrix=new int[sizeOfTheSquareMatrix, sizeOfTheSquareMatrix];
+            int sizeOfTheSquareMatrix = int.Parse(Console.ReadLine());
+            int[,] squareMatrix = new int[sizeOfTheSquareMatrix, sizeOfTheSquareMatrix];
+
             for (int row = 0; row < squareMatrix.GetLength(0); row++)
             {
                 int[] rows = Console.ReadLine().Split().Select(int.Parse).ToArray();
@@ -17,6 +18,7 @@
             }
 
             int sumOfThePrimaryDiagonal = 0;
+
             for (int rowAndColumn = 0; rowAndColumn < squareMatrix.GetLength(0); rowAndColumn++)
             {
                 //adding the element from the primary diagonal to his total sum
