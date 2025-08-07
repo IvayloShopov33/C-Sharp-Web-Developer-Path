@@ -6,6 +6,7 @@
         {
             int squareMatrixSize = int.Parse(Console.ReadLine());
             char[,] matrixOfSymbols = new char[squareMatrixSize, squareMatrixSize];
+
             for (int row = 0; row < matrixOfSymbols.GetLength(0); row++)
             {
                 string symbols = Console.ReadLine();
@@ -17,6 +18,7 @@
             }
 
             char inputSymbol = char.Parse(Console.ReadLine());
+
             for (int row = 0; row < matrixOfSymbols.GetLength(0); row++)
             {
                 for (int col = 0; col < matrixOfSymbols.GetLength(1); col++)
@@ -26,6 +28,7 @@
                     {
                         //print its coordinates
                         Console.WriteLine($"({row}, {col})");
+
                         //stop the program
                         Environment.Exit(0);
                     }
