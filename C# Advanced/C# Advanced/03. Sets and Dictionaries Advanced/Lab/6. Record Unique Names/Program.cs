@@ -6,14 +6,16 @@
         {
             HashSet<string> names = new HashSet<string>();
             int namesCount = int.Parse(Console.ReadLine());
+
             for (int i = 1; i <= namesCount; i++)
             {
                 string name = Console.ReadLine();
-                //add the name to the hashset if it is not in him yet
+
+                // add the name to the hashset if it is not in him yet
                 names.Add(name);
             }
 
-            //print the unique names
+            // print the unique names
             Console.WriteLine(string.Join(Environment.NewLine, names));
         }
     }
