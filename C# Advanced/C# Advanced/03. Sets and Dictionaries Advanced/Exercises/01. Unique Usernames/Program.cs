@@ -6,6 +6,7 @@
         {
             HashSet<string> usernames = new HashSet<string>();
             int inputLinesCount = int.Parse(Console.ReadLine());
+
             for (int i = 1; i <= inputLinesCount; i++)
             {
                 string username = Console.ReadLine();
