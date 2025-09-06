@@ -28,7 +28,7 @@ namespace OddLines
                     break;
                 }
 
-                //check if the line's number is odd
+                // check if the line's number is odd
                 if (counter % 2 == 1)
                 {
                     output.WriteLine(line);
