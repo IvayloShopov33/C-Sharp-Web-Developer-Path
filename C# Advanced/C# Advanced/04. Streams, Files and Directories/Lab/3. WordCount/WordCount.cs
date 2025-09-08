@@ -24,28 +24,29 @@ namespace WordCount
 
             Dictionary<string, int> wordsWithTheirOccurrencesCount = new Dictionary<string, int>();
             string[] words = inputWords.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
+
             while (!inputText.EndOfStream)
             {
                 string line = inputText.ReadLine();           
-                string[] lineWords = line.Split(' ', '-', '.', ',', '!', '?', ';', ':', StringSplitOptions.RemoveEmptyEntries);              
+                string[] lineWords = line.Split(' ', '-', '.', ',', '!', '?', ';', ':', StringSplitOptions.RemoveEmptyEntries);
+             
                 for (int i = 0; i < lineWords.Length; i++)
                 {
-                    //check if the array of words contains the current word from input lines
+                    // check if the array of words contains the current word from input lines
                     if (words.Contains(lineWords[i]))
                     {
-                        //add the word to the dictionary or increase its occurrences' count
+                        // add the word to the dictionary or increase its occurrences' count
                         if (!wordsWithTheirOccurrencesCount.ContainsKey(lineWords[i]))
                         {
                             wordsWithTheirOccurrencesCount.Add(lineWords[i], 0);
                         }
 
                         wordsWithTheirOccurrencesCount[lineWords[i]]++;
-
                     }
                 }
             }
 
-            //print all words with their occurrences's count, sorted by frequency in descending order
+            // print all words with their occurrences's count, sorted by frequency in descending order
             foreach (var word in wordsWithTheirOccurrencesCount.OrderByDescending(x => x.Value))
             {
                 string output = $"{word.Key} - {word.Value}";
