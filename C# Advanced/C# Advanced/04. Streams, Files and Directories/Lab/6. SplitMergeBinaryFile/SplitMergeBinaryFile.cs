@@ -9,6 +9,7 @@ namespace SplitMergeBinaryFile
         {
             string sourceFilePath = @"..\..\..\Files\example.png";
             string joinedFilePath = @"..\..\..\Files\example-joined.png";
+            
             string partOnePath = @"..\..\..\Files\part-1.bin";
             string partTwoPath = @"..\..\..\Files\part-2.bin";
 
@@ -24,6 +25,7 @@ namespace SplitMergeBinaryFile
 
             byte[] data = new byte[fileStream.Length];
             fileStream.Read(data);
+            
             double fileLengthSplitted = fileStream.Length / 2;
             int partOneFileLength = (int)Math.Ceiling(fileLengthSplitted);
             int partTwoFileLength = (int)Math.Floor(fileLengthSplitted);
@@ -46,8 +48,10 @@ namespace SplitMergeBinaryFile
             using FileStream joinedFile = new FileStream(joinedFilePath, FileMode.Create, FileAccess.Write);
 
             byte[] data = new byte[partOneFilePath.Length + partTwoFilePath.Length];
+            
             partOneFile.Read(data);
             partTwoFile.Read(data);
+            
             joinedFile.Write(data);
         }
     }
