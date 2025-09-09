@@ -20,7 +20,7 @@ namespace MergeFiles
             using StreamReader secondInput = new StreamReader(secondInputFilePath);
             using StreamWriter output = new StreamWriter(outputFilePath);
 
-            //merge two files' values, line by line into a third text file
+            // merge two files' values, line by line into a third text file
             while (!firstInput.EndOfStream || !secondInput.EndOfStream)
             {
                 if (!firstInput.EndOfStream)
