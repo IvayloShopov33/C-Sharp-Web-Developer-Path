@@ -17,10 +17,12 @@ namespace LineNumbers
             string[] lines = File.ReadAllLines(inputFilePath);
             string output = string.Empty;
             int linesCounter = 1;
+            
             foreach (string line in lines)
             {
                 int lettersCount = 0;
                 int punctuationMarksCount = 0;
+                
                 foreach (char @char in line)
                 {
                     if (char.IsLetter(@char))
@@ -35,6 +37,7 @@ namespace LineNumbers
 
                 output += $"Line {linesCounter}: {line} ({lettersCount})({punctuationMarksCount})";
                 output += "\n";
+                
                 linesCounter++;
             }
 
