@@ -18,6 +18,7 @@ namespace EvenLines
             string output = string.Empty;
             using StreamReader streamReader = new StreamReader(inputFilePath);
             int linesCount = 0;
+
             while (!streamReader.EndOfStream)
             {
                 string line = streamReader.ReadLine();
