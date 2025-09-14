@@ -20,7 +20,6 @@ namespace CopyBinaryFile
             byte[] bufferData = new byte[fileStreamReader.Length];
             fileStreamReader.Read(bufferData);
             fileStreamWriter.Write(bufferData);
-
         }
     }
 }
