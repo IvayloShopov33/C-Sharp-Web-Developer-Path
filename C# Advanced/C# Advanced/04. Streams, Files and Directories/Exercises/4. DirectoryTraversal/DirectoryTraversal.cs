@@ -22,10 +22,12 @@ namespace DirectoryTraversal
         {
             Dictionary<string, Dictionary<string, decimal>> filesNamesWithTheirSizes = new Dictionary<string, Dictionary<string, decimal>>();
             string[] files = Directory.GetFiles(inputFolderPath);
+
             foreach (string file in files)
             {
                 int indexOfDot = file.IndexOf('.');
                 string extension = file.Substring(indexOfDot);
+
                 if (!filesNamesWithTheirSizes.ContainsKey(extension))
                 {
                     filesNamesWithTheirSizes.Add(extension, new Dictionary<string, decimal>());
