@@ -5,6 +5,7 @@
         static void Main(string[] args)
         {
             int[] numbers = Console.ReadLine().Split(", ").Select(MyParse).ToArray();
+            
             Console.WriteLine(numbers.Length);
             Console.WriteLine(numbers.Sum());
         }
