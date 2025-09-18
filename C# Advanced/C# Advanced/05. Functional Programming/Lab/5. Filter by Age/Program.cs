@@ -19,8 +19,9 @@
             int ageThreshold = int.Parse(Console.ReadLine());
             string outputFormat = Console.ReadLine();
 
-            //function which filters the people in the dictionary by their age
+            // function which filters the people in the dictionary by their age
             Func<KeyValuePair<string, int>, bool> ageFilter = people => true;
+            
             if (ageCondition == "younger")
             {
                 ageFilter = people => people.Value < ageThreshold;
@@ -30,11 +31,12 @@
                 ageFilter = people => people.Value >= ageThreshold;
             }
 
-            //remove the people which don't meet the requested age
+            // remove the people which don't meet the requested age
             peopleWithTheirAge = peopleWithTheirAge.Where(ageFilter).ToDictionary(x => x.Key, x => x.Value);
 
-            //print the people's details in an appropriate format
+            // print the people's details in an appropriate format
             Func<KeyValuePair<string, int>, string> printFunc = person => person.Key + " - " + person.Value;
+            
             if (outputFormat == "name")
             {
                 printFunc = person => person.Key;
