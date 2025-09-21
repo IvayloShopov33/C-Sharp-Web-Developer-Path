@@ -9,8 +9,9 @@
             int upperBound = numbersRangeBounds.Max();
             string typeOfnumbersToPrint = Console.ReadLine();
 
-            //create a function which check by default if the current number is even
+            // create a function which check by default if the current number is even
             Func<int, bool> func = num => num % 2 == 0;
+
             if (typeOfnumbersToPrint == "odd")
             {
                 func = num => Math.Abs(num) % 2 == 1;
