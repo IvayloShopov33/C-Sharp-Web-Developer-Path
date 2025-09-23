@@ -10,6 +10,7 @@
 
             List<string> guests = Console.ReadLine().Split().ToList();
             string input = string.Empty;
+
             while (true)
             {
                 input = Console.ReadLine();
@@ -116,6 +117,5 @@
                 }
             }
         }
-
     }
 }
