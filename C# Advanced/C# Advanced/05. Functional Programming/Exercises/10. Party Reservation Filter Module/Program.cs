@@ -25,6 +25,7 @@
 
                 string[] commandDetails = command.Split(';');
                 string key = commandDetails[1] + "_" + commandDetails[2];
+
                 if (commandDetails[0] == "Add filter")
                 {
                     Predicate<string> predicate = GetPredicate(commandDetails[1], commandDetails[2]);
@@ -54,7 +55,7 @@
                 return x => x.EndsWith(param);
             }
 
-            //if the command is "Contains"
+            // if the command is "Contains"
             return x => x.Contains(param);
         }
     }
