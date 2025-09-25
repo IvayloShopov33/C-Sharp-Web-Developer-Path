@@ -5,8 +5,8 @@
         static void Main(string[] args)
         {
             List<Car> cars = new List<Car>();
-
             string carsDetails = string.Empty;
+
             while (true)
             {
                 carsDetails = Console.ReadLine();
@@ -39,7 +39,6 @@
                     Console.WriteLine("Invalid year of production!");
                 }
             }
-
         }
     }
 }
