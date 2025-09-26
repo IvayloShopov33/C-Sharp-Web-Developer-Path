@@ -21,6 +21,7 @@
 
             return false;
         }
+
         public void Drive(double distance)
         {
             double result = this.FuelQuantity - (distance * this.FuelConsumption);
