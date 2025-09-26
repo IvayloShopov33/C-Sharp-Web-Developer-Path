@@ -6,10 +6,10 @@
         {
             List<Car> cars = new List<Car>();
             string input = string.Empty;
+
             while (true)
             {
                 input = Console.ReadLine();
-
                 if (input == "End")
                 {
                     foreach (Car item in cars)
@@ -22,14 +22,14 @@
 
                 if (!input.StartsWith("Drive") && !input.StartsWith("Print last car's details"))
                 {
-                    string[] carDetails = input.Split(' ');
-                    Car car = new Car();
+                    string[] carDetails = input.Split(' ');                    
                     string make = carDetails[0];
                     string model = carDetails[1];
                     int yearOfProduction = int.Parse(carDetails[2]);
                     double fuelQuantity = double.Parse(carDetails[3]);
                     double fuelConsumption = double.Parse(carDetails[4]);
 
+                    Car car = new Car();
                     car.Make = make;
                     car.Model = model;
                     car.Year = yearOfProduction;
