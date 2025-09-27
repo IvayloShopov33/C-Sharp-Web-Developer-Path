@@ -4,11 +4,11 @@
     {
         public Car()
         {
-            Make = "VW";
-            Model = "Golf";
-            Year = 2025;
-            FuelQuantity = 200;
-            FuelConsumption = 10;
+            this.Make = "VW";
+            this.Model = "Golf";
+            this.Year = 2025;
+            this.FuelQuantity = 200;
+            this.FuelConsumption = 10;
         }
 
         public Car(string make, string model, int yearOfProduction) : this()
