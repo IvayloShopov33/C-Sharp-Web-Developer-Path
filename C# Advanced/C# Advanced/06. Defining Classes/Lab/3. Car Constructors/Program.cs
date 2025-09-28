@@ -5,16 +5,20 @@
         static void Main(string[] args)
         {
             List<Car> cars = new List<Car>();
+
             string make = Console.ReadLine();
             string model = Console.ReadLine();
+
             int yearOfProduction = int.Parse(Console.ReadLine());
             double fuelQuantity = double.Parse(Console.ReadLine());
             double fuelConsumption = double.Parse(Console.ReadLine());
 
             Car firstCar = new Car();
             cars.Add(firstCar);
+
             Car secondCar = new Car(make, model, yearOfProduction);
             cars.Add(secondCar);
+
             Car thirdCar = new Car(make, model, yearOfProduction, fuelQuantity, fuelConsumption);
             cars.Add(thirdCar);
 
