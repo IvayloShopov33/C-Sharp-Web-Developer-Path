@@ -12,6 +12,7 @@
                 string[] personDetails = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
                 string name = personDetails[0];
                 int age = int.Parse(personDetails[1]);
+
                 Person person = new Person(name, age);
                 people.Add(person);
             }
