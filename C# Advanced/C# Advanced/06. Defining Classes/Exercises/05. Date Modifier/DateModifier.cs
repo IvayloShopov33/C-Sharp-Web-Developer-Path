@@ -7,6 +7,7 @@
             DateTime dateOne = DateTime.Parse(firstDate);
             DateTime dateTwo = DateTime.Parse(secondDate);
             int daysDifference = Math.Abs((dateOne - dateTwo).Days);
+
             return daysDifference;
         }
     }
