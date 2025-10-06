@@ -6,6 +6,7 @@
         {
             string firstDate = Console.ReadLine();
             string secondDate = Console.ReadLine();
+
             int daysDifference = DateModifier.CalculateDateDifferenceInDays(firstDate, secondDate);
             Console.WriteLine(daysDifference);
         }
