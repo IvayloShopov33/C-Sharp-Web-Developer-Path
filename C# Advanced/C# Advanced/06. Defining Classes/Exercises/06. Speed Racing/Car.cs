@@ -9,6 +9,7 @@
             this.FuelConsumptionPerOneKilometer = fuelConsumptionPerOneKilometer;
             this.TravelledDistance = 0;
         }
+
         public string Model { get; set; }
 
         public double FuelAmount { get; set; }
@@ -20,6 +21,7 @@
         public void DriveCar(double distance)
         {
             double remainingFuel = this.FuelAmount - (distance * this.FuelConsumptionPerOneKilometer);
+
             if (remainingFuel >= 0)
             {
                 this.FuelAmount = remainingFuel;
@@ -30,6 +32,5 @@
                 Console.WriteLine("Insufficient fuel for the drive");
             }
         }
-
     }
 }
