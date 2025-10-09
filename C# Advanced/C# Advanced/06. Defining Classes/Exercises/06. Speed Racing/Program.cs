@@ -13,6 +13,7 @@
                 string model = carDetails[0];
                 double fuelAmount = double.Parse(carDetails[1]);
                 double fuelConsumptionPerOneKilometer = double.Parse(carDetails[2]);
+
                 Car car = new Car(model, fuelAmount, fuelConsumptionPerOneKilometer);
                 cars.Add(car);
             }
@@ -38,6 +39,7 @@
                     string carModel = commandDetails[1];
                     double distance = double.Parse(commandDetails[2]);
                     Car selectedCar = cars.FirstOrDefault(x => x.Model == carModel);
+
                     if (selectedCar != null)
                     {
                         selectedCar.DriveCar(distance);
