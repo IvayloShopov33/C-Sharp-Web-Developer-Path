@@ -19,10 +19,12 @@
                 Engine engine = new Engine(engineSpeed, enginePower);
                 Cargo cargo = new Cargo(cargoWeight, cargoType);
                 List<Tire> tires = new List<Tire>();
+                
                 for (int j = 5; j < carDetails.Length; j += 2)
                 {
                     double tirePressure = double.Parse(carDetails[j]);
                     int tireAge = int.Parse(carDetails[j + 1]);
+                    
                     Tire tire = new Tire(tireAge, tirePressure);
                     tires.Add(tire);
                 }
