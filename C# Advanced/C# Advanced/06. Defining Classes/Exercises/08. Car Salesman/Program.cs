@@ -27,12 +27,14 @@
                 {
                     int displacement = 0;
                     string engineEfficiency = engineDetails[2];
+
                     engine = new Engine(engineModel, enginePower, displacement, engineEfficiency);
                 }
                 else if (engineDetails.Length == 4)
                 {
                     int engineDisplacement = int.Parse(engineDetails[2]);
                     string engineEfficiency = engineDetails[3];
+
                     engine = new Engine(engineModel, enginePower, engineDisplacement, engineEfficiency);
                 }
 
@@ -50,6 +52,7 @@
                 string[] carDetails = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
                 string carModel = carDetails[0];
                 string carEngine = carDetails[1];
+
                 Engine engine = engines.FirstOrDefault(x => x.Model == carEngine);
                 Car car = null;
 
@@ -66,12 +69,14 @@
                 {
                     int weight = 0;
                     string carColor = carDetails[2];
+
                     car = new Car(carModel, engine, weight, carColor);
                 }
                 else if (carDetails.Length == 4)
                 {
                     int carWeight = int.Parse(carDetails[2]);
                     string carColor = carDetails[3];
+
                     car = new Car(carModel, engine, carWeight, carColor);
                 }
 
