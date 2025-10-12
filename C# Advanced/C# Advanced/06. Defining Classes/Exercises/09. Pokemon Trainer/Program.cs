@@ -5,8 +5,8 @@
         static void Main(string[] args)
         {
             List<Trainer> trainers = new List<Trainer>();
-
             string[] trainersAndPokemons;
+
             while (true)
             {
                 trainersAndPokemons = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
@@ -33,7 +33,6 @@
                     trainer.Pokemons.Add(pokemon);
                     trainers.Add(trainer);
                 }
-
             }
 
             string command = string.Empty;
