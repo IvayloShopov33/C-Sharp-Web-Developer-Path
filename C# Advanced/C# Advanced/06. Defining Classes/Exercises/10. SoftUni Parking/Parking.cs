@@ -13,8 +13,7 @@
 
         public List<Car> Cars { get { return cars; } set { cars = value; } }
 
-        public int Count
-            => this.Cars.Count;
+        public int Count => this.Cars.Count;
 
         public string AddCar(Car car)
         {
@@ -29,6 +28,7 @@
             }
 
             this.Cars.Add(car);
+
             return $"Successfully added new car {car.Make} {car.RegistrationNumber}";
         }
 
@@ -38,6 +38,7 @@
             {
                 Car carToRemove = this.Cars.First(x => x.RegistrationNumber == registrationNumber);
                 this.Cars.Remove(carToRemove);
+
                 return $"Successfully removed {registrationNumber}";
             }
 
