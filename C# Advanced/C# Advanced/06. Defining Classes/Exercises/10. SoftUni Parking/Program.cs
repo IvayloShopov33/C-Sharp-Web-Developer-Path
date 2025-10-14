@@ -6,9 +6,10 @@
         {
             Car car = new Car("Mazda", "Miata", 70, "CC1857BG");
             Car car2 = new Car("Lamborghini", "Huracan", 600, "EB9999MN");
-            Console.WriteLine(car.ToString());
 
+            Console.WriteLine(car.ToString());
             Parking parking = new Parking(5);
+
             Console.WriteLine(parking.AddCar(car));
             Console.WriteLine(parking.AddCar(car));
             Console.WriteLine(parking.AddCar(car2));
@@ -22,7 +23,6 @@
 
             parking.RemoveSetOfRegistrationNumber(registrationNumbers);
             Console.WriteLine(parking.Count);
-
         }
     }
 }
