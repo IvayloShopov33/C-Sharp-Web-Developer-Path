@@ -5,11 +5,12 @@
         static void Main(string[] args)
         {
             List<Box<string>> boxes = new List<Box<string>>();
-
             int stringsCount = int.Parse(Console.ReadLine());
+
             for (int i = 1; i <= stringsCount; i++)
             {
                 string input = Console.ReadLine();
+
                 Box<string> box = new Box<string>(input);
                 boxes.Add(box);
             }
