@@ -12,6 +12,7 @@
         public override string ToString()
         {
             Type type = typeof(T);
+
             return $"{type}: {this.element}";
         }
     }
