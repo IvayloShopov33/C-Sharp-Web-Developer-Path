@@ -5,8 +5,8 @@
         static void Main(string[] args)
         {
             List<string> strings = new List<string>();
-
             int itemsCount = int.Parse(Console.ReadLine());
+
             for (int i = 0; i < itemsCount; i++)
             {
                 string value = Console.ReadLine();
