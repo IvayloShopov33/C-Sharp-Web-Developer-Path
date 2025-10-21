@@ -5,8 +5,8 @@
         static void Main(string[] args)
         {
             List<int> numbers = new List<int>();
-
             int numbersCount = int.Parse(Console.ReadLine());
+
             for (int i = 0; i < numbersCount; i++)
             {
                 int number = int.Parse(Console.ReadLine());
