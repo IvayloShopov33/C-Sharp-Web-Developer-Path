@@ -6,8 +6,8 @@
         {
             List<string> strings = new List<string>();
             Box<string> box = new Box<string>(strings);
-
             int itemsCount = int.Parse(Console.ReadLine());
+
             for (int i = 0; i < itemsCount; i++)
             {
                 string input = Console.ReadLine();
@@ -16,6 +16,7 @@
 
             string itemToCompare = Console.ReadLine();
             int result = box.CalculateCountOfGreaterElements(itemToCompare);
+
             Console.WriteLine(result);
         }
     }
