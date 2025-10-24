@@ -17,6 +17,7 @@ namespace _08._Threeuple
             string fullName = firstLineDetails[0] + " " + firstLineDetails[1];
             string address = firstLineDetails[2];
             StringBuilder town = new StringBuilder();
+
             for (int i = 3; i < firstLineDetails.Length; i++)
             {
                 town.Append(firstLineDetails[i] + " ");
@@ -34,6 +35,7 @@ namespace _08._Threeuple
             string customerName = thirdLineDetails[0];
             double accountBalance = double.Parse(thirdLineDetails[1]);
             StringBuilder bankName = new StringBuilder();
+
             for (int i = 2; i < thirdLineDetails.Length; i++)
             {
                 bankName.Append(thirdLineDetails[i] + " ");
