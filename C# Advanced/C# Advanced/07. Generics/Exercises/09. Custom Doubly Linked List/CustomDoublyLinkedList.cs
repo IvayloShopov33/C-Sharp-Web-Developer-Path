@@ -26,7 +26,7 @@
         {
             ListNode<T> newItem = new ListNode<T>(element);
 
-            //check if there are any elements in the list
+            // check if there are any elements in the list
             if (this.firstItem == null)
             {
                 this.firstItem = newItem;
@@ -44,7 +44,7 @@
         {
             ListNode<T> newItem = new ListNode<T>(element);
 
-            //check if there are any elements in the list
+            // check if there are any elements in the list
             if (this.lastItem == null)
             {
                 this.firstItem = newItem;
@@ -60,12 +60,12 @@
 
         public T RemoveFirst()
         {
-            //check if there are no elements in the list
+            // check if there are no elements in the list
             if (this.firstItem != null && this.lastItem != null)
             {
                 T currentFisrtItem = this.firstItem.Value;
 
-                //check if there is one element in the list or not
+                // check if there is one element in the list or not
                 if (this.firstItem == this.lastItem)
                 {
                     this.firstItem = null;
@@ -85,12 +85,12 @@
 
         public T RemoveLast()
         {
-            //check if there are no elements in the list
+            // check if there are no elements in the list
             if (this.firstItem != null && this.lastItem != null)
             {
                 T currentLastItem = this.lastItem.Value;
 
-                //check if there is one element in the list or not
+                // check if there is one element in the list or not
                 if (this.firstItem == this.lastItem)
                 {
                     this.firstItem = null;
