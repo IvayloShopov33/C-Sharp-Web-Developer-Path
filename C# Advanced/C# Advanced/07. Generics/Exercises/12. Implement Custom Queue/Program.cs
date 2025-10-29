@@ -5,13 +5,17 @@
         static void Main(string[] args)
         {
             CustomQueue<int> customQueue = new CustomQueue<int>();
+
             customQueue.Enqueue(1);
             customQueue.Enqueue(2);
+
             customQueue.Clear();
             customQueue.Enqueue(3);
             Console.WriteLine(customQueue.Peek());
+
             customQueue.Enqueue(4);
             customQueue.Enqueue(5);
+
             customQueue.Dequeue();
             customQueue.Enqueue(6);
             customQueue.ForEach(Console.WriteLine);
@@ -20,6 +24,7 @@
             queue.Enqueue("hello");
             queue.Enqueue("world");
             queue.Clear();
+
             queue.Enqueue("Hello!");
             queue.Enqueue("Hi!");
 
