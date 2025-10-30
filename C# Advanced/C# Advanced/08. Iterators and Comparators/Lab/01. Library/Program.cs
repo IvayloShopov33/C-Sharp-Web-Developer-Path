@@ -14,6 +14,7 @@
             foreach (Book book in libraryTwo)
             {
                 Console.Write($"Name: {book.Title}, Published in: {book.Year}, ");
+
                 if (book.Authors.Count == 0)
                 {
                     Console.WriteLine("Anonymous author(s)");
