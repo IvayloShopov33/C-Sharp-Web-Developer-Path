@@ -34,9 +34,7 @@ namespace IteratorsAndComparators
 
             public Book Current => this.books[index];
 
-
             object IEnumerator.Current => this.Current;
-
 
             public bool MoveNext()
             {
