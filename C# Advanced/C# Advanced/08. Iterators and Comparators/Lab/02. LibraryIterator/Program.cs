@@ -15,7 +15,6 @@
             {
                 Console.WriteLine(book.Title);
             }
-
         }
     }
 }
