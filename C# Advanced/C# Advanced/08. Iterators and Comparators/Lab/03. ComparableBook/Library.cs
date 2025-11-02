@@ -36,10 +36,10 @@ namespace IteratorsAndComparators
 
             object IEnumerator.Current => this.Current;
 
-
             public bool MoveNext()
             {
                 this.index++;
+                
                 return this.index >= 0 && this.index < this.books.Count;
             }
 
@@ -47,6 +47,7 @@ namespace IteratorsAndComparators
             {
                 this.index = -1;
             }
+            
             public void Dispose()
             {
             }
