@@ -7,6 +7,7 @@
             List<string> items = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).Skip(1).ToList();
             ListyIterator<string> listyIterator = new(items);
             string input;
+
             while (true)
             {
                 input = Console.ReadLine();
