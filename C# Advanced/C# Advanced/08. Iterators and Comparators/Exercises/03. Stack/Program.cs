@@ -5,8 +5,8 @@
         static void Main(string[] args)
         {
             CustomStack<int> numbers = new();
-
             string command;
+
             while (true)
             {
                 command = Console.ReadLine();
