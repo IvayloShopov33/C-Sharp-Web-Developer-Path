@@ -5,8 +5,8 @@
         static void Main(string[] args)
         {
             List<Person> people = new();
-
             string input = string.Empty;
+
             while (true)
             {
                 input = Console.ReadLine();
@@ -29,6 +29,7 @@
 
             int equalCount = 0;
             int differentCount = 0;
+
             foreach (Person person in people)
             {
                 if (person.CompareTo(personToCompare) == 0)
