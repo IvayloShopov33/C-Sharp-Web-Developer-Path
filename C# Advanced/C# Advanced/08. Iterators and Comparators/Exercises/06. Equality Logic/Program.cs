@@ -6,8 +6,8 @@
         {
             HashSet<Person> peopleHashSet = new();
             SortedSet<Person> peopleSortedSet = new();
-
             int peopleCount = int.Parse(Console.ReadLine());
+
             for (int i = 0; i < peopleCount; i++)
             {
                 string[] personDetails = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
