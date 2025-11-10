@@ -6,6 +6,7 @@
         {
             int[] matrixSizes = Console.ReadLine().Split(",").Select(int.Parse).ToArray();
             char[,] matrix = new char[matrixSizes[0], matrixSizes[1]];
+            
             int currentRow = 0;
             int currentColumn = 0;
             int cheeseCount = 0;
@@ -31,6 +32,7 @@
 
             bool gameOver = false;
             string direction;
+            
             while (true)
             {
                 direction = Console.ReadLine().ToLower();
@@ -71,6 +73,7 @@
                             {
                                 matrix[currentRow - 1, currentColumn] = 'M';
                                 matrix[currentRow, currentColumn] = '*';
+                                
                                 Console.WriteLine("Mouse is trapped!");
                                 gameOver = true;
                             }
@@ -111,6 +114,7 @@
                             {
                                 matrix[currentRow + 1, currentColumn] = 'M';
                                 matrix[currentRow, currentColumn] = '*';
+                                
                                 Console.WriteLine("Mouse is trapped!");
                                 gameOver = true;
                             }
@@ -151,6 +155,7 @@
                             {
                                 matrix[currentRow, currentColumn + 1] = 'M';
                                 matrix[currentRow, currentColumn] = '*';
+                                
                                 Console.WriteLine("Mouse is trapped!");
                                 gameOver = true;
                             }
@@ -191,6 +196,7 @@
                             {
                                 matrix[currentRow, currentColumn - 1] = 'M';
                                 matrix[currentRow, currentColumn] = '*';
+                                
                                 Console.WriteLine("Mouse is trapped!");
                                 gameOver = true;
                             }
@@ -212,6 +218,7 @@
                 {
                     Console.Write(matrix[row, col]);
                 }
+                
                 Console.WriteLine();
             }
         }
