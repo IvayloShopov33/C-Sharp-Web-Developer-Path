@@ -6,6 +6,7 @@
         {
             Queue<int> tools = new Queue<int>();
             Stack<int> substances = new Stack<int>();
+
             List<int> toolsList = Console.ReadLine().Split(" ").Select(int.Parse).ToList();
             List<int> substancesList = Console.ReadLine().Split(" ").Select(int.Parse).ToList();
             List<int> challenges = Console.ReadLine().Split(" ").Select(int.Parse).ToList();
@@ -24,6 +25,7 @@
             {
                 int tool = tools.Dequeue();
                 int substance = substances.Pop();
+
                 if (challenges.Any(x => x == tool * substance))
                 {
                     challenges.Remove(tool * substance);
