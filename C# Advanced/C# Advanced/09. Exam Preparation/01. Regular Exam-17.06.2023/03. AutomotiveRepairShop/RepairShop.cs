@@ -37,6 +37,7 @@ namespace AutomotiveRepairShop
         {
             StringBuilder output = new();
             output.AppendLine("Vehicles in the preparatory:");
+
             foreach (var vehicle in this.Vehicles)
             {
                 output.AppendLine(vehicle.ToString());
