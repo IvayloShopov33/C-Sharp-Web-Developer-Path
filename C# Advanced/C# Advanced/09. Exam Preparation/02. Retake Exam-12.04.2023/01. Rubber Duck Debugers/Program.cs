@@ -6,6 +6,7 @@
         {
             Queue<int> programmersTimes = new Queue<int>();
             Stack<int> tasksNumbers = new Stack<int>();
+
             List<int> times = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToList();
             List<int> tasks = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToList();
 
