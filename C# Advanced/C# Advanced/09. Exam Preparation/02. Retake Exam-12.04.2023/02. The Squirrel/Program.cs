@@ -6,6 +6,7 @@
         {
             int matrixSize = int.Parse(Console.ReadLine());
             string[] directions = Console.ReadLine().Split(", ", StringSplitOptions.RemoveEmptyEntries);
+
             char[,] matrix = new char[matrixSize, matrixSize];
             int currentRow = 0;
             int currentColumn = 0;
@@ -36,6 +37,7 @@
                     {
                         Console.WriteLine("The squirrel is out of the field.");
                         gameOver = true;
+
                         break;
                     }
 
@@ -43,6 +45,7 @@
                     {
                         Console.WriteLine("Unfortunately, the squirrel stepped on a trap...");
                         gameOver = true;
+
                         break;
                     }
 
@@ -53,6 +56,7 @@
                         {
                             Console.WriteLine("Good job! You have collected all hazelnuts!");
                             gameOver = true;
+
                             break;
                         }
                     }
@@ -67,6 +71,7 @@
                     {
                         Console.WriteLine("The squirrel is out of the field.");
                         gameOver = true;
+
                         break;
                     }
 
@@ -74,6 +79,7 @@
                     {
                         Console.WriteLine("Unfortunately, the squirrel stepped on a trap...");
                         gameOver = true;
+
                         break;
                     }
 
@@ -84,6 +90,7 @@
                         {
                             Console.WriteLine("Good job! You have collected all hazelnuts!");
                             gameOver = true;
+
                             break;
                         }
                     }
@@ -98,6 +105,7 @@
                     {
                         Console.WriteLine("The squirrel is out of the field.");
                         gameOver = true;
+
                         break;
                     }
 
@@ -105,6 +113,7 @@
                     {
                         Console.WriteLine("Unfortunately, the squirrel stepped on a trap...");
                         gameOver = true;
+
                         break;
                     }
 
@@ -115,6 +124,7 @@
                         {
                             Console.WriteLine("Good job! You have collected all hazelnuts!");
                             gameOver = true;
+
                             break;
                         }
                     }
@@ -129,6 +139,7 @@
                     {
                         Console.WriteLine("The squirrel is out of the field.");
                         gameOver = true;
+
                         break;
                     }
 
@@ -136,6 +147,7 @@
                     {
                         Console.WriteLine("Unfortunately, the squirrel stepped on a trap...");
                         gameOver = true;
+
                         break;
                     }
 
@@ -146,6 +158,7 @@
                         {
                             Console.WriteLine("Good job! You have collected all hazelnuts!");
                             gameOver = true;
+
                             break;
                         }
                     }
