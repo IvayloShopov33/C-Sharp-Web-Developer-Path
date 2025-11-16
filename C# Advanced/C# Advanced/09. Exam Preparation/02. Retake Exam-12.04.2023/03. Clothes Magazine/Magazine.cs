@@ -38,6 +38,7 @@ namespace ClothesMagazine
         {
             StringBuilder output = new();
             output.AppendLine($"{this.Type} magazine contains:");
+
             foreach (Cloth cloth in this.Clothes.OrderBy(x => x.Size))
             {
                 output.AppendLine(cloth.ToString());
