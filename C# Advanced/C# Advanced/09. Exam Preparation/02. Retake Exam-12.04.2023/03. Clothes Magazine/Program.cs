@@ -14,6 +14,7 @@
 
             Cloth cloth2 = new Cloth("brown", 34, "t-shirt");
             Cloth cloth3 = new Cloth("blue", 32, "jeans");
+
             magazine.AddCloth(cloth2);
             magazine.AddCloth(cloth3);
 
