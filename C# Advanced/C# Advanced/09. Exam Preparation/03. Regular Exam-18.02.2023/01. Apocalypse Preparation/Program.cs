@@ -7,6 +7,7 @@
             Queue<int> textiles = new();
             Stack<int> medicaments = new();
             Dictionary<string, int> itemsCreated = new();
+
             List<int> textilesInput = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToList();
             List<int> medicamentsInput = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToList();
 
@@ -24,6 +25,7 @@
             {
                 int textile = textiles.Dequeue();
                 int medicament = medicaments.Pop();
+
                 if (textile + medicament == 30)
                 {
                     if (!itemsCreated.ContainsKey("Patch"))
@@ -59,6 +61,7 @@
                     }
 
                     itemsCreated["MedKit"]++;
+
                     int newMedicament = medicaments.Pop() + (textile + medicament - 100);
                     medicaments.Push(newMedicament);
                 }
