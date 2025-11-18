@@ -6,6 +6,7 @@
         {
             int[] matrixDimensions = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
             char[,] matrix = new char[matrixDimensions[0], matrixDimensions[1]];
+
             int currentRow = 0;
             int currentCol = 0;
             int movesCount = 0;
