@@ -48,8 +48,7 @@ namespace SoftUniKindergarten
             get => contactNumber;
             private set { contactNumber = value; }
         }
-
-
+
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
