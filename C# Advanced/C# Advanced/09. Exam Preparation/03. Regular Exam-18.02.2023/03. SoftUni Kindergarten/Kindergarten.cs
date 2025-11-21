@@ -97,6 +97,7 @@ namespace SoftUniKindergarten
         {
             StringBuilder output = new();
             output.AppendLine($"Registered children in {this.Name}:");
+
             foreach (Child child in this.Registry.OrderByDescending(x => x.Age).ThenBy(x => x.LastName).ThenBy(x => x.FirstName))
             {
                 output.AppendLine(child.ToString());
