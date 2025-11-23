@@ -12,11 +12,11 @@ namespace SoftUniKindergarten
 
         public Child(string firstName, string lastName, int age, string parentName, string contactNumber)
         {
-            FirstName = firstName;
-            LastName = lastName;
-            Age = age;
-            ParentName = parentName;
-            ContactNumber = contactNumber;
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.Age = age;
+            this.ParentName = parentName;
+            this.ContactNumber = contactNumber;
         }
 
         public string FirstName
