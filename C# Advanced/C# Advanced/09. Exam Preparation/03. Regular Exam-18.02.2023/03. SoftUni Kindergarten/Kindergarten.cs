@@ -12,9 +12,9 @@ namespace SoftUniKindergarten
 
         public Kindergarten(string name, int capacity)
         {
-            Name = name;
-            Capacity = capacity;
-            Registry = new List<Child>();
+            this.Name = name;
+            this.Capacity = capacity;
+            this.Registry = new List<Child>();
         }
 
         public string Name
@@ -28,7 +28,6 @@ namespace SoftUniKindergarten
             get => capacity;
             private set { capacity = value; }
         }
-
 
         public List<Child> Registry
         {
