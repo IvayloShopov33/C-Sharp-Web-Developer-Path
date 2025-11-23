@@ -7,6 +7,7 @@ namespace SoftUniKindergarten
         static void Main(string[] args)
         {
             Kindergarten kindergarten = new Kindergarten("Space S", 8);
+            
             Child childOne = new Child("Greta", "Garbo", 3, "Karl Gustafsson", "0468 888 888");
             Child childTwo = new Child("Elona", "Muskova", 4, "Maye Musk", " 1 888 518 3752");
             Child childThree = new Child("George", "Bush", 5, " George Bush Sr.", "xx xxx xxx xxx");
