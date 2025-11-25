@@ -6,6 +6,7 @@
         {
             Queue<int> monstersArmors = new();
             Stack<int> soldiersStrengths = new();
+
             List<int> monsters = Console.ReadLine().Split(",", StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToList();
             List<int> soldiers = Console.ReadLine().Split(",", StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToList();
 
