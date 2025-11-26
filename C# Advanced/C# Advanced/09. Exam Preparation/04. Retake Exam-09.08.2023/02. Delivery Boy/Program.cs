@@ -52,6 +52,7 @@
                             {
                                 Console.WriteLine("Pizza is delivered on time! Next order...");
                                 gameOver = true;
+
                                 matrix[currentRow - 1, currentColumn] = 'P';
                                 matrix[currentRow, currentColumn] = '.';
                                 matrix[initialRow, initialCol] = 'B';
@@ -91,6 +92,7 @@
                             {
                                 Console.WriteLine("Pizza is delivered on time! Next order...");
                                 gameOver = true;
+
                                 matrix[currentRow + 1, currentColumn] = 'P';
                                 matrix[currentRow, currentColumn] = '.';
                                 matrix[initialRow, initialCol] = 'B';
@@ -130,6 +132,7 @@
                             {
                                 Console.WriteLine("Pizza is delivered on time! Next order...");
                                 gameOver = true;
+
                                 matrix[currentRow, currentColumn + 1] = 'P';
                                 matrix[currentRow, currentColumn] = '.';
                                 matrix[initialRow, initialCol] = 'B';
@@ -169,6 +172,7 @@
                             {
                                 Console.WriteLine("Pizza is delivered on time! Next order...");
                                 gameOver = true;
+
                                 matrix[currentRow, currentColumn - 1] = 'P';
                                 matrix[currentRow, currentColumn] = '.';
                                 matrix[initialRow, initialCol] = 'B';
@@ -193,6 +197,7 @@
                 {
                     Console.Write(matrix[row, col]);
                 }
+
                 Console.WriteLine();
             }
         }
