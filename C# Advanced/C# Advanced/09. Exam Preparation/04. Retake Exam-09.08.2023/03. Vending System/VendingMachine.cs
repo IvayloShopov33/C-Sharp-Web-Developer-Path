@@ -42,6 +42,7 @@ namespace VendingSystem
         {
             StringBuilder output = new();
             output.AppendLine("Drinks available:");
+
             foreach (Drink drink in drinks)
             {
                 output.AppendLine(drink.ToString());
