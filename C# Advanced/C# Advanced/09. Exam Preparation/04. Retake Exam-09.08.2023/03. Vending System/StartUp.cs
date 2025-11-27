@@ -36,7 +36,6 @@ namespace VendingSystem
 
             Console.WriteLine(vendingMachine.BuyDrink("Cappuccino"));
             Console.WriteLine(vendingMachine.Report());
-
         }
     }
 }
