@@ -25,7 +25,7 @@ namespace VendingSystem
 
         public override string ToString()
         {
-            return $"Name: {Name}, Price: ${Price}, Volume: {Volume} ml";
+            return $"Name: {this.Name}, Price: ${this.Price}, Volume: {this.Volume} ml";
         }
     }
 }
