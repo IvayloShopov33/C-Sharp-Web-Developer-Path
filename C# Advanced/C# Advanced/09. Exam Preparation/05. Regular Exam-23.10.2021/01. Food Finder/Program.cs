@@ -12,6 +12,7 @@ namespace _01._Food_Finder
             string[] words = new string[4] { "pear", "flour", "pork", "olive" };
             Queue<char> vowels = new Queue<char>();
             Stack<char> consonants = new Stack<char>();
+
             char[] vowelsInput = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).Select(char.Parse).ToArray();
             char[] consonantsInput = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).Select(char.Parse).ToArray();
 
@@ -122,6 +123,7 @@ namespace _01._Food_Finder
 
             StringBuilder output = new StringBuilder();
             int wordsFoundCount = 0;
+
             if (firstWordLetterCount == words[0].Length)
             {
                 wordsFoundCount++;
