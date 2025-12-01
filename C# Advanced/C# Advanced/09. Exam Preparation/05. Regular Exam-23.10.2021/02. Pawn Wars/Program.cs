@@ -39,6 +39,7 @@ namespace _02._Pawn_Wars
                 {
                     bool isInsideFirstOption = whiteCurrentCol - 1 >= 0;
                     bool isInsideSecondOption = whiteCurrentCol + 1 < chessBoard.GetLength(1);
+
                     if (whiteCurrentRow == 0)
                     {
                         string coordinates = rowsSymbols[whiteCurrentCol] + 8.ToString();
@@ -70,6 +71,7 @@ namespace _02._Pawn_Wars
                 {
                     bool isInsideFirstOption = blackCurrentCol - 1 >= 0;
                     bool isInsideSecondOption = blackCurrentCol + 1 < chessBoard.GetLength(1);
+
                     if (blackCurrentRow == chessBoard.GetLength(0) - 1)
                     {
                         string coordinates = rowsSymbols[blackCurrentCol] + 1.ToString();
