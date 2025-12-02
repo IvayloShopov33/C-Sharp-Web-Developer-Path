@@ -29,6 +29,7 @@
 
             int reachedAltitudeCount = 0;
             bool journeyIsOver = false;
+
             while (initialFuels.Count > 0 && consumptionIndexes.Count > 0 && neededAmountsOfFuel.Count > 0)
             {
                 int fuel = initialFuels.Pop();
