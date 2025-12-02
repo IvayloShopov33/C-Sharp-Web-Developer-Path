@@ -25,12 +25,13 @@
 
             int nextRow = 0, nextColumn = 0;
             int collectedTonsOfFish = 0;
-
             string direction = Console.ReadLine();
+
             while (direction != "collect the nets")
             {
                 nextRow = currentRow;
                 nextColumn = currentColumn;
+
                 if (direction == "up")
                 {
                     nextRow--;
@@ -104,6 +105,7 @@
                 {
                     Console.Write(matrix[row, col]);
                 }
+
                 Console.WriteLine();
             }
         }
