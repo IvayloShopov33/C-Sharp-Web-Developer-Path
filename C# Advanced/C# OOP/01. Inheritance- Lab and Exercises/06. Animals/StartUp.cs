@@ -7,9 +7,9 @@ namespace Animals
     {
         public static void Main(string[] args)
         {
-            List<Animal> animals = new List<Animal>();
-
+            List<Animal> animals = new List<Animal>();
             string input;
+
             while (true)
             {
                 input = Console.ReadLine();
@@ -31,6 +31,7 @@ namespace Animals
                     string name = animalDetails[0];
                     int age = int.Parse(animalDetails[1]);
                     string gender = string.Empty;
+
                     if (input == "Cat")
                     {
                         gender = animalDetails[2];
