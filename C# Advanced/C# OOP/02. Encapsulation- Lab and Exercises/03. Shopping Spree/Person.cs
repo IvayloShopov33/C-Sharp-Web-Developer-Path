@@ -55,6 +55,7 @@
             {
                 this.Money -= product.Cost;
                 this.products.Add(product);
+
                 Console.WriteLine($"{this.Name} bought {product.Name}");
             }
             else
