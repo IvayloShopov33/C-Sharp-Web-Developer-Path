@@ -4,9 +4,9 @@
     {
         static void Main(string[] args)
         {
-            List<Team> teams = new List<Team>();
-
+            List<Team> teams = new List<Team>();
             string input;
+
             while ((input = Console.ReadLine()) != "END")
             {
                 string[] tokens = input.Split(';');
