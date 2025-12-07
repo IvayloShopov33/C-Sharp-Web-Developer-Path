@@ -9,8 +9,8 @@ namespace Telephony
         {
             string[] phoneNumbers = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
             string[] urls = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
-
             ICallable callablePhone = default;
+
             foreach (string phoneNumber in phoneNumbers)
             {
                 if (phoneNumber.Length == 7)
