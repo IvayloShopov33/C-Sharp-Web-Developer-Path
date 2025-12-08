@@ -9,8 +9,8 @@ namespace BirthdayCelebrations.Core
         public void Run()
         {
             List<IBirthable> identities = new List<IBirthable>();
-
             string[] input;
+
             while (true)
             {
                 input = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
