@@ -16,8 +16,8 @@
             {
                 Dough dough = new Dough(flourType, bakingTechnique, doughWeight);
                 Pizza pizza = new Pizza(pizzaName, dough);
-
                 string[] toppingTokens = Console.ReadLine().Split(" ");
+
                 while (toppingTokens[0] != "END")
                 {
                     string toppingType = toppingTokens[1];
