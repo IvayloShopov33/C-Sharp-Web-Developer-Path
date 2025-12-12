@@ -9,8 +9,8 @@ namespace BorderControl.Core
         public void Run()
         {
             List<IIdentification> identities = new List<IIdentification>();
-
             string[] input;
+
             while (true)
             {
                 input = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
