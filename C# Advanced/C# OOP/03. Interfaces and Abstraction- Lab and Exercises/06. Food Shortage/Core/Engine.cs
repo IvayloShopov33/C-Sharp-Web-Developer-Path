@@ -9,8 +9,8 @@ namespace FoodShortage.Core
         public void Run()
         {
             List<IBuyer> buyers = new List<IBuyer>();
-
             int peopleCount = int.Parse(Console.ReadLine());
+
             for (int i = 1; i <= peopleCount; i++)
             {
                 string[] input = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
