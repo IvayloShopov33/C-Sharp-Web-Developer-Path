@@ -19,6 +19,7 @@ namespace MilitaryElite.Models
             StringBuilder output = new StringBuilder();
             output.AppendLine(base.ToString());
             output.AppendLine("Missions:");
+
             foreach (IMission mission in this.Missions)
             {
                 output.AppendLine($"  {mission.ToString()}");
