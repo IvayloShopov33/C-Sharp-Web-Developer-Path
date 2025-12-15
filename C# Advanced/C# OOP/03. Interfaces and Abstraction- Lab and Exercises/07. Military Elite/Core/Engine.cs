@@ -104,6 +104,7 @@ namespace MilitaryElite.Core
             {
                 string partName = soldierDetails[i];
                 int hoursWorked = int.Parse(soldierDetails[i + 1]);
+
                 IRepair repair = new Repair(partName, hoursWorked);
                 repairs.Add(repair);
             }
