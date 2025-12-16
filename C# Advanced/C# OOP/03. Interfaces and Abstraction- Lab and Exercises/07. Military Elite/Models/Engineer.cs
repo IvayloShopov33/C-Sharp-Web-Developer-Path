@@ -1,5 +1,6 @@
 ﻿using MilitaryElite.Enums;
 using MilitaryElite.Models.Interfaces;
+
 using System.Text;
 
 namespace MilitaryElite.Models
@@ -19,6 +20,7 @@ namespace MilitaryElite.Models
             StringBuilder output = new StringBuilder();
             output.AppendLine(base.ToString());
             output.AppendLine("Repairs:");
+
             foreach (IRepair repair in this.Repairs)
             {
                 output.AppendLine($"  {repair.ToString()}");
