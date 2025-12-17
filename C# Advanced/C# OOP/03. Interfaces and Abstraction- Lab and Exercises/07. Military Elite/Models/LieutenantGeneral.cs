@@ -18,6 +18,7 @@ namespace MilitaryElite.Models
             StringBuilder output = new StringBuilder();
             output.AppendLine(base.ToString());
             output.AppendLine("Privates:");
+
             foreach (IPrivate currentPrivate in this.Privates)
             {
                 output.AppendLine($"  {currentPrivate.ToString()}");
