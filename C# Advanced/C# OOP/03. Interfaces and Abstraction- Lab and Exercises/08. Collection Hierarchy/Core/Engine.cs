@@ -44,6 +44,7 @@ namespace CollectionHierarchy.Core
         {
             removedElementsOfAddRemoveCollection = new string[removeOperationsCount];
             removedElementsOfMyList = new string[removeOperationsCount];
+
             for (int i = 0; i < removeOperationsCount; i++)
             {
                 removedElementsOfAddRemoveCollection[i] = addRemoveCollection.Remove();
