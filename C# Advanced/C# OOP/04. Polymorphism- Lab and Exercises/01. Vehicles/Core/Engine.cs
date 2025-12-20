@@ -20,6 +20,7 @@ namespace Vehicles.Core
                 string command = commands[0];
                 string vehicle = commands[1];
                 double countOfKilometersOrLiters = double.Parse(commands[2]);
+
                 if (command == "Drive")
                 {
                     if (vehicle == "Car")
