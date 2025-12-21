@@ -14,7 +14,6 @@
                     int number = int.Parse(Console.ReadLine());
                     IsTheNumberValid(number, numbers, validNumbersCount);
                     validNumbersCount = AddTheNumberToTheArray(numbers, validNumbersCount, number);
-
                 }
                 catch (ArgumentException ex)
                 {
