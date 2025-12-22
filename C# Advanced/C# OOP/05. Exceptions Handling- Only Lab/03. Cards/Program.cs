@@ -27,6 +27,7 @@ namespace Cards
 
             Dictionary<char, char> cardSuitsUTFCodes = new() { { 'S', '\u2660' }, { 'H', '\u2665' }, { 'D', '\u2666' }, { 'C', '\u2663' } };
             char cardSuitToSymbol = cardSuitsUTFCodes.First(x => x.Key == cardSuit).Value;
+            
             return new Card(cardFace, cardSuitToSymbol);
         }
 
@@ -51,9 +52,11 @@ namespace Cards
                 {
                     string[] cardDetails = cardInputDetails[i].Split(" ", StringSplitOptions.RemoveEmptyEntries);
                     IsTheCardDetailsValid(cardDetails);
+                    
                     string cardFace = cardDetails[0];
                     char cardSuit = char.Parse(cardDetails[1]);
                     Card card = Card.CreateCard(cardFaces, cardSuits, cardFace, cardSuit);
+                    
                     output.Append(card.ToString() + " ");
                 }
                 catch (ArgumentException ex)
