@@ -11,6 +11,7 @@
             {
                 string[] commandDetails = Console.ReadLine().Split(" ");
                 string command = commandDetails[0];
+                
                 try
                 {
                     int index = int.Parse(commandDetails[1]);
