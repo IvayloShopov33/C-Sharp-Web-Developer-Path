@@ -23,6 +23,7 @@ namespace Raiding.Core
         public void Run()
         {
             int heroesCount = int.Parse(this.reader.ReadLine());
+
             for (int i = 1; i <= heroesCount; i++)
             {
                 string name = this.reader.ReadLine();
