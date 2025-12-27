@@ -26,6 +26,7 @@ namespace WildFarm.Core
         {
             string[] animalTokens;
             string[] foodTokens;
+
             while (true)
             {
                 animalTokens = this.reader.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
@@ -38,6 +39,7 @@ namespace WildFarm.Core
                 foodTokens = this.reader.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries);
                 string foodType = foodTokens[0];
                 int foodQuantity = int.Parse(foodTokens[1]);
+
                 IAnimal animal = null;
                 IFood food = null;
 
