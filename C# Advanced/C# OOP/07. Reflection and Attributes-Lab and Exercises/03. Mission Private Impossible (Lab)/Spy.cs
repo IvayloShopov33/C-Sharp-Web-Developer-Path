@@ -29,7 +29,6 @@ namespace Stealer
             StringBuilder sb = new StringBuilder();
 
             Type typeOfTheInvestigatedClass = Type.GetType("Stealer." + className);
-
             FieldInfo[] fields = typeOfTheInvestigatedClass.GetFields(BindingFlags.Instance | BindingFlags.Public);
             MethodInfo[] nonPublicMethods = typeOfTheInvestigatedClass.GetMethods(BindingFlags.Instance | BindingFlags.NonPublic);
             MethodInfo[] publicMethods = typeOfTheInvestigatedClass.GetMethods(BindingFlags.Instance | BindingFlags.Public);
