@@ -18,6 +18,7 @@ namespace CarManager.Tests
         public void CreateCar_ShouldWorkCorrectly()
         {
             Assert.NotNull(this.car);
+            
             Assert.AreEqual("Bugatti", this.car.Make);
             Assert.AreEqual("Veyron", this.car.Model);
             Assert.AreEqual(15.7, this.car.FuelConsumption);
