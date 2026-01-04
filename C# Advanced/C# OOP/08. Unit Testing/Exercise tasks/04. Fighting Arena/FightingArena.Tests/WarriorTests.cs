@@ -18,6 +18,7 @@ namespace FightingArena.Tests
         public void WarriorConstructor_ShouldWorkCorrectly()
         {
             Assert.NotNull(this.warrior);
+            
             Assert.AreEqual("Superman", this.warrior.Name);
             Assert.AreEqual(50, this.warrior.Damage);
             Assert.AreEqual(60, this.warrior.HP);
