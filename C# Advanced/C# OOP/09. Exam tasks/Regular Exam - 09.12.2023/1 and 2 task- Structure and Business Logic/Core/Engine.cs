@@ -3,6 +3,7 @@
     using NauticalCatchChallenge.Core.Contracts;
     using NauticalCatchChallenge.IO.Contracts;
     using NauticalCatchChallenge.IO;
+
     public class Engine : IEngine
     {
         private IReader reader;
@@ -15,6 +16,7 @@
             this.writer = new Writer();
             this.controller = new Controller();
         }
+
         public void Run()
         {
             while (true)
@@ -65,6 +67,7 @@
                     {
                         result = controller.CompetitionStatistics();
                     }
+
                     writer.WriteLine(result);
                 }
                 catch (Exception ex)
