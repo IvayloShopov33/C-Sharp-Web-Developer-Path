@@ -105,6 +105,7 @@ namespace ChristmasPastryShop.Core
         {
             IBooth booth = this.booths.Models.First(x => x.BoothId == boothId);
             double boothBill = booth.CurrentBill;
+
             booth.Charge();
             booth.ChangeStatus();
 
