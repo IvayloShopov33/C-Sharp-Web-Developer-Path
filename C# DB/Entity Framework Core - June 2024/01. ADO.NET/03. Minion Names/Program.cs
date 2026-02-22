@@ -37,6 +37,7 @@ namespace _03._Minion_Names
                                     WHERE mv.[VillainId] = @Id
                                     ORDER BY m.[Name]", connection);
                 villainMinions.Parameters.AddWithValue("@Id", villainId);
+
                 using (var reader = villainMinions.ExecuteReader())
                 {
                     if (!reader.HasRows)
