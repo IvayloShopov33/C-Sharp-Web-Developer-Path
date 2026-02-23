@@ -1,4 +1,5 @@
 ﻿using Microsoft.Data.SqlClient;
+
 namespace _04._Add_Minion
 {
     internal class Program
@@ -36,6 +37,7 @@ namespace _04._Add_Minion
                 var minionTownIdCommand = new SqlCommand(
                     "SELECT [Id] FROM [Towns] WHERE [Name] = @townName", connection);
                 minionTownIdCommand.Parameters.AddWithValue("@townName", minionTown);
+
                 if (minionTownIdCommand.ExecuteScalar() == null)
                 {
                     var newTownInsertion = new SqlCommand(
