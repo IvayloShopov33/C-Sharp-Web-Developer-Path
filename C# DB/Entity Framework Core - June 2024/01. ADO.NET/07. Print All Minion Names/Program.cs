@@ -16,6 +16,7 @@ namespace _07._Print_All_Minion_Names
                 List<string> minionsNames = new List<string>();
                 var allMinionsAvailable = new SqlCommand(
                     "SELECT [Name] FROM [Minions]", connection);
+
                 using (var reader = allMinionsAvailable.ExecuteReader())
                 {
                     while (reader.Read())
@@ -26,6 +27,7 @@ namespace _07._Print_All_Minion_Names
 
                 int rightMove = 0;
                 int leftMove = 0;
+
                 for (int i = 0; i < minionsNames.Count; i += 2)
                 {
                     Console.WriteLine(minionsNames[rightMove]);
