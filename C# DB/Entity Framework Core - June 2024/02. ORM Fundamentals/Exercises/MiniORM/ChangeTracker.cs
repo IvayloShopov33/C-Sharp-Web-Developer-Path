@@ -67,7 +67,6 @@
         public IEnumerable<T> GetModifiedEntities(DbSet<T> dbSet)
         {
             var result = new List<T>();
-
             var entityType = typeof(T);
             var primaryKeyProperties = entityType.GetKeyProperties();
 
