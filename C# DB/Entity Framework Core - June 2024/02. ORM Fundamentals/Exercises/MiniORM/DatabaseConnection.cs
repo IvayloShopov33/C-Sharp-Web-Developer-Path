@@ -1,9 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Microsoft.Data.SqlClient;
+
 /// <summary>
 /// Used for accessing a database, inserting/updating/deleting entities
 /// and mapping database columns to entity classes.
 /// </summary>
+
 namespace MiniORM;
 
 internal class DatabaseConnection
@@ -52,7 +54,6 @@ internal class DatabaseConnection
                 while (reader.Read())
                 {
                     var column = reader.GetString(0);
-
                     rows.Add(column);
                 }
             }
