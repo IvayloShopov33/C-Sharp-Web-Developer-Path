@@ -13,7 +13,6 @@ namespace MiniORM
         protected DbContext(string connectionString)
         {
             this._connection = new DatabaseConnection(connectionString);
-
             this._dbSetProperties = DiscoverDbSets();
 
             using (new ConnectionManager(this._connection))
@@ -233,6 +232,7 @@ namespace MiniORM
             {
                 return;
             }
+
             foreach (var entity in dbSet.Entities)
             {
                 var primaryKey = primaryKeyProperty.GetValue(entity);
@@ -255,6 +255,7 @@ namespace MiniORM
 
                 var navigationPropertyName = foreignKeyAttribute.Name;
                 var navigationProperty = property.DeclaringType!.GetProperty(navigationPropertyName);
+
                 if (navigationProperty == null)
                 {
                     throw new InvalidOperationException($"Navigation property {navigationPropertyName} was not found.");
@@ -274,6 +275,7 @@ namespace MiniORM
         {
             var entities = this.LoadEntities<T>();
             var dbSet = new DbSet<T>(entities);
+
             ReflectionHelper.ReplaceBackingField(this, dbSetProperty.Name, dbSet);
         }
 
