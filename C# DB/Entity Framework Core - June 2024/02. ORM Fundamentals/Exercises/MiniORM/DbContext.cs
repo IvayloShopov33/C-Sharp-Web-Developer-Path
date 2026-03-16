@@ -198,6 +198,7 @@ namespace MiniORM
 
                 var navigationPropertyName = foreignKeyAttribute.Name;
                 var navigationProperty = entityType.GetProperty(navigationPropertyName);
+
                 if (navigationProperty == null)
                 {
                     throw new InvalidOperationException($"Navigation property {navigationPropertyName} was not found.");
