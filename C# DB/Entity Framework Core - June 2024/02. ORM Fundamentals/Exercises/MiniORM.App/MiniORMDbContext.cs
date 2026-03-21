@@ -11,8 +11,11 @@ namespace MiniORM.App
         }
 
         public DbSet<Department> Departments { get; } = null!;
+
         public DbSet<Employee> Employees { get; } = null!;
+
         public DbSet<Project> Projects { get; } = null!;
+
         public DbSet<EmployeeProject> EmployeesProjects { get; } = null!;
     }
 }
