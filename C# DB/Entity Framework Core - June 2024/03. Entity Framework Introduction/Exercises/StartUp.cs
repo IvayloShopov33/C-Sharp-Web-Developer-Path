@@ -1,6 +1,7 @@
 ﻿using SoftUni.Data;
-using System.Text;
 using SoftUni.Models;
+
+using System.Text;
 
 namespace SoftUni
 {
