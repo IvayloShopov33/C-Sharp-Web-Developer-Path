@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+
 using P02_FootballBetting.Data;
 
 namespace P02_FootballBetting
