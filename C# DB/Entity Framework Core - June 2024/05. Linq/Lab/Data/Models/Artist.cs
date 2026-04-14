@@ -24,7 +24,9 @@ namespace Demo.Data.Models
         public DateTime? ModifiedOn { get; set; }
 
         public bool IsDeleted { get; set; }
+
         public DateTime? DeletedOn { get; set; }
+
         public string? Name { get; set; }
 
         [InverseProperty(nameof(ArtistMetadatum.Artist))]
