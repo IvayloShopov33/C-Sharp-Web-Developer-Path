@@ -31,6 +31,7 @@ namespace Demo.Data.Models
 
         [InverseProperty(nameof(ArtistMetadatum.Artist))]
         public virtual ICollection<ArtistMetadatum> ArtistMetadata { get; set; }
+
         [InverseProperty(nameof(SongArtist.Artist))]
         public virtual ICollection<SongArtist> SongArtists { get; set; }
     }
