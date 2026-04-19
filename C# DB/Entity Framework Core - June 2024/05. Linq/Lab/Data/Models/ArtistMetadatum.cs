@@ -28,7 +28,9 @@ namespace Demo.Data.Models
         public int Type { get; set; }
 
         public string? Value { get; set; }
+
         public int? SourceId { get; set; }
+
         public string? SourceItemId { get; set; }
 
         [ForeignKey(nameof(ArtistId))]
