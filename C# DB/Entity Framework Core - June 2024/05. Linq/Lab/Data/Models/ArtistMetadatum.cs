@@ -36,6 +36,7 @@ namespace Demo.Data.Models
         [ForeignKey(nameof(ArtistId))]
         [InverseProperty("ArtistMetadata")]
         public virtual Artist Artist { get; set; } = null!;
+
         [ForeignKey(nameof(SourceId))]
         [InverseProperty("ArtistMetadata")]
         public virtual Source? Source { get; set; }
