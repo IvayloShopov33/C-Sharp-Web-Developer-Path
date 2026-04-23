@@ -31,14 +31,18 @@ namespace Demo.Data.Models
         public string Name { get; set; } = null!;
 
         public int? SourceId { get; set; }
+
         public string? SourceItemId { get; set; }
+
         public string? SearchTerms { get; set; }
 
         [ForeignKey(nameof(SourceId))]
         [InverseProperty("Songs")]
         public virtual Source? Source { get; set; }
+
         [InverseProperty(nameof(SongArtist.Song))]
         public virtual ICollection<SongArtist> SongArtists { get; set; }
+
         [InverseProperty(nameof(SongMetadatum.Song))]
         public virtual ICollection<SongMetadatum> SongMetadata { get; set; }
     }
