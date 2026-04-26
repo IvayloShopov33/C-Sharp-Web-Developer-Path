@@ -20,9 +20,13 @@ namespace Demo.Data.Models
         public DateTime? ModifiedOn { get; set; }
 
         public bool IsDeleted { get; set; }
+
         public DateTime? DeletedOn { get; set; }
+
         public int SongId { get; set; }
+
         public int ArtistId { get; set; }
+
         public int Order { get; set; }
 
         [ForeignKey(nameof(ArtistId))]
