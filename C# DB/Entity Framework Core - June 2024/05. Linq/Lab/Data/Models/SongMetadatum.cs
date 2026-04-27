@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+
 using Microsoft.EntityFrameworkCore;
 
 namespace Demo.Data.Models
@@ -13,9 +14,13 @@ namespace Demo.Data.Models
     {
         [Key]
         public int Id { get; set; }
+
         public DateTime CreatedOn { get; set; }
+
         public DateTime? ModifiedOn { get; set; }
+
         public bool IsDeleted { get; set; }
+
         public DateTime? DeletedOn { get; set; }
         public int SongId { get; set; }
         public short Type { get; set; }
@@ -26,6 +31,7 @@ namespace Demo.Data.Models
         [ForeignKey(nameof(SongId))]
         [InverseProperty("SongMetadata")]
         public virtual Song Song { get; set; } = null!;
+
         [ForeignKey(nameof(SourceId))]
         [InverseProperty("SongMetadata")]
         public virtual Source? Source { get; set; }
