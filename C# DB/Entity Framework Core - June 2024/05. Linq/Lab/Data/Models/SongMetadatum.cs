@@ -22,10 +22,15 @@ namespace Demo.Data.Models
         public bool IsDeleted { get; set; }
 
         public DateTime? DeletedOn { get; set; }
+
         public int SongId { get; set; }
+
         public short Type { get; set; }
+
         public string? Value { get; set; }
+
         public int? SourceId { get; set; }
+
         public string? SourceItemId { get; set; }
 
         [ForeignKey(nameof(SongId))]
