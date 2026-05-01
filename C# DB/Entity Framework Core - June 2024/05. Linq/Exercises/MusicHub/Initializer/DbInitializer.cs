@@ -40,6 +40,7 @@
                     var entities = dataset.Value
                         .Select(j => j.ToObject(entityType))
                         .ToArray();
+
                     var entityName = $"{entityType.Name}s";
                     context.AddRange(entities);
 
@@ -54,6 +55,7 @@
                     {
                         context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT " + entityName + "  OFF;");
                     }
+
                     transaction.Commit();
                 }
             }
