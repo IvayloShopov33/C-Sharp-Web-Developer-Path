@@ -14,7 +14,9 @@ namespace Demo.Data.Models
         }
 
         public int Id { get; set; }
+
         public DateTime CreatedOn { get; set; }
+
         public DateTime? ModifiedOn { get; set; }
         public bool IsDeleted { get; set; }
         public DateTime? DeletedOn { get; set; }
@@ -25,6 +27,7 @@ namespace Demo.Data.Models
         public decimal? MoneyEarned { get; set; }
 
         public virtual ICollection<ArtistMetadatum> ArtistMetadata { get; set; }
+
         public virtual ICollection<SongArtist> SongArtists { get; set; }
     }
 }
