@@ -17,6 +17,7 @@ namespace Demo.Data.Models
         public string? SourceItemId { get; set; }
 
         public virtual Artist Artist { get; set; } = null!;
+
         public virtual Source? Source { get; set; }
     }
 }
