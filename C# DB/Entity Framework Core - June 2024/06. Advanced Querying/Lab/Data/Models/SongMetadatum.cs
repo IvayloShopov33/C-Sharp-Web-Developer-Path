@@ -16,9 +16,13 @@ namespace Demo.Data.Models
         public DateTime? DeletedOn { get; set; }
 
         public int SongId { get; set; }
+
         public short Type { get; set; }
+
         public string? Value { get; set; }
+
         public int? SourceId { get; set; }
+
         public string? SourceItemId { get; set; }
 
         public virtual Song Song { get; set; } = null!;
