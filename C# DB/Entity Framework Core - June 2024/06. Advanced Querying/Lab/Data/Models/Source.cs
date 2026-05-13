@@ -13,12 +13,17 @@ namespace Demo.Data.Models
         }
 
         public int Id { get; set; }
+
         public DateTime CreatedOn { get; set; }
+
         public DateTime? ModifiedOn { get; set; }
+
         public string? Name { get; set; }
 
         public virtual ICollection<ArtistMetadatum> ArtistMetadata { get; set; }
+
         public virtual ICollection<SongMetadatum> SongMetadata { get; set; }
+
         public virtual ICollection<Song> Songs { get; set; }
     }
 }
