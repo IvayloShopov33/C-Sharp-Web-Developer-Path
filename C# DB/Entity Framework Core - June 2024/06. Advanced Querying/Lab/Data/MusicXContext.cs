@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+
 using Demo.Data.Models;
+
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
