@@ -1,7 +1,8 @@
 ﻿using Demo.Data;
+using Demo.Data.Models;
+
 using Microsoft.EntityFrameworkCore;
 using Z.EntityFramework.Plus;
-using Demo.Data.Models;
 
 namespace Demo
 {
@@ -44,8 +45,10 @@ namespace Demo
             var artist1 = db.Artists.Find(1);
             var db1 = new MusicXContext();
             var artist2 = db.Artists.Find(1);
+
             artist1.MoneyEarned += 1000;
             db.SaveChanges();
+
             while (true)
             {
                 try
