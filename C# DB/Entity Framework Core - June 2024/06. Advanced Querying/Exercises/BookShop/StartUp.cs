@@ -3,6 +3,7 @@
     using BookShop.Models.Enums;
     using Data;
     using Initializer;
+
     using System.Globalization;
     using System.Text;
 
@@ -71,6 +72,7 @@
         {
             var output = new StringBuilder();
             AgeRestriction ageRestriction = Enum.Parse<AgeRestriction>(command, true);
+
             var bookByAgeRestriction = context.Books
                 .Where(x => x.AgeRestriction == ageRestriction)
                 .OrderBy(x => x.Title)
@@ -89,6 +91,7 @@
         {
             var output = new StringBuilder();
             EditionType editionType = Enum.Parse<EditionType>("Gold");
+
             var goldenBooks = context.Books
                 .Where(x => x.EditionType == editionType && x.Copies < 5000)
                 .OrderBy(x => x.BookId)
