@@ -50,7 +50,6 @@
             };
 
             int authorCount = authorNames.Length;
-
             Author[] authors = new Author[authorCount];
 
             for (int i = 0; i < authorCount; i++)
