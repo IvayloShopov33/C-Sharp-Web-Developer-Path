@@ -30,7 +30,6 @@
             };
 
             int categoryCount = categoryNames.Length;
-
             Category[] categories = new Category[categoryCount];
 
             for (int i = 0; i < categoryCount; i++)
