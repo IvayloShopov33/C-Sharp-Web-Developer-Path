@@ -6,6 +6,7 @@ namespace BookShop.Data
 
     using Models;
     using EntityConfiguration;
+
     using System.Collections.Generic;
     using System.Reflection.Emit;
 
