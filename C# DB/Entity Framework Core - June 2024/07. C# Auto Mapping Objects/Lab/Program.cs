@@ -1,8 +1,10 @@
 ﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
+
 using Demo.Data;
 using Demo.Data.Models;
 using Demo.MapperProfiles;
+
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 
