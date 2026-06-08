@@ -1,11 +1,13 @@
 ﻿namespace FastFood.Core.MappingConfiguration
 {
     using AutoMapper;
+
     using FastFood.Core.ViewModels.Categories;
     using FastFood.Core.ViewModels.Employees;
     using FastFood.Core.ViewModels.Items;
     using FastFood.Core.ViewModels.Orders;
     using FastFood.Models;
+
     using System;
     using ViewModels.Positions;
 
