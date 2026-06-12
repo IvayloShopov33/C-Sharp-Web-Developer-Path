@@ -18,6 +18,7 @@ namespace MigrationsDemo
                 // Query all students
                 var students = context.Students.ToList();
                 Console.WriteLine("All students in the database:");
+
                 foreach (var student in students)
                 {
                     Console.WriteLine($"- {student.FullName}, Age: {student.Age}, Email: {student.Email}");
