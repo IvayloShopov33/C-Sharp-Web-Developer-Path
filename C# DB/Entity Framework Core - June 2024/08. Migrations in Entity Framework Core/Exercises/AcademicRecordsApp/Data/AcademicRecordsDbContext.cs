@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+
 using AcademicRecordsApp.Data.Models;
 using Microsoft.EntityFrameworkCore;
 
