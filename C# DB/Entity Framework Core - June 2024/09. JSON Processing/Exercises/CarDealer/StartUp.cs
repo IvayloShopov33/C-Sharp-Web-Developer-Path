@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
+
 using CarDealer.Data;
 using CarDealer.DTOs;
 using CarDealer.Models;
+
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using System.Globalization;
