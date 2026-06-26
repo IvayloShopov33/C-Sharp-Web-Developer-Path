@@ -36,8 +36,10 @@ namespace XmlDemo
             for (int i = 1; i <= 10; i++)
             {
                 var book = new XElement("book");
+
                 book.Add(new XElement("title", i.ToString()));
                 book.Add(new XElement("price", i * 10));
+
                 root.Add(book);
             }
 
