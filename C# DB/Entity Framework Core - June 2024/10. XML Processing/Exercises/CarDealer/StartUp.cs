@@ -1,9 +1,11 @@
 ﻿using AutoMapper;
+
 using CarDealer.Data;
 using CarDealer.DTOs.Export;
 using CarDealer.DTOs.Import;
 using CarDealer.Models;
 using CarDealer.XML_Helper;
+
 using Microsoft.EntityFrameworkCore;
 using System.Xml.Serialization;
 
@@ -68,6 +70,7 @@ namespace CarDealer
         {
             var serializer = new XmlSerializer(typeof(SupplierInputModel[]), new XmlRootAttribute("Suppliers"));
             var textRead = new StringReader(inputXml);
+
             var dtoSuppliers = (SupplierInputModel[])serializer.Deserialize(textRead);
             var suppliers = mapper.Map<Supplier[]>(dtoSuppliers);
 
@@ -81,6 +84,7 @@ namespace CarDealer
         {
             var serializer = new XmlSerializer(typeof(PartInputModel[]), new XmlRootAttribute("Parts"));
             var textRead = new StringReader(inputXml);
+
             var dtoParts = (PartInputModel[])serializer.Deserialize(textRead);
             var supplierIds = context.Suppliers
                 .Select(x => x.Id)
@@ -107,6 +111,7 @@ namespace CarDealer
         {
             var serializer = new XmlSerializer(typeof(CarInputModel[]), new XmlRootAttribute("Cars"));
             var textRead = new StringReader(inputXml);
+
             var dtoCars = (CarInputModel[])serializer.Deserialize(textRead);
             var cars = new List<Car>();
             var carPartIds = context.PartsCars
@@ -147,6 +152,7 @@ namespace CarDealer
         {
             var serializer = new XmlSerializer(typeof(CustomerInputModel[]), new XmlRootAttribute("Customers"));
             var textRead = new StringReader(inputXml);
+
             var dtoCustomers = (CustomerInputModel[])serializer.Deserialize(textRead);
             var customers = mapper.Map<Customer[]>(dtoCustomers);
 
@@ -160,6 +166,7 @@ namespace CarDealer
         {
             var serializer = new XmlSerializer(typeof(SaleInputModel[]), new XmlRootAttribute("Sales"));
             var textRead = new StringReader(inputXml);
+
             var dtoSales = (SaleInputModel[])serializer.Deserialize(textRead);
             var sales = mapper.Map<Sale[]>(dtoSales);
 
