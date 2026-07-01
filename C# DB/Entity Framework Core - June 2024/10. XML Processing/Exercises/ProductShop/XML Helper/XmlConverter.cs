@@ -65,6 +65,7 @@ namespace ProductShop.XML_Helper
         {
             XmlSerializerNamespaces xmlNamespaces = new XmlSerializerNamespaces();
             xmlNamespaces.Add(string.Empty, string.Empty);
+
             return xmlNamespaces;
         }
     }
