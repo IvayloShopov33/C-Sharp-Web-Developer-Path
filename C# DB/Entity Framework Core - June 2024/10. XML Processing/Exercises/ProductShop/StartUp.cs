@@ -1,10 +1,12 @@
 ﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
+
 using ProductShop.Data;
 using ProductShop.DTOs.Export;
 using ProductShop.DTOs.Import;
 using ProductShop.Models;
 using ProductShop.XML_Helper;
+
 using System.Globalization;
 using System.Text;
 using System.Xml;
@@ -62,6 +64,7 @@ namespace ProductShop
         {
             var serializer = new XmlSerializer(typeof(ImportUserInputModel[]), new XmlRootAttribute("Users"));
             var textRead = new StringReader(inputXml);
+
             var dtoUsers = (ImportUserInputModel[])serializer.Deserialize(textRead);
             var users = mapper.Map<User[]>(dtoUsers);
 
@@ -75,6 +78,7 @@ namespace ProductShop
         {
             var serializer = new XmlSerializer(typeof(ImportProductInputModel[]), new XmlRootAttribute("Products"));
             var textRead = new StringReader(inputXml);
+
             var dtoProducts = (ImportProductInputModel[])serializer.Deserialize(textRead);
             var products = mapper.Map<Product[]>(dtoProducts);
 
@@ -88,6 +92,7 @@ namespace ProductShop
         {
             var serializer = new XmlSerializer(typeof(ImportCategoryInputModel[]), new XmlRootAttribute("Categories"));
             var textRead = new StringReader(inputXml);
+
             var dtoCategories = (ImportCategoryInputModel[])serializer.Deserialize(textRead);
             var categories = mapper.Map<Category[]>(dtoCategories);
 
@@ -105,6 +110,7 @@ namespace ProductShop
         {
             var serializer = new XmlSerializer(typeof(ImportCategoryProductInputModel[]), new XmlRootAttribute("CategoryProducts"));
             var textRead = new StringReader(inputXml);
+
             var dtoCategoriesProducts = (ImportCategoryProductInputModel[])serializer.Deserialize(textRead);
             var categoriesProducts = mapper.Map<CategoryProduct[]>(dtoCategoriesProducts);
 
