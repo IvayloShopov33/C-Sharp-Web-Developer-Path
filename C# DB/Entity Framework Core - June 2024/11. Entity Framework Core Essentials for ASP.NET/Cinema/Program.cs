@@ -3,6 +3,7 @@ using CinemaApp.Data;
 using CinemaApp.Data.Common;
 using CinemaApp.Data.Models;
 using CinemaApp.Services;
+
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
