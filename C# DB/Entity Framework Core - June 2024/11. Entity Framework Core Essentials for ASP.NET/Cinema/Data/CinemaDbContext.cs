@@ -1,5 +1,6 @@
 ﻿using CinemaApp.Data.Extensions;
 using CinemaApp.Data.Models;
+
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
