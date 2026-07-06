@@ -1,11 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
+
 using RealEstates.Data;
 using RealEstates.Services;
-using System.Text;
-using System.Xml.Serialization;
 using RealEstates.Services.Models;
-using System.Text.Json;
 using RealEstates.Services.Contracts;
+
+using System.Text;
+using System.Text.Json;
+using System.Xml.Serialization;
 
 namespace RealEstates.ConsoleApplication
 {
@@ -14,6 +16,7 @@ namespace RealEstates.ConsoleApplication
         static void Main(string[] args)
         {
             Console.OutputEncoding = Encoding.Unicode;
+
             var db = new ApplicationDbContext();
             db.Database.Migrate();
 
@@ -83,10 +86,13 @@ namespace RealEstates.ConsoleApplication
         {
             Console.Write("Min price:");
             int minPrice = int.Parse(Console.ReadLine());
+
             Console.Write("Max price:");
             int maxPrice = int.Parse(Console.ReadLine());
+
             Console.Write("Min size:");
             int minSize = int.Parse(Console.ReadLine());
+
             Console.Write("Max size:");
             int maxSize = int.Parse(Console.ReadLine());
 
@@ -137,6 +143,7 @@ namespace RealEstates.ConsoleApplication
         {
             Console.Write("Tag's name:");
             string tagName = Console.ReadLine();
+
             Console.Write("Tag's importance (optional):");
             bool isImportanceSetOrNot = int.TryParse(Console.ReadLine(), out int tagImportance);
             int? importance = isImportanceSetOrNot ? tagImportance : null;
@@ -151,6 +158,7 @@ namespace RealEstates.ConsoleApplication
             Console.WriteLine("Bulk operation started...");
             IPropertiesService propertiesService = new PropertiesService(dbContext);
             ITagService tagService = new TagService(dbContext, propertiesService);
+
             tagService.BulkTagToProperties();
             Console.WriteLine("Bulk operation finished.");
         }
@@ -175,9 +183,11 @@ namespace RealEstates.ConsoleApplication
             Console.Write("Count of properties: ");
             int count = int.Parse(Console.ReadLine());
             IPropertiesService propertiesService = new PropertiesService(dbContext);
+
             var properties = propertiesService.GetFullData(count);
             var xmlSerializer = new XmlSerializer(typeof(PropertyInfoFullDataDto[]));
             var stringWriter = new StringWriter();
+
             xmlSerializer.Serialize(stringWriter, properties);
             Console.WriteLine(stringWriter.ToString().TrimEnd());
         }
@@ -186,6 +196,7 @@ namespace RealEstates.ConsoleApplication
         {
             Console.Write("Count of properties: ");
             int count = int.Parse(Console.ReadLine());
+
             IPropertiesService propertiesService = new PropertiesService(dbContext);
             var properties = propertiesService.GetFullData(count);
 
