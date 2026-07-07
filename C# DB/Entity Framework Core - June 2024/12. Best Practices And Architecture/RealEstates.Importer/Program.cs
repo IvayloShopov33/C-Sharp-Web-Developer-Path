@@ -1,6 +1,7 @@
 ﻿using RealEstates.Data;
 using RealEstates.Services;
 using RealEstates.Services.Contracts;
+
 using System.Text.Json;
 
 namespace RealEstates.Importer
