@@ -1,4 +1,5 @@
 ﻿using AutoMapper.QueryableExtensions;
+
 using RealEstates.Data;
 using RealEstates.Services.Contracts;
 using RealEstates.Services.Models;
