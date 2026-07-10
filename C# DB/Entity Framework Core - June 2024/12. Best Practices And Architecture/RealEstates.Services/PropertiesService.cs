@@ -1,7 +1,8 @@
-﻿using RealEstates.Data;
+using AutoMapper.QueryableExtensions;
+
+using RealEstates.Data;
 using RealEstates.Models;
 using RealEstates.Services.Models;
-using AutoMapper.QueryableExtensions;
 using RealEstates.Services.Contracts;
 
 namespace RealEstates.Services
@@ -38,6 +39,7 @@ namespace RealEstates.Services
 
             property.District = dbDistrict;
             var dbPropertyType = dbContext.PropertyTypes.FirstOrDefault(x => x.Name == propertyType);
+            
             if (dbPropertyType == null)
             {
                 dbPropertyType = new PropertyType
@@ -48,6 +50,7 @@ namespace RealEstates.Services
 
             property.PropertyType = dbPropertyType;
             var dbBuildingType = dbContext.BuildingTypes.FirstOrDefault(x => x.Name == buildingType);
+            
             if (dbBuildingType == null)
             {
                 dbBuildingType = new BuildingType
