@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+
 using Boardgames.Data.Models.Enums;
 using static Boardgames.Data.ModelsValidationConstraints;
 
