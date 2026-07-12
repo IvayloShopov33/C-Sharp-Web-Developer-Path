@@ -1,4 +1,5 @@
 ﻿using Boardgames.Data.Models;
+
 using System.Xml.Serialization;
 
 namespace Boardgames.DataProcessor.ExportDto
