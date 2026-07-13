@@ -1,7 +1,8 @@
 ﻿using Boardgames.Data.Models;
+using static Boardgames.Data.ModelsValidationConstraints;
+
 using System.ComponentModel.DataAnnotations;
 using System.Xml.Serialization;
-using static Boardgames.Data.ModelsValidationConstraints;
 
 namespace Boardgames.DataProcessor.ImportDto
 {
