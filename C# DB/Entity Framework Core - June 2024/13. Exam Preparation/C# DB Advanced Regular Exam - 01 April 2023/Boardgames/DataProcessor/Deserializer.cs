@@ -8,6 +8,7 @@
     using Boardgames.Data.Models;
     using Boardgames.Data.Models.Enums;
     using Boardgames.DataProcessor.ImportDto;
+
     using Newtonsoft.Json;
 
     public class Deserializer
@@ -24,6 +25,7 @@
         {
             var output = new StringBuilder();
             var xmlSerializer = new XmlSerializer(typeof(CreatorInputXmlModel[]), new XmlRootAttribute("Creators"));
+
             var stringReader = new StringReader(xmlString);
             var creators = (CreatorInputXmlModel[])xmlSerializer.Deserialize(stringReader);
             var validCreators = new HashSet<Creator>();
