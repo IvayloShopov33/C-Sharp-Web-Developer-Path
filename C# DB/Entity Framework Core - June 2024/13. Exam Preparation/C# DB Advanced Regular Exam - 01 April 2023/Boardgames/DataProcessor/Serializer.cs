@@ -33,6 +33,7 @@
             var xmlSerializer = new XmlSerializer(typeof(CreatorOutputXmlModel[]), new XmlRootAttribute("Creators"));
             var stringWriter = new StringWriter();
             var namespaces = new XmlSerializerNamespaces();
+            
             namespaces.Add("", "");
             xmlSerializer.Serialize(stringWriter, creatorsWithTheirBoardgames, namespaces);
 
