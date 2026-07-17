@@ -1,20 +1,17 @@
 ﻿namespace Boardgames
 {
-    using Microsoft.EntityFrameworkCore;
     using Boardgames.Data;
+    using Microsoft.EntityFrameworkCore;
 
     public class StartUp
     {
         public static void Main()
         {
             var context = new BoardgamesContext();
-
             ResetDatabase(context, shouldDropDatabase: true);
 
-            var projectDir = GetProjectDirectory();
-
+            var projectDir = GetProjectDirectory();         
             ImportEntities(context, projectDir + @"Datasets/", projectDir + @"ImportResults/");
-
             ExportEntities(context, projectDir + @"ExportResults/");
 
             using (var transaction = context.Database.BeginTransaction())
@@ -46,6 +43,7 @@
 
             var year = 2021;
             double rating = 9.50;
+            
             var exportSellersWithMostBoardgames = DataProcessor.Serializer.ExportSellersWithMostBoardgames(context, year, rating);
             Console.WriteLine(exportSellersWithMostBoardgames);
             File.WriteAllText(exportDir + "Actual Result - ExportSellersWithMostBoardgames.json", exportSellersWithMostBoardgames);
