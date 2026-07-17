@@ -9,8 +9,9 @@
     using Medicines.Data.Models;
     using Medicines.Data.Models.Enums;
     using Medicines.DataProcessor.ImportDtos;
-    using Newtonsoft.Json;
     using static Medicines.Data.ModelsValidationConstraints;
+
+    using Newtonsoft.Json;
 
     public class Deserializer
     {
