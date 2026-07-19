@@ -41,6 +41,7 @@
             var xmlSerializer = new XmlSerializer(typeof(PatientOutputXmlModel[]), new XmlRootAttribute("Patients"));
             var stringWriter = new StringWriter();
             var namespaces = new XmlSerializerNamespaces();
+
             namespaces.Add(string.Empty, string.Empty);
             xmlSerializer.Serialize(stringWriter, patientsWithTheirMedicines, namespaces);
 
