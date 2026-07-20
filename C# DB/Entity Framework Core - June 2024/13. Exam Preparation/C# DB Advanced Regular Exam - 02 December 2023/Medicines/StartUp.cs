@@ -10,13 +10,10 @@
         public static void Main()
         {
             var context = new MedicinesContext();
-
             ResetDatabase(context, shouldDropDatabase: false);
 
             var projectDir = GetProjectDirectory();
-
             ImportEntities(context, projectDir + @"Datasets/", projectDir + @"ImportResults/");
-
             ExportEntities(context, projectDir + @"ExportResults/");
 
             using (var transaction = context.Database.BeginTransaction())
@@ -30,12 +27,14 @@
             int medicineCategory = 2;
             var ExportMedicinesFromDesiredCategoryInNonStopPharmacies = DataProcessor
                 .Serializer.ExportMedicinesFromDesiredCategoryInNonStopPharmacies(context, medicineCategory);
+
             Console.WriteLine(ExportMedicinesFromDesiredCategoryInNonStopPharmacies);
             File.WriteAllText(exportDir + "Actual Result - ExportMedicinesFromDesiredCategoryInNonStopPharmacies.json", ExportMedicinesFromDesiredCategoryInNonStopPharmacies);
 
             string date = "2022-01-01";
             var ExportPatientsWithTheirMedicines = DataProcessor
                 .Serializer.ExportPatientsWithTheirMedicines(context, date);
+
             Console.WriteLine(ExportPatientsWithTheirMedicines);
             File.WriteAllText(exportDir + "Actual Result - ExportPatientsWithTheirMedicines.xml", ExportPatientsWithTheirMedicines);
         }
