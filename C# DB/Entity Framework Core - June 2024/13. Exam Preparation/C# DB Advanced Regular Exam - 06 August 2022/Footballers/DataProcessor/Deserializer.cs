@@ -26,6 +26,7 @@
         {
             var output = new StringBuilder();
             var xmlSerializer = new XmlSerializer(typeof(CoachInputXmlModel[]), new XmlRootAttribute("Coaches"));
+            
             var stringReader = new StringReader(xmlString);
             var coaches = (CoachInputXmlModel[])xmlSerializer.Deserialize(stringReader);
             var validCoaches = new List<Coach>();
