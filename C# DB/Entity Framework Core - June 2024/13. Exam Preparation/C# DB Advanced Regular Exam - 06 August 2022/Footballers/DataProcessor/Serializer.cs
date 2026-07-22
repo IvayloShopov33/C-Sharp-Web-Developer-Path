@@ -34,6 +34,7 @@
             var xmlSerializer = new XmlSerializer(typeof(CoachOutputXmlModel[]), new XmlRootAttribute("Coaches"));
             var stringWriter = new StringWriter();
             var namespaces = new XmlSerializerNamespaces();
+
             namespaces.Add(string.Empty, string.Empty);
             xmlSerializer.Serialize(stringWriter, coachesWithTheirFootballers, namespaces);
 
