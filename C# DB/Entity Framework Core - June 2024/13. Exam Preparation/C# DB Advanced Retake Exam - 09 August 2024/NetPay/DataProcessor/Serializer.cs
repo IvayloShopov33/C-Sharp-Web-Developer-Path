@@ -40,6 +40,7 @@ namespace NetPay.DataProcessor
             var xmlSerializer = new XmlSerializer(typeof(HouseholdOutputXmlModel[]), new XmlRootAttribute("Households"));
             var stringWriter = new StringWriter();
             var namespaces = new XmlSerializerNamespaces();
+
             namespaces.Add(string.Empty, string.Empty);
             xmlSerializer.Serialize(stringWriter, householdsWhichHaveExpensesToPay, namespaces);
 
