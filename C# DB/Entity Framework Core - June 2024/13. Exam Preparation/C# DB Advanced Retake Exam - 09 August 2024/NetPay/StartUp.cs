@@ -9,11 +9,9 @@ namespace NetPay
         static void Main(string[] args)
         {
             NetPayContext context = new NetPayContext();
-
             ResetDatabase(context, shouldDropDatabase: true);
 
             var projectDir = GetProjectDirectory();
-
             ImportEntities(context, projectDir + @"Datasets/", projectDir + @"ImportResults/");
             ExportEntities(context, projectDir + @"ExportResults/");
 
