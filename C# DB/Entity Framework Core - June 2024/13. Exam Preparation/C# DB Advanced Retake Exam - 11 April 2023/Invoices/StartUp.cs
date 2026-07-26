@@ -9,13 +9,10 @@ namespace Invoices
         public static void Main()
         {
             var context = new InvoicesContext();
-
             ResetDatabase(context, shouldDropDatabase: true);
 
             var projectDir = GetProjectDirectory();
-
             ImportEntities(context, projectDir + @"Datasets/", projectDir + @"ImportResults/");
-
             ExportEntities(context, projectDir + @"ExportResults/");
 
             using (var transaction = context.Database.BeginTransaction())
@@ -46,11 +43,13 @@ namespace Invoices
         {
             DateTime date = DateTime.ParseExact("01/12/2022", "dd/MM/yyyy", CultureInfo.InvariantCulture);
             var exportClientsWithTheirInvoices = DataProcessor.Serializer.ExportClientsWithTheirInvoices(context, date);
+
             Console.WriteLine(exportClientsWithTheirInvoices);
             File.WriteAllText(exportDir + "Actual Result - ExportClientsWithTheirInvoices.xml", exportClientsWithTheirInvoices);
 
             var nameLength = 11;
             var exportProductsWithMostClients = DataProcessor.Serializer.ExportProductsWithMostClients(context, nameLength);
+
             Console.WriteLine(exportProductsWithMostClients);
             File.WriteAllText(exportDir + "Actual Result - ExportProductsWithMostClients.json", exportProductsWithMostClients);
         }
