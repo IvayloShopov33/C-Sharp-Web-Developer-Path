@@ -4,10 +4,12 @@
     using System.Globalization;
     using System.Text;
     using System.Xml.Serialization;
+
     using Invoices.Data;
     using Invoices.Data.Models;
     using Invoices.Data.Models.Enums;
     using Invoices.DataProcessor.ImportDto;
+
     using Newtonsoft.Json;
 
     public class Deserializer
@@ -29,6 +31,7 @@
             var output = new StringBuilder();
             var xmlSerializer = new XmlSerializer(typeof(ClientInputXmlModel[]), new XmlRootAttribute("Clients"));
             var stringReader = new StringReader(xmlString);
+
             var clients = (ClientInputXmlModel[])xmlSerializer.Deserialize(stringReader);
             var validClients = new List<Client>();
 
