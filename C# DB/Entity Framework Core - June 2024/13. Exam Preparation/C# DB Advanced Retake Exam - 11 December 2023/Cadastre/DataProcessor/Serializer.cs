@@ -1,6 +1,8 @@
 ﻿using Cadastre.Data;
 using Cadastre.DataProcessor.ExportDtos;
+
 using Newtonsoft.Json;
+
 using System.Globalization;
 using System.Xml.Serialization;
 
@@ -53,6 +55,7 @@ namespace Cadastre.DataProcessor
             var xmlSerializer = new XmlSerializer(typeof(PropertyOutputXmlModel[]), new XmlRootAttribute("Properties"));
             var stringWriter = new StringWriter();
             var namespaces = new XmlSerializerNamespaces();
+
             namespaces.Add("", "");
             xmlSerializer.Serialize(stringWriter, filteredPropertiesWithDistrict, namespaces);
 
