@@ -8,11 +8,9 @@
         public static void Main()
         {
             var dbContext = new CadastreContext();
-
             ResetDatabase(dbContext, shouldDropDatabase: false);
 
             var projectDir = GetProjectDirectory();
-
             ImportEntities(dbContext, projectDir + @"Datasets/", projectDir + @"ImportResults/");
             ExportEntities(dbContext, projectDir + @"ExportResults/");
 
@@ -67,12 +65,12 @@
 
         private static void ResetDatabase(CadastreContext dbContext, bool shouldDropDatabase = false)
         {
-            if(shouldDropDatabase)
+            if (shouldDropDatabase)
             {
                 dbContext.Database.EnsureDeleted();
             }
 
-            if(dbContext.Database.EnsureCreated())
+            if (dbContext.Database.EnsureCreated())
             {
                 return;
             }
