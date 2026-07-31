@@ -6,6 +6,7 @@
 
     using Data;
     using Newtonsoft.Json;
+
     using Trucks.Data.Models;
     using Trucks.Data.Models.Enums;
     using Trucks.DataProcessor.ImportDto;
@@ -24,6 +25,7 @@
         {
             var output = new StringBuilder();
             var xmlSerializer = new XmlSerializer(typeof(DespatcherInputXmlModel[]), new XmlRootAttribute("Despatchers"));
+
             var stringReader = new StringReader(xmlString);
             var despatchers = (DespatcherInputXmlModel[])xmlSerializer.Deserialize(stringReader);
             var validDespatchers = new HashSet<Despatcher>();
