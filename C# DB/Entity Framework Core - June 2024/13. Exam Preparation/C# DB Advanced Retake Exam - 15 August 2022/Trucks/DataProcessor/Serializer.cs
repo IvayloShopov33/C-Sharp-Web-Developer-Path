@@ -32,6 +32,7 @@
             var xmlSerializer = new XmlSerializer(typeof(DespatcherOutputXmlModel[]), new XmlRootAttribute("Despatchers"));
             var stringWriter = new StringWriter();
             var namespaces = new XmlSerializerNamespaces();
+
             namespaces.Add(string.Empty, string.Empty);
             xmlSerializer.Serialize(stringWriter, despatchersWithTheirTrucks, namespaces);
 
