@@ -12,13 +12,10 @@
         public static void Main()
         {
             var context = new TrucksContext();
-
             ResetDatabase(context, shouldDropDatabase: false);
 
             var projectDir = GetProjectDirectory();
-
             ImportEntities(context, projectDir + @"Datasets/", projectDir + @"ImportResults/");
-
             ExportEntities(context, projectDir + @"ExportResults/");
 
             using (var transaction = context.Database.BeginTransaction())
@@ -50,6 +47,7 @@
 
             int tankCapacity = 1000;
             var ExportClientsWithMostTrucks = DataProcessor.Serializer.ExportClientsWithMostTrucks(context, tankCapacity);
+
             Console.WriteLine(ExportClientsWithMostTrucks);
             File.WriteAllText(exportDir + "Actual Result - ExportClientsWithMostTrucks.json", ExportClientsWithMostTrucks);
         }
