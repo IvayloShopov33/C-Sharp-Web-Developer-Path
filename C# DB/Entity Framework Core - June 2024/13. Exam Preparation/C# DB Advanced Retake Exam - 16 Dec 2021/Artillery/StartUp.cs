@@ -12,13 +12,10 @@
         public static void Main()
         {
             var context = new ArtilleryContext();
-
             ResetDatabase(context, shouldDropDatabase: true);
 
             var projectDir = GetProjectDirectory();
-
             ImportEntities(context, projectDir + @"Datasets/", projectDir + @"ImportResults/");
-
             ExportEntities(context, projectDir + @"ExportResults/");
 
             using (var transaction = context.Database.BeginTransaction())
