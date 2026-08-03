@@ -1,5 +1,4 @@
-﻿
-namespace Artillery.DataProcessor
+﻿namespace Artillery.DataProcessor
 {
     using System.Xml.Serialization;
     using Newtonsoft.Json;
@@ -63,6 +62,7 @@ namespace Artillery.DataProcessor
             var xmlSerializer = new XmlSerializer(typeof(GunOutputXmlModel[]), new XmlRootAttribute("Guns"));
             var stringWriter = new StringWriter();
             var namespaces = new XmlSerializerNamespaces();
+            
             namespaces.Add(string.Empty, string.Empty);
             xmlSerializer.Serialize(stringWriter, gunsByManufacturer, namespaces);
 
