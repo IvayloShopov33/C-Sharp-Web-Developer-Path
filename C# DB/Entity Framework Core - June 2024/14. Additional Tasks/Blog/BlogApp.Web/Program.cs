@@ -27,7 +27,6 @@ namespace BlogApp.Web
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
             builder.Services.AddControllersWithViews();
-
             builder.Services.AddScoped<IArticleService, ArticleService>();
 
             var app = builder.Build();
