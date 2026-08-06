@@ -1,9 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 
 using EventMiWorkshopMVC.Data;
-using EventMiWorkshopMVC.Services.Data.Contracts;
 using EventMiWorkshopMVC.Services.Data;
-
+using EventMiWorkshopMVC.Services.Data.Contracts;
+
 namespace EventMiWorkshop.Web
 {
     public class Program
