@@ -1,11 +1,12 @@
 ﻿using System.Linq;
 using System.Collections.Generic;
+using System.Threading.Tasks;
+
+using Microsoft.EntityFrameworkCore;
 
 using PetStore.Data.Common.Repositories;
 using PetStore.Data.Models;
 using PetStore.Services.Data.Contracts;
-using Microsoft.EntityFrameworkCore;
-using System.Threading.Tasks;
 
 namespace PetStore.Services.Data
 {
