@@ -11,6 +11,7 @@
     using PetStore.Data.Models;
     using PetStore.Data.Repositories;
     using PetStore.Data.Seeding;
+    using PetStore.Services.Data.Contracts;
     using PetStore.Services.Data;
     using PetStore.Services.Messaging;
 
@@ -20,7 +21,6 @@
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Logging;
-    using PetStore.Services.Data.Contracts;
 
     public static class Program
     {
