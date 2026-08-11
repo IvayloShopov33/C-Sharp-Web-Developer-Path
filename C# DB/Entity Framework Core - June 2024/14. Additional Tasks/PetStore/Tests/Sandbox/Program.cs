@@ -11,8 +11,8 @@
     using PetStore.Data.Models;
     using PetStore.Data.Repositories;
     using PetStore.Data.Seeding;
-    using PetStore.Services.Data.Contracts;
     using PetStore.Services.Data;
+    using PetStore.Services.Data.Contracts;
     using PetStore.Services.Messaging;
 
     using CommandLine;
