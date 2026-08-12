@@ -17,10 +17,10 @@
     using PetStore.Data.Repositories;
     using PetStore.Data.Seeding;
     using PetStore.Services.Data;
+    using PetStore.Services.Data.Contracts;
     using PetStore.Services.Mapping;
     using PetStore.Services.Messaging;
-    using PetStore.Web.ViewModels;
-    using PetStore.Services.Data.Contracts;
+    using PetStore.Web.ViewModels;   
 
     public class Program
     {
