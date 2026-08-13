@@ -17,8 +17,8 @@ namespace Quiz.ConsoleUI
             {
                 var serviceCollection = new ServiceCollection();
                 ConfigureServices(serviceCollection);
-                var serviceProvider = serviceCollection.BuildServiceProvider();
 
+                var serviceProvider = serviceCollection.BuildServiceProvider();
                 var quizService = serviceProvider.GetService<IQuizService>();
                 quizService.Add("C# DB");
 
@@ -45,7 +45,6 @@ namespace Quiz.ConsoleUI
                 userAnswerService.AddUserAnswer(db.Users.FirstOrDefault()!.Id, 1, 2);
 
                 var quiz = quizService.GetQuizById(1);
-
                 Console.WriteLine(quiz.Title);
 
                 foreach (var question in quiz.Questions)
