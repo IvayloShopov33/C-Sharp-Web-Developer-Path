@@ -1,9 +1,10 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Quiz.Data;
-using Quiz.Services.Contracts;
-using Quiz.Services;
 
+using Quiz.Data;
+using Quiz.Services;
+using Quiz.Services.Contracts;
+
 namespace Quiz.Web
 {
     public class Program
