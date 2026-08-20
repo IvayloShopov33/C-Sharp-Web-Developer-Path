@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+
 using System.Globalization;
 using System.Xml.Serialization;
 
@@ -35,6 +36,7 @@ namespace TravelAgency.DataProcessor
             var xmlSerializer = new XmlSerializer(typeof(GuideOutputXmlModel[]), new XmlRootAttribute("Guides"));
             var stringWriter = new StringWriter();
             var namespaces = new XmlSerializerNamespaces();
+
             namespaces.Add(string.Empty, string.Empty);
             xmlSerializer.Serialize(stringWriter, guidesWithSpanishLanguageWithAllTheirTourPackages, namespaces);
 
