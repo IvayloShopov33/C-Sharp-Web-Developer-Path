@@ -9,11 +9,9 @@ namespace TravelAgency
         static void Main(string[] args)
         {
             TravelAgencyContext context = new TravelAgencyContext();
-
             ResetDatabase(context, shouldDropDatabse: true);
 
             var projectDir = GetProjectDirectory();
-
             ImportEntities(context, projectDir + @"Datasets/", projectDir + @"ImportResults/");
             ExportEntities(context, projectDir + @"ExportResults/");
 
