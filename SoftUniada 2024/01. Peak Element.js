@@ -1,6 +1,7 @@
 function solve(numbers) {
     numbers = numbers.shift().split(' ');
     let peakElement = Number.MIN_SAFE_INTEGER;
+    
     for (let i = 1; i < numbers.length - 1; i++) {
         numbers[i] = Number(numbers[i]);
         numbers[i - 1] = Number(numbers[i - 1]);
