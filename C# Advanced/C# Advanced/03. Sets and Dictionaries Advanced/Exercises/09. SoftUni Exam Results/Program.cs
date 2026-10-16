@@ -17,7 +17,6 @@
                 {
                     // print the students results and language submissions, both sorted by descending value and then by ascending name (key)
                     Console.WriteLine("Results:");
-
                     foreach (var student in studentsWithPoints.OrderByDescending(x => x.Value).ThenBy(x => x.Key))
                     {
                         Console.WriteLine($"{student.Key} | {student.Value}");
